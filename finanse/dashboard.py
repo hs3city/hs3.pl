@@ -1,26 +1,28 @@
+import os
 import argparse
 import pandas as pd
 import plotly.graph_objects as go
-from datetime import datetime
+from bs4 import BeautifulSoup
 
-
-def export_dashboard_cashflow(source_file, output_file, offline=False, standalone=False):
+def export_dashboard_cashflow(source_path, offline=False, standalone=False):
     '''
     Returns HTML file with cashflow plot
     
     Params
     ------
-    source_file : path to csv source file
-    output_file : path to html output file
+    source_path : path with finanse.csv and current index.html included
     offline     : if True returns html with plotly.js included (+3MB) 
                   if False plotly.js requires internet connection to load
     standalone  : if True returns full html with html tag
                   if False returns a string containing a single <div>
 
     '''
-    
+
+    source_file = os.path.join(source_path, "finanse.csv")
+    output_file = os.path.join(source_path, "cashflow_plot.html")
+
     include_plotlyjs = 'cdn'
-    if offline == True:
+    if offline:
         include_plotlyjs = True
         
     # Load data
@@ -52,15 +54,31 @@ def export_dashboard_cashflow(source_file, output_file, offline=False, standalon
     
     fig.write_html(output_file, include_plotlyjs=include_plotlyjs, full_html=standalone)
     
-    
+
+def update_html(source_path):
+
+    with open(os.path.join(source_path, "index.html")) as index:
+        soup_index = BeautifulSoup(index, 'html.parser')
+
+    with open(os.path.join(source_path, "cashflow_plot.html")) as cashflow:
+        soup_cashflow = BeautifulSoup(cashflow, 'html.parser')
+
+    soup_index('h2', {'id': 'przepÅ‚yw'})[0].next_sibling.next_sibling.replace_with(soup_cashflow)
+
+    with open(os.path.join(source_path, "index.html"), "w") as output:
+        output.write(str(soup_index))
+
+
 if __name__ == '__main__':
     
     parser = argparse.ArgumentParser()
-    parser.add_argument("--output_file", type=str, default="cashflow_plot.html")
-    parser.add_argument("--source_file", type=str, default="finanse.csv")
+    parser.add_argument("--source_path", type=str, default="")
     parser.add_argument('--offline', default=False, action=argparse.BooleanOptionalAction)
     parser.add_argument("--standalone", default=False, action=argparse.BooleanOptionalAction)
     
     args = parser.parse_args()
     
-    export_dashboard_cashflow(args.source_file, args.output_file, args.offline, args.standalone)
+    export_dashboard_cashflow(args.source_path, args.offline, args.standalone)
+    print("Graph plotted and exported successfully to HTML")
+    update_html(args.source_path)
+    print("Index.html updated")
