@@ -57,15 +57,15 @@ def export_dashboard_cashflow(source_path, offline=False, standalone=False):
 
 def update_html(source_path):
 
-    with open(os.path.join(source_path, "index.html")) as index:
+    with open(os.path.join(source_path, "index.html"), encoding="utf-8") as index:
         soup_index = BeautifulSoup(index, 'html.parser')
 
-    with open(os.path.join(source_path, "cashflow_plot.html")) as cashflow:
+    with open(os.path.join(source_path, "cashflow_plot.html"), encoding="utf-8") as cashflow:
         soup_cashflow = BeautifulSoup(cashflow, 'html.parser')
 
-    soup_index('h2', {'id': 'przepÅ‚yw'})[0].next_sibling.next_sibling.replace_with(soup_cashflow)
+    soup_index('h2', {'id': 'przepływ'})[0].next_sibling.next_sibling.replace_with(soup_cashflow)
 
-    with open(os.path.join(source_path, "index.html"), "w") as output:
+    with open(os.path.join(source_path, "index.html"), mode="w", encoding="utf-8") as output:
         output.write(str(soup_index))
 
 
