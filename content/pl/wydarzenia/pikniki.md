@@ -2,7 +2,7 @@
 title: Pikniki Hackerspace Trójmiasto
 tags: ["hs3", "piknik"]
 openingHours: >
-    Fr[-1] 18:00-24:00;
+    2022 Apr 5 - 2099 Dec 31 Fr[-1] 18:00-24:00;
     2022 Sep Fr[-1] 18-24 "@ Noc Nauka Hevelianum";
     2022 Dec Fr[-1] 18-02 "Bring 🍾";
     2023 Jan Fr[-1] off;
