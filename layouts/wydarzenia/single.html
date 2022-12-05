@@ -20,6 +20,54 @@
           <img src="/images/wydarzenia/null.png" alt="blog-images">
           {{ end }}
         </div>
+        {{if .Params.openingHours }}
+            <script src="/js/opening_hours+deps.min.js"></script>
+            <div id="eventdates" class="loading" data-opening-hours="{{ .Params.openingHours }}" data-day-names="{{ i18n "daynames" }}" data-month-names="{{ i18n "monthnames" }}"></div>
+<script type="text/javascript">
+var eventDatesElement = document.getElementById("eventdates")
+var dayNames = eventDatesElement.dataset.dayNames.split(",")
+var monthNames = eventDatesElement.dataset.monthNames.split(",")
+var oh = new opening_hours(eventDatesElement.dataset.openingHours)
+var warnings = oh.getWarnings();
+if (warnings.length) {
+    console.log(warnings)
+}
+
+function printTime(date) {
+    hours = date.getHours()
+    minutes = date.getMinutes()
+    return (hours < 10 ? "0" : "") + hours + ":" + (minutes < 10 ? "0" : "") + minutes
+}
+var nextEventsElement = document.createElement("ol")
+nextEventsElement.setAttribute("id", "next-events")
+eventDatesElement.appendChild(nextEventsElement)
+var now = new Date()
+var start = new Date(now.getFullYear(), now.getMonth(), now.getDay())
+var end = new Date(now.getFullYear() + 2, now.getMonth(), now.getDay())
+var intervals = oh.getOpenIntervals(start, end).slice(0, 5);
+let yearel = null
+for (let interval of intervals) {
+    let eventStart = interval[0]
+    let eventEnd = interval[1]
+    let comment = interval[3]
+    if (yearel?.dataset?.year != eventStart.getFullYear()) {
+        console.log(yearel?.innerText)
+        let li = document.createElement("li")
+        li.innerHTML = `<span>${eventStart.getFullYear()}</span>`
+        yearel = document.createElement("ol")
+        yearel.dataset.year = eventStart.getFullYear()
+        li.appendChild(yearel)
+        nextEventsElement.appendChild(li)
+    }
+    let li = document.createElement("li")
+    li.innerText =
+        `${dayNames[eventStart.getDay()]} ${eventStart.getDate()} ${monthNames[eventStart.getMonth()]} `
+        + `${printTime(eventStart)} - ${printTime(eventEnd)}`
+        + (comment ? "; " + comment : "")
+    yearel.appendChild(li)
+}
+</script>
+        {{ end }}
         <div class="post-body">
           {{ .Content }}
         </div>

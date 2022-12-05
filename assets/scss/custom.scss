@@ -13,3 +13,25 @@ img[src="/images/google-translate.png"] {
     height: 1.2em;
     width: 1.2em !important;
 }
+
+#eventdates {
+    text-align: left;
+    & > ol {
+        &::before {
+            Content: "Next events:";
+        }
+        list-style: none;
+        & > li {
+            & > span {
+                font-size: 1.6em;
+            }
+            & > ol {
+                list-style: "\1F5D3" outside;
+                & > li {
+                    padding-left: .5em;
+                }
+            }
+        }
+    }
+}
+
