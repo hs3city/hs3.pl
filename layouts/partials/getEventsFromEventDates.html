@@ -157,7 +157,7 @@ Known limitations:
     {{ $changes := newScratch }}
     {{ $changes.Set "c" dict }}
     {{ $changes.Set "t" dict }}
-    {{ if $value}}{{ $changes.SetInMap "c" "comment" $value }}{{ end }}
+    {{ $changes.SetInMap "c" "comment" $value }}
     {{ if eq (len $splitkey) 1 }}
         {{/* do nothing, since the comment is already set */}}
     {{ else }}
