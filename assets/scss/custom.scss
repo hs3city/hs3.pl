@@ -14,12 +14,9 @@ img[src="/images/google-translate.png"] {
     width: 1.2em !important;
 }
 
-#eventdates {
+#eventDates {
     text-align: left;
     & > ol {
-        &::before {
-            Content: "Next events:";
-        }
         list-style: none;
         & > li {
             & > span {
@@ -29,6 +26,23 @@ img[src="/images/google-translate.png"] {
                 list-style: "\1F5D3" outside;
                 & > li {
                     padding-left: .5em;
+                    &.cancelled {
+                        color: red;
+                    }
+                    & > span.cancelled {
+                        font-weight: bold;
+                    }
+                    & > span.comment {
+                        font-style: italic;
+                    }
+                    & > span.date.changed, & > span.time.changed {
+                        color: red;
+                        &::after {
+                            font-size: .8em;
+                            content: "(changed)"
+                        }
+                    }
+
                 }
             }
         }
