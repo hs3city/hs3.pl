@@ -27,7 +27,8 @@ img[src="/images/google-translate.png"] {
                 & > li {
                     padding-left: .5em;
                     &.cancelled {
-                        color: red;
+                        color: hsl(0, 80, 60);
+                        text-decoration: line-through;
                     }
                     & > span.cancelled {
                         font-weight: bold;
@@ -36,7 +37,7 @@ img[src="/images/google-translate.png"] {
                         font-style: italic;
                     }
                     & > span.date.changed, & > span.time.changed {
-                        color: red;
+                        color: hsl(30, 100, 50);
                         &::after {
                             font-size: .8em;
                             content: "(changed)"
