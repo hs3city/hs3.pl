@@ -46,6 +46,7 @@
             {{end}}
             {{ if ne ($s.Get "year") "" }}</ol></li>{{end}}
             </ol>
+            <a href="{{(.OutputFormats.Get "Calendar").RelPermalink | absURL}}">Download this calendar (tip: Go to your calendar software, click "Subcribe to calendar" and add this URL and the calendar will stay in sync!).</a>
             </div>
         {{ end }}
         <div class="post-body">

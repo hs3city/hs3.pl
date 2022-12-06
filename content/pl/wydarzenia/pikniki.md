@@ -1,6 +1,12 @@
 ---
 title: Pikniki Hackerspace Trójmiasto
 tags: ["hs3", "piknik"]
+outputs:
+- html
+- calendar
+organizer:
+    name: Hackerspace Trójmiasto
+    email: piknik@hs3.pl
 eventDates:
     periodics:
     - start: 2022-10-01
@@ -18,8 +24,9 @@ eventDates:
       2023-02-24: "Too cold"
       2023-07-28: vacation
     extra:
+      2022-12-07 18:00-19:00: extra meeting too
       2023-08-27 18:00-19:00: extra meeting
-      2022-10-29 18:00-17:00: DLS change
+      2022-10-29 18:00-05:00: DLS change party!
     changes:
       2022-10-28->2022-10-27: "moved because of planning issues"
       2022-12-30: bring 🍾
