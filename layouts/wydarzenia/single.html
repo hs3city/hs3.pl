@@ -27,9 +27,9 @@
             {{ $s := newScratch }}
             {{ $s.Set "year" "" }}
             {{ range $key, $value := $events }}
-                {{ if ne ($s.Get "year") ($value.startDateTime.Format "2006") }}
+                {{ if ne ($s.Get "year") $value.startDateTime.Year }}
                 {{ if ne ($s.Get "year") "" }}</ol></li>{{end}}
-                    {{ $s.Set "year" ($value.startDateTime.Format "2006") }}
+                    {{ $s.Set "year" $value.startDateTime.Year }}
                     <li>{{ $s.Get "year" }}<ol>
                 {{ end }}
                 <li class="{{if $value.cancelled}}cancelled{{end}}">

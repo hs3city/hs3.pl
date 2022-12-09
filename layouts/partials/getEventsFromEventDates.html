@@ -57,6 +57,16 @@ Known limitations:
     "fifth" 5
     "last" -1
     "penultimate" -2}}
+{{ $WEEKDAYS_LOOKUP := dict
+    "Sunday" 0
+    "Monday" 1
+    "Tuesday" 2
+    "Wednesday" 3
+    "Thursday" 4
+    "Friday" 5
+    "Saturday" 6
+}}
+{{ $DAYS_IN_WEEK := 7 }}
 {{ $ALLOWED_TOPLEVEL_KEYS := dict
     "periodics" false
     "cancelled" false
@@ -93,27 +103,24 @@ Known limitations:
     {{ $seconds := (sub $end.Unix $start.Unix) }}
     {{/* Add 2 hours to compensate for DLS, then divide by seconds per day */}}
     {{ $nrdays := (div (add $seconds 7200) (mul 3600 24)) }}
-    {{range $i := (seq (sub $nrdays 1)) }}
-        {{ $day := $start.AddDate 0 0 $i }}
-        {{ $s.Add "dates" (slice $day) }}
-    {{end }}
     {{ $comment := .comment }}
     {{ if (findRE `^(first|second|third|fourth|fifth|last|penultimate) (Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday) of the month$` .rule) }}
         {{ $ruleparts := split .rule " " }}
-        {{ $dow := index $ruleparts 1 }}
         {{ $times := index $ruleparts 5 }}
         {{ $ordinal := index $ORDINAL_LOOKUP (index $ruleparts 0) }}
+        {{ $weekday := index $WEEKDAYS_LOOKUP (index $ruleparts 1) }}
         {{ $diffdays_other_month := int (mul -7 $ordinal) }}
         {{ $diffdays_same_month := int (add $diffdays_other_month (cond (lt $diffdays_other_month 0) 7 -7)) }}
-        {{ range $s.Get "dates" }}
+        {{ $startday_offset := mod (add (sub $weekday $start.Weekday) $DAYS_IN_WEEK) $DAYS_IN_WEEK }}
+        {{ range $i := (seq $startday_offset $DAYS_IN_WEEK (sub $nrdays 1)) }}
+            {{ $date := $start.AddDate 0 0 $i }}
             {{ if (and
-                ( eq ((.).Format "Monday") $dow)
-                ( ne ((.).Format "Jan") (((.).AddDate 0 0 $diffdays_other_month).Format "Jan"))
-                ( eq ((.).Format "Jan") (((.).AddDate 0 0 $diffdays_same_month).Format "Jan"))
+                ( ne $date.Month ($date.AddDate 0 0 $diffdays_other_month).Month)
+                ( eq $date.Month ($date.AddDate 0 0 $diffdays_same_month).Month)
                 ) }}
                 {{/* todo what if already exists? For now we don't care */}}
-                {{ $startEndDT := partial "GetStartEndDateTime" (dict "date" . "start" $periodic.starttime "end" $periodic.endtime) }}
-                {{ $s.SetInMap "events" ((.).Format "2006-01-02") (merge $startEndDT (dict "source" "rule" "comment" $comment )) }}
+                {{ $startEndDT := partial "GetStartEndDateTime" (dict "date" $date "start" $periodic.starttime "end" $periodic.endtime) }}
+                {{ $s.SetInMap "events" ($date.Format "2006-01-02") (merge $startEndDT (dict "source" "rule" "comment" $comment )) }}
             {{ end }}
         {{ end }}
     {{ else if (findRE `^every \d+ days$` .rule) }}

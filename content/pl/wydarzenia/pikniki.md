@@ -11,9 +11,9 @@ eventDates:
     periodics:
     - start: 2022-10-01
       end: 2024-01-02
+      rule: last Friday of the month
       starttime: 18:00
       endtime: 02:00
-      rule: last Friday of the month
     - start: 2022-12-01
       end: 2023-02-10
       rule: every 14 days
