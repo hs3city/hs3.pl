@@ -80,7 +80,7 @@ def export_dashboard_cashflow(source_path, offline=False, standalone=False):
     )
     fig.update_layout(
         barmode="relative",
-        title_text=title + " -- Bilans: " + str(current_balance) + "PLN",
+        title_text=f"{title} -- Bilans: {current_balance:.2f}PLN",
         yaxis_title="PLN",
     )
     fig.update_xaxes(dtick="M1")
