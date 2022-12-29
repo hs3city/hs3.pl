@@ -38,6 +38,51 @@
   {{ $preferredPages.Add "pages" (slice $preferredPage) }}
 {{ end }}
 
+{{ $s := newScratch }}
+{{range $allPages}}
+{{if .Params.eventDates -}}
+  {{$page := .}}
+  {{range (partial "getEventsFromEventDates" (dict "timezone" "Europe/Warsaw" "eventDates" .Params.eventDates)) }}
+    {{$event := (merge . (dict "title" $page.Title "permalink" $page.Permalink "Params" $page.Params "Summary" $page.Summary "Language" $page.Language))}}
+    {{$s.SetInMap "events" (string $event.startDateTime) (slice $event)}}
+    {{end}}
+  {{end}}
+{{end}}
+
+<section class="blog">
+  <div class="container">
+    <div class="row">
+      {{ range ($s.GetSortedMapValues "events") }}
+      {{ range . }}
+      <div class="col-lg-4">
+        <article class="blog-post">
+          {{ if .Params.featureImage }}
+          <img src="{{ .Params.featureImage | absURL }}" alt="blog-images">
+          {{ else }}
+          <img src="/images/wydarzenia/null.png" alt="blog-images">
+          {{ end }}
+          <div class="blog-content">
+            <h3><a href="{{.permalink}}">{{ .title }}</a></h3>
+            <h4>{{ .startDateTime }}</h4>
+            <p> {{truncate 100 .Summary}} </p>
+            <a class="more" href="{{ .Permalink }}">Read more <span>⟶</span></a>
+            {{ if (ne .Language.Lang $.Page.Language.Lang) }}
+            <p>
+              (only in {{ .Language.LanguageName }}; or
+              <a href="http://translate.google.com/translate?{{(slice "js" "n" "sl" .Language.Lang "tl" site.Language.Lang "u" (.Permalink | absURL)) | querify | safeURL}}">
+              <img alt="Google translate" src="/images/google-translate.png">
+              </a>)
+            </p>
+            {{ end }}
+          </div>
+        </article>
+      </div>
+      {{ end }}
+      {{ end }}
+    </div>
+  </div>
+</section>
+<!--
 <section class="blog">
   <div class="container">
     <div class="row">
@@ -73,4 +118,5 @@
     </div>
   </div>
 </section>
+-->
 {{end}}

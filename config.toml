@@ -93,7 +93,7 @@ name = "Privacy Policy"
 url = "/privacy/"
 weight = 1
 
-# Socail icons
+# Social icons
 [[params.social]]
 icon = "ti-facebook"
 url = "https://www.facebook.com/hackerspacetrojmiasto"
