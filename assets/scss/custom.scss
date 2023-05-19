@@ -1,52 +1,51 @@
 .main-nav .navbar-nav .nav-item .nav-link {
-    &::first-letter {
-        // capitalize on whole string makes "about us" to "About Us". We want "About us"
-        text-transform: uppercase;
-    }
-    &.language-switch {
-        font-size: 1.4em;
-        transform: translateY(-.2em);
-    }
+  &::first-letter {
+    // capitalize on whole string makes "about us" to "About Us". We want "About us"
+    text-transform: uppercase;
+  }
+  &.language-switch {
+    font-size: 1.4em;
+    transform: translateY(-0.2em);
+  }
 }
 
 img[src="/images/google-translate.png"] {
-    height: 1.2em;
-    width: 1.2em !important;
+  height: 1.2em;
+  width: 1.2em !important;
 }
 
-#eventDates {
-    text-align: left;
-    & > ol {
-        list-style: none;
-        & > li {
-            & > span {
-                font-size: 1.6em;
-            }
-            & > ol {
-                list-style: "\1F5D3" outside;
-                & > li {
-                    padding-left: .5em;
-                    &.cancelled {
-                        color: hsl(0, 80, 60);
-                        text-decoration: line-through;
-                    }
-                    & > span.cancelled {
-                        font-weight: bold;
-                    }
-                    & > span.comment {
-                        font-style: italic;
-                    }
-                    & > span.date.changed, & > span.time.changed {
-                        color: hsl(30, 100, 50);
-                        &::after {
-                            font-size: .8em;
-                            content: "(changed)"
-                        }
-                    }
-
-                }
-            }
-        }
+.eventDates {
+  text-align: left;
+  &.singlePage .p-name {
+    display: none;
+  }
+  .h-event {
+    &::before {
+      content: "\1F5D3";
     }
+    time {
+      font-family: monospace;
+      font-size: .8em;
+      &.dt-end::before {
+        content: " - ";
+      }
+    }
+    &.cancelled {
+      color: hsl(0, 80, 60);
+      time {
+        text-decoration: line-through;
+      }
+    }
+    span.comment {
+      font-style: italic;
+    }
+    span.date.changed,
+    & > span.time.changed {
+      color: hsl(30, 100, 50);
+      &::after {
+        font-size: 0.8em;
+        content: "(changed)";
+      }
+    }
+  }
 }
-

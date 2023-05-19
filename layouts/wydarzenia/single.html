@@ -21,32 +21,10 @@
           {{ end }}
         </div>
         {{if .Params.eventDates }}
-            {{$events := partial "getEventsFromEventDates" (dict "timezone" "Europe/Warsaw" "eventDates" .Params.eventDates) }}
-            <div id="eventDates">
-            <ol>
-            {{ $s := newScratch }}
-            {{ $s.Set "year" "" }}
-            {{ range $key, $value := $events }}
-                {{ if ne ($s.Get "year") $value.startDateTime.Year }}
-                {{ if ne ($s.Get "year") "" }}</ol></li>{{end}}
-                    {{ $s.Set "year" $value.startDateTime.Year }}
-                    <li>{{ $s.Get "year" }}<ol>
-                {{ end }}
-                <li class="{{if $value.cancelled}}cancelled{{end}}">
-                    <span class="date{{if $value.dateChanged}} changed{{end}}">
-                        {{ time.Format "Monday, 2 January 2006" $value.startDateTime}}
-                    </span>
-                    <span class="time{{if $value.timeChanged}} changed{{end}}">
-                        {{ $value.startDateTime.Format "15:04" }}-{{ $value.endDateTime.Format "15:04" }}
-                    </span>
-                    {{if or $value.comment $value.cancelled}}: {{end}}
-                    {{if $value.cancelled}}<span class="cancelled">CANCELLED</span>{{end}}
-                    {{if $value.comment}}<span class="comment">{{ $value.comment }}</span>{{end}}
-                </li>
-            {{end}}
-            {{ if ne ($s.Get "year") "" }}</ol></li>{{end}}
-            </ol>
-            <a href="{{(.OutputFormats.Get "Calendar").RelPermalink | absURL}}">Download this calendar (tip: Go to your calendar software, click "Subcribe to calendar" and add this URL and the calendar will stay in sync!).</a>
+            {{$events := partial "getEventsFromEventDates" (dict "timezone" "Europe/Warsaw" "eventDates" .Params.eventDates "title" .Title "url" .RelPermalink) }}
+            <div class="eventDates singlePage">
+              {{ partial "eventList.html" (dict "events" $events "make_link" false) }}
+              <a href="{{(.OutputFormats.Get "Calendar").RelPermalink | absURL}}">Download this calendar (tip: Go to your calendar software, click "Subcribe to calendar" and add this URL and the calendar will stay in sync!).</a>
             </div>
         {{ end }}
         <div class="post-body">

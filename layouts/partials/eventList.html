@@ -1,0 +1,24 @@
+{{ $make_link := .make_link }}
+{{ range $key, $value := .events }}
+<article class="h-event{{if $value.cancelled}} cancelled{{end}}">
+    <time class="dt-start" datetime="{{ time.Format "2006-01-02 15:04:03" $value.startDateTime}}">
+      <span class="{{if $value.dateChanged}}changed{{end}}">
+          {{ time.Format "Monday, 2 January 2006" $value.startDateTime}}
+      </span>
+      <span class="{{if $value.timeChanged}} changed{{end}}">
+          {{ $value.startDateTime.Format "15:04" }}
+      </span>
+    </time>
+    <time class="dt-end" datetime="{{ time.Format "2006-01-02 15:04:03" $value.endDateTime}}">
+      <span class="{{if $value.timeChanged}} changed{{end}}">
+          {{ $value.endDateTime.Format "15:04" }}
+      </span>
+    </time>
+    {{if $value.cancelled}}<span class="cancelled">CANCELLED</span>{{end}}
+    {{ if $make_link }}<a href="{{$value.url}}" alt="{{$value.title}}">{{ end }}
+      <span class="p-name">{{$value.title}}</span>
+    {{ if $make_link }}</a>{{ end }}
+    {{if $value.comment}}<span class="comment">{{ $value.comment }}</span>{{end}}
+  </article>
+{{end}}
+
