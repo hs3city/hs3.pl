@@ -1,4 +1,4 @@
-{{ $make_link := .make_link }}
+{{ $long := .long }}
 {{ range $key, $value := .events }}
 <article class="h-event{{if $value.cancelled}} cancelled{{end}}">
     <time class="dt-start" datetime="{{ time.Format "2006-01-02 15:04:03" $value.startDateTime}}">
@@ -15,9 +15,15 @@
       </span>
     </time>
     {{if $value.cancelled}}<span class="cancelled">CANCELLED</span>{{end}}
-    {{ if $make_link }}<a href="{{$value.url}}" alt="{{$value.title}}">{{ end }}
-      <span class="p-name">{{$value.title}}</span>
-    {{ if $make_link }}</a>{{ end }}
+    {{ if $long }}
+      <a class="u-url" rel="bookmark" href="{{$value.page.RelPermalink}}" alt="{{$value.page.Title}}">
+        <h1 class="p-name">{{$value.page.Title}}</h1>
+      </a>
+      <span class="p-description">{{$value.page.Summary}}</h1>
+          {{ if .Params.featureImage }}
+          <img class="p-image" src="{{ .Params.featureImage | absURL }}" alt="blog-image">
+          {{ end }}
+    {{ end }}
     {{if $value.comment}}<span class="comment">{{ $value.comment }}</span>{{end}}
   </article>
 {{end}}

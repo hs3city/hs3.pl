@@ -13,8 +13,7 @@ Wants a dict as context, with the following keys:
         - endtime: the time (HH:MM) at which the event ends in this period
         - comment (optional): default comment for this event
 - timezone: The timezone in which 
-- title: title, just copied to all events
-- url: url, just copied to all events
+- page: page, just copied to all events
 
 
 returns a list of dicts with keys (note that boolean keys may be missing if false):
@@ -93,7 +92,7 @@ Known limitations:
 
 {{ $s := newScratch }}
 
-{{ $shared_base_dict := dict "title" .title "url" .url}}
+{{ $shared_base_dict := dict "page" .page }}
 {{ range .eventDates.periodics }}
     {{ range $key, $value := . }}
         {{if not (isset $ALLOWED_PERIODIC_KEYS $key)}}

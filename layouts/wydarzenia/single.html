@@ -21,9 +21,9 @@
           {{ end }}
         </div>
         {{if .Params.eventDates }}
-            {{$events := partial "getEventsFromEventDates" (dict "timezone" "Europe/Warsaw" "eventDates" .Params.eventDates "title" .Title "url" .RelPermalink) }}
-            <div class="eventDates singlePage">
-              {{ partial "eventList.html" (dict "events" $events "make_link" false) }}
+            {{$events := partial "getEventsFromEventDates" (dict "timezone" "Europe/Warsaw" "eventDates" .Params.eventDates "page" .) }}
+            <div class="eventDates">
+              {{ partial "eventList.html" (dict "events" $events "long" false) }}
               <a href="{{(.OutputFormats.Get "Calendar").RelPermalink | absURL}}">Download this calendar (tip: Go to your calendar software, click "Subcribe to calendar" and add this URL and the calendar will stay in sync!).</a>
             </div>
         {{ end }}

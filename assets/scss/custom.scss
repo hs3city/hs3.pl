@@ -16,16 +16,13 @@ img[src="/images/google-translate.png"] {
 
 .eventDates {
   text-align: left;
-  &.singlePage .p-name {
-    display: none;
-  }
-  .h-event {
+ .h-event {
     &::before {
       content: "\1F5D3";
     }
     time {
       font-family: monospace;
-      font-size: .8em;
+      font-size: 0.8em;
       &.dt-end::before {
         content: " - ";
       }
