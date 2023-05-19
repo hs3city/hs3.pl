@@ -14,7 +14,7 @@
       {{ end }}
     {{ end }}
     <span class="start-end-time">
-      <time class="dt-start" datetime="{{ time.Format "2006-01-02 15:04:03" $event.startDateTime}}">
+      <time class="dt-start" datetime="{{ time.Format "2006-01-02T15:04:03Z" $event.startDateTime.UTC}}">
         <span class="{{if $event.dateChanged}}changed{{end}}">
             {{ time.Format "Monday, 2 January 2006" $event.startDateTime}}
         </span>
@@ -22,7 +22,7 @@
             {{ $event.startDateTime.Format "15:04" }}
         </span>
       </time>
-      <time class="dt-end" datetime="{{ time.Format "2006-01-02 15:04:03" $event.endDateTime}}">
+      <time class="dt-end" datetime="{{ time.Format "2006-01-02T15:04:03Z" $event.endDateTime.UTC}}">
         <span class="{{if $event.timeChanged}} changed{{end}}">
             {{ $event.endDateTime.Format "15:04" }}
         </span>

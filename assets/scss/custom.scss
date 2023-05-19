@@ -16,6 +16,18 @@ img[src="/images/google-translate.png"] {
 
 .eventDates {
   text-align: left;
+    .past::before {
+      content: "past";
+      font-size: 2em;
+    }
+    .ongoing::before {
+      content: "ongoing";
+      font-size: 2em;
+    }
+    .upcoming::before {
+      content: "upcoming";
+      font-size: 2em;
+    }
   .h-event {
     time {
       font-family: monospace;

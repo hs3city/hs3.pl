@@ -20,17 +20,12 @@
           <img src="/images/wydarzenia/null.png" alt="blog-images">
           {{ end }}
         </div>
-        {{$events := partial "getEventsForPages.html" (dict
+        {{partial "eventViews.html" (dict
           "pages" (slice .)
           "default_timezone" "Europe/Warsaw"
-        )
-        }}
-        {{if $events}}
-            <div class="eventDates">
-              {{ partial "eventList.html" (dict "events" $events "long" false) }}
-              <a href="{{(.OutputFormats.Get "Calendar").RelPermalink | absURL}}">Download this calendar (tip: Go to your calendar software, click "Subcribe to calendar" and add this URL and the calendar will stay in sync!).</a>
-            </div>
-        {{ end }}
+          "long" false
+        )}}
+        <a href="{{(.OutputFormats.Get "Calendar").RelPermalink | absURL}}">Download this calendar (tip: Go to your calendar software, click "Subcribe to calendar" and add this URL and the calendar will stay in sync!).</a>
         <div class="post-body">
           {{ .Content }}
         </div>

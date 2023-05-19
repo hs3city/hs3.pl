@@ -1,0 +1,25 @@
+{{ partial "check-parameters.html" (dict
+  "name" "partials/eventViews.html"
+  "parameters" .
+  "requiredParameters" (slice "pages" "default_timezone" "long")
+  "optionalParameters" (slice )
+)}}
+{{ $pages := .pages }}
+{{ $default_timezone := .default_timezone }}
+{{ $long := .long }}
+
+{{$events := partial "getEventsForPages.html" (dict
+  "pages" $pages
+  "default_timezone" $default_timezone
+)}}
+
+{{if $events }}
+  <div class="eventDates">
+    {{ partial "eventList.html" (dict "events" $events "long" $long) }}
+  </div>
+
+  {{ .Scratch.Set "eventViews" true }}
+  {{ $js := resources.Get "js/eventViews.ts" | js.Build }}
+  <script src="{{ $js.RelPermalink }}">
+  </script>
+{{ end }}
