@@ -2,16 +2,6 @@
 title: Proszę mi to zautomatyzować
 tags: ["hs3", "akademia hs3", "testowanie", "automatyzacja", "mastermind"]
 featureImage: /images/wydarzenia/ptmz.png
-outputs:
-- html
-- calendar
-eventDates:
-    periodics:
-    - start: 2022-05-26
-      end: 2024-01-02
-      rule: every 14 days
-      starttime: 18:00
-      endtime: 20:00
 ---
 
 Spotkanie w formule [HS3 Academy](/tags/akademia-hs3), czyli uczymy się razem: wszyscy od wszystkich.
