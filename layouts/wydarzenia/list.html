@@ -38,6 +38,25 @@
   {{ $preferredPages.Add "pages" (slice $preferredPage) }}
 {{ end }}
 
+{{$events := partial "getEventsForPages.html" (dict
+  "pages" $allPages
+  "default_timezone" "Europe/Warsaw"
+)
+}}
+
+<section class="blog">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-10">
+        <div class="story-content">
+          <div class="eventDates">
+            {{ partial "eventList.html" (dict "events" $events "long" true) }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 <section class="blog">
   <div class="container">
     <div class="row">

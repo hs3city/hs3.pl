@@ -16,13 +16,13 @@ img[src="/images/google-translate.png"] {
 
 .eventDates {
   text-align: left;
- .h-event {
-    &::before {
-      content: "\1F5D3";
-    }
+  .h-event {
     time {
       font-family: monospace;
       font-size: 0.8em;
+      &.dt-start::before {
+        content: "\1F5D3";
+      }
       &.dt-end::before {
         content: " - ";
       }
@@ -42,6 +42,46 @@ img[src="/images/google-translate.png"] {
       &::after {
         font-size: 0.8em;
         content: "(changed)";
+      }
+    }
+    &.long {
+      --box-padding: 1rem;
+      --box-width: min(45rem, 100%);
+      --image-width: 15rem;
+      --image-height: calc(var(--image-width) / 16 * 9);
+
+      box-sizing: border-box;
+      width: var(--box-width);
+      border: 1px solid #ececec;
+      padding: var(--box-padding);
+      margin-bottom: 1.5em;
+      min-height: calc(var(--image-height) + 2 * var(--box-padding));
+      .start-end-time {
+        display: block;
+      }
+      .p-name {
+        display: block;
+        font-size: 1.2em;
+        line-height: 1.2em;
+
+      }
+      .p-image {
+        float: right;
+        width: var(--image-width);
+        height: var(--image-height);
+        margin-left: 1em;
+        margin-bottom: .7em;
+      }
+      @media only screen and (max-width: 35rem) {
+        & {
+          --image-width: var(--box-width);
+          .p-image {
+            margin-left: 0em;
+          }
+        }
+      }
+      a {
+        color: unset;
       }
     }
   }

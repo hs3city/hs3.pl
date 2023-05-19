@@ -1,30 +1,40 @@
+{{ partial "check-parameters.html" (dict
+  "name" "layouts/partials/getEventsForPages.html"
+  "parameters" .
+  "requiredParameters" (slice "events" "long")
+  "optionalParameters" (slice))
+}}
 {{ $long := .long }}
-{{ range $key, $value := .events }}
-<article class="h-event{{if $value.cancelled}} cancelled{{end}}">
-    <time class="dt-start" datetime="{{ time.Format "2006-01-02 15:04:03" $value.startDateTime}}">
-      <span class="{{if $value.dateChanged}}changed{{end}}">
-          {{ time.Format "Monday, 2 January 2006" $value.startDateTime}}
-      </span>
-      <span class="{{if $value.timeChanged}} changed{{end}}">
-          {{ $value.startDateTime.Format "15:04" }}
-      </span>
-    </time>
-    <time class="dt-end" datetime="{{ time.Format "2006-01-02 15:04:03" $value.endDateTime}}">
-      <span class="{{if $value.timeChanged}} changed{{end}}">
-          {{ $value.endDateTime.Format "15:04" }}
-      </span>
-    </time>
-    {{if $value.cancelled}}<span class="cancelled">CANCELLED</span>{{end}}
+{{ range $event := .events }}
+<article class="h-event{{if $event.cancelled}} cancelled{{end}}{{if $long}} long{{ end }}">
     {{ if $long }}
-      <a class="u-url" rel="bookmark" href="{{$value.page.RelPermalink}}" alt="{{$value.page.Title}}">
-        <h1 class="p-name">{{$value.page.Title}}</h1>
-      </a>
-      <span class="p-description">{{$value.page.Summary}}</h1>
-          {{ if .Params.featureImage }}
-          <img class="p-image" src="{{ .Params.featureImage | absURL }}" alt="blog-image">
-          {{ end }}
+      <a class="u-url" rel="bookmark" href="{{$event.page.RelPermalink}}" alt="{{$event.page.Title}}">
+      {{ if $event.page.Params.featureImage }}
+        <img class="p-image" src="{{ $event.page.Params.featureImage | absURL }}" alt="blog-image">
+      {{ end }}
     {{ end }}
-    {{if $value.comment}}<span class="comment">{{ $value.comment }}</span>{{end}}
+    <span class="start-end-time">
+      <time class="dt-start" datetime="{{ time.Format "2006-01-02 15:04:03" $event.startDateTime}}">
+        <span class="{{if $event.dateChanged}}changed{{end}}">
+            {{ time.Format "Monday, 2 January 2006" $event.startDateTime}}
+        </span>
+        <span class="{{if $event.timeChanged}} changed{{end}}">
+            {{ $event.startDateTime.Format "15:04" }}
+        </span>
+      </time>
+      <time class="dt-end" datetime="{{ time.Format "2006-01-02 15:04:03" $event.endDateTime}}">
+        <span class="{{if $event.timeChanged}} changed{{end}}">
+            {{ $event.endDateTime.Format "15:04" }}
+        </span>
+      </time>
+    </span>
+    {{if $event.cancelled}}<span class="cancelled">CANCELLED</span>{{end}}
+    {{if $event.comment}}<span class="comment">{{ $event.comment }}</span>{{end}}
+    {{ if $long }}
+        <h1 class="p-name">{{$event.page.Title}}</h1>
+      <span class="p-description">{{$event.page.Summary}}</span>
+      </a>
+    {{ end }}
   </article>
 {{end}}
 
