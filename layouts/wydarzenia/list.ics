@@ -1,3 +1,4 @@
+
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:{{.Title}}
@@ -34,7 +35,7 @@ END:VTIMEZONE
     {{end}}
   {{end}}
 {{end}}
-{{ range first 10 ($s.GetSortedMapValues "events") }}
+{{ range ($s.GetSortedMapValues "events") }}
 {{ range . }}
 {{if .Params.eventDates -}}
 {{- $events := partial "getEventsFromEventDates" (dict "timezone" "Europe/Warsaw" "eventDates" .Params.eventDates) }}
@@ -52,9 +53,8 @@ LOCATION:TBD
 URL:{{.Permalink}}
 END:VEVENT
 {{end}}
-{{end}}
-
-{{end}}
-{{end}}
-
 END:VCALENDAR
+{{end}}
+
+{{end}}
+{{end}}
