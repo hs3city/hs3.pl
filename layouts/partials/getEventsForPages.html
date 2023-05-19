@@ -1,0 +1,43 @@
+{{/* documentation see bottom */}}
+{{ partial "check-parameters.html" (dict
+  "name" "layouts/partials/getEventsForPages.html"
+  "parameters" .
+  "requiredParameters" (slice "pages" "default_timezone")
+  "optionalParameters" (slice))
+}}
+
+{{ $pages := .pages }}
+{{ $default_timezone := .default_timezone }}
+
+{{ $s := newScratch }}
+{{range $page := $pages}}
+  {{if $page.Params.eventDates -}}
+    {{$timezone := (default $default_timezone $page.Params.eventTimezone) }}
+    {{$events := (partial "getEventsFromEventDates" (dict
+        "timezone" $timezone
+        "eventDates" $page.Params.eventDates
+        "page" $page
+    ))}}
+    {{range $event := $events }}
+      {{$uniqueKey := (printf "%s-%d" (string $event.startDateTime) (len (default (slice) ($s.Get "events"))))}}
+      {{$s.SetInMap "events" $uniqueKey $event}}
+    {{end}}
+  {{end}}
+{{end}}
+{{  return ($s.GetSortedMapValues "events") }}
+
+{{/*
+Given a number of pages (possibly one), it will look for pages with a .Params.eventDates and extract the events from those pages.
+Events will be in .Params.eventTimezone, or, if not present, in default_timezone.
+
+Result is a slice of events, sorted by startDateTime (events with the same startDateTime are sorted by order of the page in the "pages" input)
+
+Example:
+
+{{$events := partial "getEventsForPages.html" (dict
+  "pages" (slice .)
+  "default_timezone" "Europe/Warsaw"
+)
+}}
+
+*/}}

@@ -1,5 +1,5 @@
 {{if .Params.eventDates -}}
-{{- $events := partial "getEventsFromEventDates" (dict "timezone" "Europe/Warsaw" "eventDates" .Params.eventDates) }}
+{{- $events := partial "getEventsFromEventDates" (dict "timezone" "Europe/Warsaw" "eventDates" .Params.eventDates "page" .) }}
 BEGIN:VCALENDAR
 VERSION:2.0
 PRODID:{{.Title}}

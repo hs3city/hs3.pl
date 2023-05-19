@@ -1,37 +1,11 @@
-{{/*
-Wants a dict as context, with the following keys:
-- eventDates: The eventdates dict. This dict has 4 optional keys:
-    - periodics: list of dicts with keys:
-        - start: the start-date (YYYY-MM-DD) for the period that this periodic is active
-        - end: the end-date (YYYY-MM-DD) for this period. The range is EXCLUDING this date
-        - rule: The rule defining which days in this period the event is happening
-            - "(1) (2) of the month" (e.g. "last Friday of the month")
-                - (1) is one of "first|second|third|fourth|fifth|last|penultimate"
-                - (2) is one of the names of the days of the week in English
-            - "every X days" (e.g. every 14 days)
-        - starttime: the time (HH:MM) at which the event starts in this period
-        - endtime: the time (HH:MM) at which the event ends in this period
-        - comment (optional): default comment for this event
-- timezone: The timezone in which 
-- page: page, just copied to all events
+{{/* documentation see bottom */}}
+{{ partial "check-parameters.html" (dict
+  "name" "layouts/partials/getEventsFromEventDates.html"
+  "parameters" .
+  "requiredParameters" (slice "eventDates" "timezone" "page")
+  "optionalParameters" (slice))
+}}
 
-
-returns a list of dicts with keys (note that boolean keys may be missing if false):
-    - startDateTime: time.Time in the given timezone
-    - endDateTime: time.Time in the given timezone. Note that if endtime < starttime, the enddate is going to be startdate + 1
-    - cancelled: true if cancelled
-    - source: one of "rule", "rule+change", "extra"
-    - dateChanged: true if rule+change and the date was changed
-    - timeChanged: true if rule+change and the time was changed
-    - comment: comment for this event, or missing
-
-The result it sorted by startDateTime of the event.
-
-
-Known limitations:
-- If the periodics work so that there are multiple events on the same day, the latter event will overwrite the former one.
-
-*/}}
 
 {{ define "partials/GetStartEndDateTime.html" }}
     {{ $date := .date }}{{/* Date object */}}
@@ -213,3 +187,39 @@ Known limitations:
 {{end}}
 
 {{ return ($s.GetSortedMapValues "return") }}
+
+{{/*
+Wants a dict as context, with the following keys:
+- eventDates: The eventdates dict. This dict has 4 optional keys:
+    - periodics: list of dicts with keys:
+        - start: the start-date (YYYY-MM-DD) for the period that this periodic is active
+        - end: the end-date (YYYY-MM-DD) for this period. The range is EXCLUDING this date
+        - rule: The rule defining which days in this period the event is happening
+            - "(1) (2) of the month" (e.g. "last Friday of the month")
+                - (1) is one of "first|second|third|fourth|fifth|last|penultimate"
+                - (2) is one of the names of the days of the week in English
+            - "every X days" (e.g. every 14 days)
+        - starttime: the time (HH:MM) at which the event starts in this period
+        - endtime: the time (HH:MM) at which the event ends in this period
+        - comment (optional): default comment for this event
+- timezone: The timezone in which 
+- page: page, just copied to all events
+
+
+returns a list of dicts with keys (note that boolean keys may be missing if false):
+    - startDateTime: time.Time in the given timezone
+    - endDateTime: time.Time in the given timezone. Note that if endtime < starttime, the enddate is going to be startdate + 1
+    - cancelled: true if cancelled
+    - source: one of "rule", "rule+change", "extra"
+    - dateChanged: true if rule+change and the date was changed
+    - timeChanged: true if rule+change and the time was changed
+    - comment: comment for this event, or missing
+
+The result it sorted by startDateTime of the event.
+
+
+Known limitations:
+- If the periodics work so that there are multiple events on the same day, the latter event will overwrite the former one.
+
+*/}}
+

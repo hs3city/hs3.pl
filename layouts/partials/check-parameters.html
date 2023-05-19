@@ -1,0 +1,36 @@
+{{/* documentation see bottom */}}
+{{if not (reflect.IsSlice .requiredParameters) }}{{errorf "No requiredParameters parameter"}}{{end}}
+{{if not (reflect.IsSlice .optionalParameters) }}{{errorf "No optionalParameters parameter"}}{{end}}
+{{if not (reflect.IsMap .parameters) }}{{errorf "No parameters parameter"}}{{end}}
+{{ $scratch := newScratch }}
+{{ $scratch.Add "params" (slice) }}{{ range $key,$value := .parameters }}{{ $scratch.Add "params" (slice $key) }}{{end}}
+{{ $extra := (complement .requiredParameters .optionalParameters ($scratch.Get "params")) }}
+{{ $missing := (complement ($scratch.Get "params") .requiredParameters) }}
+{{ if (len $missing) }}{{ errorf "Missing parameters for \"%s\": %v" .name $missing}}{{end}}
+{{ if (len $extra) }}{{ errorf "Unrecognised parameters for \"%s\": %v" .name $extra}}{{end}}
+
+{{/*
+This shortcode allows one to enforce named parameters on a shortcode.
+It will error if any parameters in requiredParameters are missing
+Or if there are any parameters that are not in either requiredParameters or optionalParameters.
+
+It cannot enforce parameter types (yet).
+
+Example usage:
+
+// in Shortcode
+{{ partial "check-parameters.html" (dict
+  "name" .Name
+  "parameters" .Params
+  "requiredParameters" (slice "caption")
+  "optionalParameters" (slice "nr-items-horizontally"))
+}}
+
+// in Partial
+{{ partial "check-parameters.html" (dict
+  "name" "layouts/partials/getEventsFromEventDates.html"
+  "parameters" .
+  "requiredParameters" (slice "eventDates" "timezone" "page")
+  "optionalParameters" (slice))
+}}
+*/}}
