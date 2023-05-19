@@ -9,3 +9,4 @@ In order to run the website locally:
 - Go to http:/localhost:1313/
 
 Also read the [I18n notes](i18n.md).
+Also (todo) read the calendar notes. 
