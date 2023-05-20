@@ -1,11 +1,33 @@
 {{/* documentation see bottom */}}
 {{ partial "check-parameters.html" (dict
-  "name" "layouts/partials/getEventsFromEventDates.html"
+  "name" "layouts/partials/getEventsFromPage.html"
   "parameters" .
-  "requiredParameters" (slice "eventDates" "timezone" "page")
+  "requiredParameters" (slice "page")
   "optionalParameters" (slice))
 }}
-
+{{ $page := .page }}
+{{ $eventInfo := default (dict) $page.Params.eventInfo }}
+{{ partial "check-parameters.html" (dict
+  "name" "layouts/partials/getEventsFromPage.html -- eventInfo"
+  "parameters" $eventInfo
+  "requiredParameters" (slice)
+  "optionalParameters" (slice "dates" "timezone" "organizer"))
+}}
+{{ $eventInfoDates := (default (dict) $eventInfo.dates) }}
+{{ partial "check-parameters.html" (dict
+  "name" "layouts/partials/getEventsFromPage.html -- eventInfo.dates"
+  "parameters" $eventInfoDates
+  "requiredParameters" (slice)
+  "optionalParameters" (slice "periodics" "cancelled" "extra" "changes"))
+}}
+{{ range $eventInfoDates.periodics }}
+  {{ partial "check-parameters.html" (dict
+    "name" "layouts/partials/getEventsFromEventInfo.html -- eventInfo.dates.periodics"
+    "parameters" .
+    "requiredParameters" (slice "start" "end" "rule" "starttime" "endtime" )
+    "optionalParameters" (slice "comment"))
+  }}
+{{ end }}
 
 {{ define "partials/GetStartEndDateTime.html" }}
     {{ $date := .date }}{{/* Date object */}}
@@ -23,7 +45,7 @@
     {{ return (dict "startDateTime" $startdatetime "endDateTime" $enddatetime) }}
 {{ end }}
 
-{{ $TIMEZONE := .timezone }}
+{{ $TIMEZONE := $eventInfo.timezone }}
 {{ $ORDINAL_LOOKUP := dict
     "first" 1
     "second" 2
@@ -42,37 +64,11 @@
     "Saturday" 6
 }}
 {{ $DAYS_IN_WEEK := 7 }}
-{{ $ALLOWED_TOPLEVEL_KEYS := dict
-    "periodics" false
-    "cancelled" false
-    "extra" false
-    "changes" false
-}}
-{{ $ALLOWED_PERIODIC_KEYS := dict
-    "start" true
-    "end" true
-    "rule" true
-    "starttime" true
-    "endtime" true
-    "comment" false
-}}
-
-{{/* extra keys check */}}
-{{ range $key, $value := .eventDates }}
-    {{if not (isset $ALLOWED_TOPLEVEL_KEYS $key)}}
-        {{ errorf "Key \"%s\" not allowed in eventDates" $key }}
-    {{end}}
-{{ end }}
 
 {{ $s := newScratch }}
 
-{{ $shared_base_dict := dict "page" .page }}
-{{ range .eventDates.periodics }}
-    {{ range $key, $value := . }}
-        {{if not (isset $ALLOWED_PERIODIC_KEYS $key)}}
-            {{ errorf "Key \"%s\" not allowed in periodics" $key }}
-        {{end}}
-    {{ end }}
+{{ $shared_base_dict := dict "page" $page "organizer" $eventInfo.organizer}}
+{{ range $eventInfoDates.periodics }}
     {{ $periodic := . }}
     {{ $start := time .start $TIMEZONE }}
     {{ $end := time .end $TIMEZONE }}
@@ -112,14 +108,14 @@
     {{ end }}
 {{ end }}
 
-{{ range $key, $value := .eventDates.cancelled }}
+{{ range $key, $value := $eventInfoDates.cancelled }}
     {{ if not (isset ($s.Get "events") $key) }}
         {{ errorf "Trying to cancel event on %s but no such event" $key }}
     {{ end }}
-    {{ $s.SetInMap "events" $key (merge (index ($s.Get "events") $key) (dict "cancelled" true)) }}
+    {{ $s.SetInMap "events" $key (merge (index ($s.Get "events") $key) (dict "cancelled" true "comment" $value)) }}
 {{ end }}
 
-{{ range $key, $value := .eventDates.extra }}
+{{ range $key, $value := $eventInfoDates.extra }}
     {{ $splitkey := split $key " " }}
     {{ $date := time (index $splitkey 0) $TIMEZONE}}
     {{ $splittime := split (index $splitkey 1) "-" }}
@@ -133,7 +129,7 @@
     {{ $s.SetInMap "events" $datestring (merge $startEndDT (dict "comment" $value "source" "extra")) }}
 {{ end }}
 
-{{ range $key, $value := .eventDates.changes }}
+{{ range $key, $value := $eventInfoDates.changes }}
     {{/* TODO some regex to check it has the right format */}}
     {{ $splitkey := split $key "->" }}
     {{ $from := index $splitkey 0 }}
@@ -196,9 +192,12 @@
 {{ return  $return_with_local_datetimes }}
 
 {{/*
-Wants a dict as context, with the following keys:
-- eventDates: The eventdates dict. This dict has 4 optional keys:
-    - periodics: list of dicts with keys:
+Wants a page as context, with the following keys:
+The page can have a key in the front-matter:
+- eventInfo(optional):
+  - timezone(optional): the timezone
+  - dates(optional):
+    - periodics(optional): list of dicts with keys:
         - start: the start-date (YYYY-MM-DD) for the period that this periodic is active
         - end: the end-date (YYYY-MM-DD) for this period. The range is EXCLUDING this date
         - rule: The rule defining which days in this period the event is happening
@@ -209,13 +208,18 @@ Wants a dict as context, with the following keys:
         - starttime: the time (HH:MM) at which the event starts in this period
         - endtime: the time (HH:MM) at which the event ends in this period
         - comment (optional): default comment for this event
-- timezone: The timezone in which 
-- page: page, just copied to all events
+    - extra(optional): extra, one-off, meetings; map, key of form "2022-12-07 18:00-19:00", value free text
+    - cancelled(optional): cancelled meetings; map, key of form "2022-12-07", value free text
+    - changes(optional): changes to regular schedule. Key one of the following formats (value free text):
+      - 2022-10-28 -- only extra message for this meeting
+      - 2022-10-28->2022-10-27 -- date change
+      - 2022-10-28->19:00-21:00 -- time change
+      - 2022-10-28->2022-10-27 19:00-21:00 -- date and time change
 
 
 returns a list of dicts with keys (note that boolean keys may be missing if false):
-    - startDateTime: time.Time in the given timezone
-    - endDateTime: time.Time in the given timezone. Note that if endtime < starttime, the enddate is going to be startdate + 1
+    - startDateTime: time.Time in the site local timezone
+    - endDateTime: time.Time in the site local timezone. Note that if endtime < starttime, the enddate is going to be startdate + 1
     - cancelled: true if cancelled
     - source: one of "rule", "rule+change", "extra"
     - dateChanged: true if rule+change and the date was changed
@@ -226,7 +230,9 @@ The result it sorted by startDateTime of the event.
 
 
 Known limitations:
+- Events cannot last longer than 24 hours
 - If the periodics work so that there are multiple events on the same day, the latter event will overwrite the former one.
+- During DST change, no way to specify if you mean time before or after change (basically what the `is_dst` in `pytz` is for)
 
 */}}
 

@@ -1,16 +1,14 @@
 {{ partial "check-parameters.html" (dict
   "name" "partials/eventViews.html"
   "parameters" .
-  "requiredParameters" (slice "pages" "default_timezone" "long")
+  "requiredParameters" (slice "pages" "long")
   "optionalParameters" (slice )
 )}}
 {{ $pages := .pages }}
-{{ $default_timezone := .default_timezone }}
 {{ $long := .long }}
 
 {{$events := partial "getEventsForPages.html" (dict
   "pages" $pages
-  "default_timezone" $default_timezone
 )}}
 
 {{if $events }}

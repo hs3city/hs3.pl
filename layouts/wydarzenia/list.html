@@ -40,7 +40,6 @@
 
 {{$events := partial "getEventsForPages.html" (dict
   "pages" $allPages
-  "default_timezone" "Europe/Warsaw"
 )
 }}
 
@@ -51,7 +50,6 @@
         <div class="story-content">
           {{partial "eventViews.html" (dict
             "pages" $allPages
-            "default_timezone" "Europe/Warsaw"
             "long" true
           )}}
         </div>
