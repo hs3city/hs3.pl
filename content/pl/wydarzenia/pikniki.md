@@ -8,7 +8,6 @@ eventInfo:
   organizer:
     name: Hackerspace Trójmiasto
     email: piknik@hs3.pl
-  timezone: Europe/Helsinki
   dates:
     periodics:
     - start: 2022-10-01
