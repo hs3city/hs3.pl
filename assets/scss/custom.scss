@@ -42,9 +42,13 @@ img[src="/images/google-translate.png"] {
     max-height: 80vh;
   }
 
+  &.long.calendar .grid-body, &.calendar .grid-body {
+    max-height: unset;
+  }
+
   .grid-body {
     grid-area: 2 / 1 / 2 / 5;
-    max-height: 20em;
+    max-height: 10em;
     min-height: 3em;
     overflow-y: scroll;
     display: none;
