@@ -186,7 +186,14 @@
     {{ $s.SetInMap "return" (.startDateTime.Format "2006-01-02T15:04:05") (merge . $shared_base_dict) }}
 {{end}}
 
-{{ return ($s.GetSortedMapValues "return") }}
+{{/* Convert all datetimes to local timezone */}}
+{{ $return_with_local_datetimes := slice }}
+{{ range $event := ($s.GetSortedMapValues "return") }}
+  {{ $event_with_local_datetimes := merge $event (dict "startDateTime" $event.startDateTime.Local "endDateTime" $event.endDateTime.Local ) }}
+  {{ $return_with_local_datetimes = append $event_with_local_datetimes $return_with_local_datetimes  }}
+{{ end }}
+
+{{ return  $return_with_local_datetimes }}
 
 {{/*
 Wants a dict as context, with the following keys:

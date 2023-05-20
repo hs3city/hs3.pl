@@ -19,7 +19,7 @@
         "page" $page
     ))}}
     {{range $event := $events }}
-      {{$uniqueKey := (printf "%s-%d" (string $event.startDateTime) (len (default (slice) ($s.Get "events"))))}}
+      {{$uniqueKey := (printf "%s-%d" (string $event.startDateTime.UTC) (len (default (slice) ($s.Get "events"))))}}
       {{$s.SetInMap "events" $uniqueKey $event}}
     {{end}}
   {{end}}

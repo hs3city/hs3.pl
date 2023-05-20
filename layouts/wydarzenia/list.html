@@ -49,9 +49,11 @@
     <div class="row align-items-center">
       <div class="col-lg-10">
         <div class="story-content">
-          <div class="eventDates">
-            {{ partial "eventList.html" (dict "events" $events "long" true) }}
-          </div>
+          {{partial "eventViews.html" (dict
+            "pages" $allPages
+            "default_timezone" "Europe/Warsaw"
+            "long" true
+          )}}
         </div>
       </div>
     </div>

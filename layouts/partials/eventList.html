@@ -1,5 +1,5 @@
 {{ partial "check-parameters.html" (dict
-  "name" "layouts/partials/getEventsForPages.html"
+  "name" "layouts/partials/eventList.html"
   "parameters" .
   "requiredParameters" (slice "events" "long")
   "optionalParameters" (slice))
@@ -14,7 +14,7 @@
       {{ end }}
     {{ end }}
     <span class="start-end-time">
-      <time class="dt-start" datetime="{{ time.Format "2006-01-02T15:04:03Z" $event.startDateTime.UTC}}">
+      <time class="dt-start" datetime="{{ time.Format "2006-01-02T15:04:05-0700" $event.startDateTime}}">
         <span class="{{if $event.dateChanged}}changed{{end}}">
             {{ time.Format "Monday, 2 January 2006" $event.startDateTime}}
         </span>
@@ -22,7 +22,7 @@
             {{ $event.startDateTime.Format "15:04" }}
         </span>
       </time>
-      <time class="dt-end" datetime="{{ time.Format "2006-01-02T15:04:03Z" $event.endDateTime.UTC}}">
+      <time class="dt-end" datetime="{{ time.Format "2006-01-02T15:04:05-0700" $event.endDateTime}}">
         <span class="{{if $event.timeChanged}} changed{{end}}">
             {{ $event.endDateTime.Format "15:04" }}
         </span>
