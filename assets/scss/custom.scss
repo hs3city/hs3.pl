@@ -19,14 +19,27 @@ img[src="/images/google-translate.png"] {
   margin: 1em 0 1.5em;
   display: grid;
   grid-template-columns: repeat(3, Min(10em, 30%)) auto;
-  grid-template-rows: 2em auto;
+  grid-template-rows: 2em 2em auto;
+  .ics-link {
+    grid-area: 1 / 1 / 1 / 5;
+    padding-left: 10px;
+    height: 2em;
+    overflow: hidden;
+    &::before {
+      content: "\1F913 ";
+    }
+  }
   .grid-tab {
     user-select: none;
     text-align: center;
     cursor: pointer;
-    border-right: 1px solid Hsl(0 0% 20%);
+    border: 1px solid Hsl(0 0% 20%);
+    border-left: none;
     background-color: Hsl(0 0% 80%);
     color: Hsl(0 0% 20%);
+  }
+  .grid-tab-filler {
+    border-bottom: 1px solid Hsl(0 0% 20%);
   }
   &.upcoming > .grid-tab.upcoming,
   &.past > .grid-tab.past,
@@ -47,12 +60,11 @@ img[src="/images/google-translate.png"] {
   }
 
   .grid-body {
-    grid-area: 2 / 1 / 2 / 5;
+    grid-area: 3 / 1 / 3 / 5;
     max-height: 10em;
     min-height: 3em;
     overflow-y: scroll;
     display: none;
-    border-top: 1px solid Hsl(0 0% 20%);
     padding: .7em;
   }
   &.upcoming > .grid-body.upcoming,

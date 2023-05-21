@@ -1,0 +1,24 @@
+{{- partial "check-parameters.html" (dict
+  "name" "partials/eventViews.html"
+  "parameters" .
+  "requiredParameters" (slice "pages")
+  "optionalParameters" (slice )
+) -}}
+{{- $pages := .pages -}}
+{{- $events := partial "getEventsForPages.html" (dict
+  "pages" $pages
+) -}}
+{{- range $event := $events}}
+BEGIN:VEVENT
+{{ with $event.organizer}}ORGANIZER;CN="{{ .name }}":mailto:{{ .email }}{{ end }}
+SUMMARY:{{if $event.cancelled}}CANCELLED: {{end}}{{$event.page.Title}}{{with $event.comment}} -- {{.}}{{end}}
+UID:{{$event.page.Title | urlize}}-{{dateFormat "2006-01-02" $event.startDateTime}}@hs3.pl
+SEQUENCE:0
+STATUS:{{if $event.cancelled}}CANCELLED{{else}}CONFIRMED{{end}}
+DTSTAMP:{{dateFormat "20060102T150405Z" $event.startDateTime.UTC}}
+DTSTART:{{dateFormat "20060102T150405Z" $event.startDateTime.UTC}}
+DTEND:{{dateFormat "20060102T150405Z" $event.endDateTime.UTC}}
+LOCATION:TBD
+URL:{{$event.page.Permalink}}
+END:VEVENT
+{{end -}}

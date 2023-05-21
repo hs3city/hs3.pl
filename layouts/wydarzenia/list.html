@@ -28,20 +28,10 @@
 </section>
 
 {{ $allPages := where (where .Site.AllPages "Type" "==" $.Page.Type) "Kind" "page" }}
-{{ $pageByTranslationKey := newScratch }}
-{{range $allPages }}
-{{ $pageByTranslationKey.Add .TranslationKey (slice .) }}
-{{end}}
-{{ $preferredPages:= newScratch }}
-{{ range $key,$pages := $pageByTranslationKey.Values }}
-  {{ $preferredPage := index (where $pages "Language.Lang" $.Page.Language.Lang | default $pages) 0 }}
-  {{ $preferredPages.Add "pages" (slice $preferredPage) }}
-{{ end }}
-
-{{$events := partial "getEventsForPages.html" (dict
+{{ $pagesToShow := partial "getPreferredLanguagePages.html" (dict
   "pages" $allPages
-)
-}}
+  "preferredLanguage" .Lang
+) }}
 
 <section class="blog">
   <div class="container">
@@ -49,8 +39,9 @@
       <div class="col-lg-10">
         <div class="story-content">
           {{partial "eventViews.html" (dict
-            "pages" $allPages
+            "pages" $pagesToShow
             "long" true
+            "icsUrl" ((.OutputFormats.Get "calendar").RelPermalink | absURL)
           )}}
         </div>
       </div>
@@ -60,7 +51,7 @@
 <section class="blog">
   <div class="container">
     <div class="row">
-      {{ range (.Paginate ($preferredPages.Get "pages")).Pages }}
+      {{ range (.Paginate $pagesToShow).Pages }}
       <div class="col-lg-4">
         <article class="blog-post">
           {{ if .Params.featureImage }}

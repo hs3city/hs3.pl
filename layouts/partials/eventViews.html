@@ -1,11 +1,12 @@
 {{ partial "check-parameters.html" (dict
   "name" "partials/eventViews.html"
   "parameters" .
-  "requiredParameters" (slice "pages" "long")
-  "optionalParameters" (slice )
+  "requiredParameters" (slice "pages" "long" "icsUrl")
+  "optionalParameters" (slice)
 )}}
 {{ $pages := .pages }}
 {{ $long := .long }}
+{{ $icsUrl := .icsUrl }}
 
 {{$events := partial "getEventsForPages.html" (dict
   "pages" $pages
@@ -15,11 +16,13 @@
   {{/* separating in upcoming and past events; note, this is compared to buildtime, and only used if JS fails */}}
   {{ $now := now }}
   {{ $past := sort (where $events ".startDateTime" "<" $now) ".startDateTime" "desc" }}
-{{ $future := where $events "startDateTime" ">=" $now }}
-<div class="eventDates upcoming{{if $long}} long{{end}}">
-  <div class="grid-tab upcoming">{{ site.Params.events.upcoming }}</div>
+  {{ $future := where $events "startDateTime" ">=" $now }}
+  <div class="eventDates upcoming{{if $long}} long{{end}}">
+  <div class="ics-link"><a href="{{ $icsUrl }}" title="{{ site.Params.events.icsLinkExplain }}">{{ site.Params.events.icsLink }}</a></div>
+    <div class="grid-tab upcoming">{{ site.Params.events.upcoming }}</div>
     <div class="grid-tab past">{{ site.Params.events.past }}</div>
     <div class="grid-tab calendar">{{ site.Params.events.calendar }}</div>
+    <div class="grid-tab-filler"></div>
     <div class="grid-body upcoming">
       {{ partial "eventList.html" (dict "events" $future "long" $long) }}
     </div>

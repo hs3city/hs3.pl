@@ -52,7 +52,8 @@
     {{ return (dict "startDateTime" $startdatetime "endDateTime" $enddatetime) }}
 {{ end }}
 
-{{ $TIMEZONE := $eventInfo.timezone }}
+{{ $site_timezone := (time "2002-01-02").Location }}
+{{ $TIMEZONE := $eventInfo.timezone | default $site_timezone}}
 {{ $ORDINAL_LOOKUP := dict
     "first" 1
     "second" 2

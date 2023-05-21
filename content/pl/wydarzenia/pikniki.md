@@ -1,13 +1,9 @@
 ---
 title: Pikniki Hackerspace Trójmiasto
 tags: ["hs3", "piknik"]
-outputs:
-- html
-- calendar
 eventInfo:
   organizer:
     name: Hackerspace Trójmiasto
-    email: piknik@hs3.pl
   dates:
     periodics:
     - start: 2022-10-01
