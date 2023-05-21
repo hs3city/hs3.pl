@@ -25,6 +25,11 @@ openingDesc = "Otwarte całą dobę dla osób z kluczem."
 openingHours = "Jeśli nie masz klucza [zapytaj na Discord](https://hs3.pl/join) czy ktoś jest w środku."
 phone = "+48 661 691 133"
 
+[languages.pl.params.events]
+upcoming = "Nadchodzące"
+past = "Przeszłe"
+calendar = "Kalendarz"
+
 [languages.en]
 title = "Hackerspace Trójmiasto (Three-city)"
 contentDir = 'content/en'
@@ -45,6 +50,12 @@ email = "kontakt@hs3.pl"
 openingDesc = "Open 24/7 for members with a key."
 openingHours = "For members without key and non-members: [ask on Discord](https://hs3.pl/join) if someone is there (in English or Polish)."
 phone = "+48 661 691 133"
+
+[languages.en.params.events]
+upcoming = "Upcoming"
+past = "Past"
+calendar = "Calendar"
+
 
 [params.map]
 APIkey = "AIzaSyC9rV6yesIygoVKTD6QLf_iCa9eiIIHqZ0"

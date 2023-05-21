@@ -15,6 +15,109 @@ img[src="/images/google-translate.png"] {
 }
 
 .eventDates {
+  border: 1px solid Hsl(0 0% 20%);
+  margin: 1em 0 1.5em;
+  display: grid;
+  grid-template-columns: repeat(3, Min(10em, 30%)) auto;
+  grid-template-rows: 2em auto;
+  .grid-tab {
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
+    border-right: 1px solid Hsl(0 0% 20%);
+    background-color: Hsl(0 0% 80%);
+    color: Hsl(0 0% 20%);
+  }
+  &.upcoming > .grid-tab.upcoming,
+  &.past > .grid-tab.past,
+  &.calendar > .grid-tab.calendar,
+  {
+    background-color: unset;
+    padding-top: .2em;
+    font-weight: bold;
+    border-bottom: none;
+  }
+
+  &.long .grid-body {
+    max-height: 80vh;
+  }
+
+  &.long.calendar .grid-body, &.calendar .grid-body {
+    max-height: unset;
+  }
+
+  .grid-body {
+    grid-area: 2 / 1 / 2 / 5;
+    max-height: 10em;
+    min-height: 3em;
+    overflow-y: scroll;
+    display: none;
+    border-top: 1px solid Hsl(0 0% 20%);
+    padding: .7em;
+  }
+  &.upcoming > .grid-body.upcoming,
+  &.past > .grid-body.past,
+  &.calendar > .grid-body.calendar,
+  {
+    display: block;
+  }
+  .grid-body.calendar .month-calendar {
+    border: .5px solid Hsl(0 0% 20%);
+    display: grid;
+    grid-template-columns: 1.5em repeat(7, minmax(0, 1fr));
+    grid-template-rows: 1.5em 1.5em repeat(var(--nr-week-rows), 5em);
+    > * {
+      border: .5px solid Hsl(0 0% 20%);
+      &.weekday-name {
+        text-align: center;
+      }
+      &.header {
+        grid-area: 1 / 1 / 1 / 9;
+        text-align: center;
+        .month-name {
+          display: inline-block;
+          width: 12em;
+        }
+        .previous-month, .next-month {
+          user-select: none;
+          padding: 0 .8em;
+          cursor: pointer;
+        }
+      }
+      &.weeknumber {
+        font-size: .6em;
+        text-align: center;
+        color: Hsl(0, 0%, 60%);
+      }
+      &.calendar-day {
+        &.today:not(other-month) {
+          background-color: Hsl(40, 60%, 80%);
+        }
+        &.other-month {
+          background-color: Hsl(0, 0%, 80%);
+        }
+        .daynumber {
+          color: black;
+          font-size: .8em;
+        }
+        &.other-month .event {
+          background-color: Hsl(0, 10%, 45%);
+        }
+        .event {
+          width: 100%;
+          background-color: Hsl(0, 80%, 50%);
+          color: white;
+          font-size: .7em;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+          border: 1.5px solid white;
+          border-width: 0 1.5px;
+          display: block;
+        }
+      }
+    }
+  }
   text-align: left;
   .h-event {
     time {

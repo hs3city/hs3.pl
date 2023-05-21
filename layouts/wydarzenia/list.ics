@@ -27,7 +27,6 @@ END:VTIMEZONE
 {{ $allPages := where (where .Site.AllPages "Type" "==" $.Page.Type) "Kind" "page" }}
 {{$events := partial "getEventsForPages.html" (dict
   "pages" $allPages
-  "default_timezone" "Europe/Warsaw"
 )
 }}
 {{ range $event := $events }}
