@@ -14,7 +14,7 @@ eventInfo:
       end: 2025-01-02
       rule: last Friday of the month
       starttime: 18:00
-      endtime: 02:00
+      endtime: 23:00
     cancelled:
       2022-12-30: because of silvester
     changes:
