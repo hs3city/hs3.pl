@@ -8,5 +8,4 @@ In order to run the website locally:
 - `hugo serve`
 - Go to http:/localhost:1313/
 
-Also read the [I18n notes](i18n.md).
-Also (todo) read the calendar notes. 
+Also read the [I18n notes](i18n.md) and the [calendar/event notes](calendar.md).
