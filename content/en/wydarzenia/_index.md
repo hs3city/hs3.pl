@@ -1,9 +1,10 @@
 ---
 title: "Wydarzenia Hackerspace Trójmiasto"
 url: /en/events
-outputs:
-- html
-- calendar
+cascade:
+  outputs:
+    - HTML
+    - calendar
 ---
 
 Do you want to organise an event with us? Read the {{% link ref="/zasoby/organizacja-wydarzen" %}}how to organise your event{{%/link%}}.

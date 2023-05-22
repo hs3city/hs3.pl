@@ -23,8 +23,8 @@
         {{partial "eventViews.html" (dict
           "pages" (slice .)
           "long" false
+          "icsUrl" ((.OutputFormats.Get "calendar").RelPermalink | absURL)
         )}}
-        {{/*<a href="{{(.OutputFormats.Get "Calendar").RelPermalink | absURL}}">Download this calendar (tip: Go to your calendar software, click "Subcribe to calendar" and add this URL and the calendar will stay in sync!).</a>*/}}
         <div class="post-body">
           {{ .Content }}
         </div>

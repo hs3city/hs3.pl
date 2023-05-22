@@ -1,0 +1,23 @@
+{{ partial "check-parameters.html" (dict
+  "name" "layouts/partials/getPreferredLanguagePages.html"
+  "parameters" .
+  "requiredParameters" (slice "pages" "preferredLanguage")
+  "optionalParameters" (slice))
+}}
+{{ $allPages := .pages }}
+{{ $preferredLanguage := .preferredLanguage }}
+{{ $pageByTranslationKey := newScratch }}
+{{range $allPages }}
+{{ $pageByTranslationKey.Add .TranslationKey (slice .) }}
+{{end}}
+{{ $preferredPages:= newScratch }}
+{{ $preferredPages.Add "pages" (slice ) }}
+{{ range $key,$pages := $pageByTranslationKey.Values }}
+  {{ $preferredPage := index (where $pages "Language.Lang" $preferredLanguage | default $pages) 0 }}
+  {{ $preferredPages.Add "pages" (slice $preferredPage) }}
+{{ end }}
+{{ return ($preferredPages.Get "pages") }}
+
+{{/*
+Returns a subset of the input "pages" such that only one language-version of each page is returned, in the preferredLanguage if exists, else (randomly) another language.
+*/}}

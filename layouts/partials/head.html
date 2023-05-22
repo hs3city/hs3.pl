@@ -20,6 +20,12 @@
     <link rel="shortcut icon" href="{{"/images/favicon.ico" | absURL}}" type="image/x-icon" />
     <link rel="icon" href="{{"/images/favicon.png" | absURL}}" type="image/x-icon" />
 
+  {{ $calendarOutput := .OutputFormats.Get "Calendar" }}
+  {{ if $calendarOutput }}
+    <link ref="alternate" type="text/calendar" href="{{$calendarOutput.RelPermalink | absURL}}" />
+  {{ end }}
+
+
     {{ with .Site.Params.googleAnalytics }}
     {{ "<!-- Global Site Tag (gtag.js) - Google Analytics -->" | safeHTML }}
     <script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
