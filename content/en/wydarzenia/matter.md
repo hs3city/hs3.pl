@@ -4,7 +4,7 @@ tags: ["hs3", "matter", "english"]
 featureImage: /images/wydarzenia/matter.jpg
 ---
 
-- Date: Thursday 17 August 2023, 19:00
+- Date: Thursday 17 August 2023, 18:00
 - Duration: 2 hours; longer of we feel like it
 - Presenter: Claude (@claude9134 on Discord)
 - _The presentation will be done in English_
