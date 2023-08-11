@@ -10,7 +10,7 @@ featureImage: /images/wydarzenia/matter.jpg
 - _The presentation will be done in English_
 
 In October 2022, the Matter 1.0 standard was released.
-The vision of Matter is to have one standard for home automation, where before many different standards existed (HomeKit, Google Home, Samsung SmartThings, Alex, etc).
+The vision of Matter is to have one standard for home automation, where before many different standards existed (HomeKit, Google Home, Samsung SmartThings, Alexa, etc).
 
 (and yes, there is an ironclad law on the internet that anyone writing that sentence has to then display the following XKCD).
 
@@ -18,34 +18,25 @@ The vision of Matter is to have one standard for home automation, where before m
 
 (and when we all stop laughing, we realise that we are very happy that the developers of USB didn't get discouraged by this...)
 
-In addition to making it easier for companies to get Smart Home hardware working on all platforms (they only need to go through the Matter certification once, rather than separate trajectories for HomeKit, Google Home, etc)), having an open standard like Matter is super interesting for Makers.
-It allows development, in your home, of devices that integrate _properly_ in your Smart Home, just like a store-bought-china-made-rich-people-getting-richer device:
+In this (partly hand-on) talk I will try to explain what Matter and Thread is, what the big deal is, and how it's useful for Makers (=us).
+I will try to answer the question if you should make your next home project Matter or not, and how I see the future of Matter.
+And I will show some Matter in action!
 
-- You can use your normal Smart Home app to control them (e.g. use Apple Home on your iPhone), including voice control through Siri/Alexa.
-- The device can be used in triggers (switch on/off when I come home / at a certain time)[^dependent].
-- The device can be made part of scenes (e.g. "Movie Night" scene, switches on TV, sets lights to mood-lighting, etc).
-- The device can react to other devices, or be a trigger to other devices (e.g. open the window when inside temperature > 25 and outside temperature < inside temperature)[^dependent].
-
-During this workshop I will talk about Matter and Thread, and how you can get started as a maker to make some device.
-We will have a Matter network available in the space, so that after the talk we can get hands-on.
-We do have some devices available to play with (depending on the number of people attending).
+Then during the second hour we should get a bit more hands-on:
+We will look at what's happening on a network level, and run a small Matter Controller.
+I will give you some tools and pointers to get started, to get some of your own Matter things working; and maybe, depending on time, we'll manage to get some Matter stuff running.
 
 ## Level of the talk / workshop
 
 I want to give a talk / workshop that is open to everyone, however there is a lot to cover on this subject, so we will need to move fast.
 This is because although the Matter protocol is open and free, it's quite complex.
-Therefore this talk will be less suited for people who are not comfortable with C, network technology and embedded devices.
-If you are unsure if you will be able to follow along, please send me a PM.
-
-Also if you would like to know more about Matter but are sure that this will go too fast for you, let me know.
-Then we can make a plan for a talk/workshop that takes things a bit slower.
+I expect the first hour will be interesting for anyone with an interest in technology to follow, for the second hour everyone is welcome to stay but it may go a bit too far in-depth if you don't have experience with network protocols, C and embedded systems.
+Then again, sometimes the best way to learn to swim, is being thrown into the deep end.
 
 ## Registration
 
-Please register by sending me a PM on discord (@claude9134) before 15 August.
+In a previous version I suggested that I wanted pre-registration so that we could set up some stuff, however this is overkill.
+However if you want to be maximum-prepared, please follow the [Hackademy thread][1].
 
 
-[^dependent]: Dependent on whether your home hub has support for this.
-
-
-[1]: https://blog.claude.nl/posts/docker-on-m1-mac-performance/
+[1]: https://discord.com/channels/762566311930101761/1139467044769775626
