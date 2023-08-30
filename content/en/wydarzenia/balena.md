@@ -1,5 +1,5 @@
 ---
-title: "balena.io: runing small and large fleets of docker devices"
+title: "Workshop Balena.io: run docker loads on Raspberry Pi (-like) devices, in a stable and maintainable way"
 tags: ["hs3", "docker", "english"]
 featureImage: /images/wydarzenia/balena.jpg
 ---
