@@ -9,4 +9,4 @@
 /fow-5				https://futureofwork.hs3.pl/fow-5
 /fow-6				https://futureofwork.hs3.pl
 /calendar			/wydarzenia
-/spaceapi.json			/.netlify/functions/spaceapi	200
+/spaceapi.json			https://spaceapi.hs3.eu/	307
