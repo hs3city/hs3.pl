@@ -46,3 +46,7 @@ tags: ["hackerspace", "hs3", "hardware", "druk 3d", "ender", "creality"]
 - zdejmij swój model ze stołu używając do tego szpatułki
 - wyczyść stół przy pomocy IPA i ręczników papierowych
 - wyłącz drukarkę dopiero gdy głowica będzie miała poniżej 65 C. lub pozostaw drukarkę włączoną
+
+## Schemat drukarki 3D Ender
+
+![Schemat drukarki 3D Ender](/static/images/zasoby/3d-printer-ender-schema.jpg)
