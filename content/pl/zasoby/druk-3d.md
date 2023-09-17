@@ -30,7 +30,7 @@ tags: ["hackerspace", "hs3", "hardware", "druk 3d", "ender", "creality"]
 - wybierz odpowiedni rodzaj filamentu pod swoje potrzeby (np. PLA lub PET-G)
 - wejdź w ustawienia drukarki i znajdź opcję 'Load Filament' - po jej wybraniu głowica drukarki rozpocznie nagrzewanie do odpowiedniej temperatury pod wybrany filament
 - obetnij końcówkę filamentu pod ostrym kątem - dzięki temu proces wprowadzania filamentu do ekstrudera będzie łatwiejszy
-- nałóż szpulę z filamentem, odegnij klips przy głowicy i zacznij wprowadzać filament aż poczujesz opór
+- nałóż szpulę z filamentem, odegnij klips ekstrudera i zacznij wprowadzać filament aż poczujesz opór
 - jeśli z dyszy wydobywa się załadowany filament proces został zakończony - drukarka jest gotowa do pracy
 - jeśli dysza drukuje w innym kolorze, możliwe, że to resztka poprzedniego filamentu. Wtedy wystarczy pozwolić mu wypływać tak długo aż do dyszy dojdzie nasz załadowany materiał
 
@@ -49,4 +49,4 @@ tags: ["hackerspace", "hs3", "hardware", "druk 3d", "ender", "creality"]
 
 ## Schemat drukarki 3D Ender
 
-![Schemat drukarki 3D Ender](/static/images/zasoby/3d-printer-ender-schema.jpg)
+![Schemat drukarki 3D Ender](/images/zasoby/3d-printer-ender-schema.jpg)
