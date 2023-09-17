@@ -7,13 +7,13 @@ tags: ["hackerspace", "hs3", "hardware", "druk 3d", "ender", "creality"]
 
 ## Przygotowanie
 
-- na laptopie Hacklab-0x01 zainstalowany jest slicer Ultimaker Cura oraz Prusa Slicer, które są skonfigurowane pod drukarkę Ender (zobacz punkty poniżej odnoszące się do konkretnych programów)
+- Na laptopie Hacklab-0x01 zainstalowany jest slicer Ultimaker Cura oraz Prusa Slicer, które są skonfigurowane pod drukarkę Ender (zobacz punkty poniżej odnoszące się do konkretnych programów)
 - skopiuj pliki STL które chcesz wydrukować na laptopa, uruchom wybrany slicer i umieść modele na polu roboczym
-- użyj profili które zostały przygotowane w obu slicerach, jeśli ustawienia cię zadowalają to potnij model (czyli stwórz gcode do drukarki)
+- użyj profili które zostały przygotowane w obu slicerach, jeśli ustawienia Cię zadowalają to potnij model (czyli stwórz gcode do drukarki)
 - sprawdź jaki będzie czas druku i ile filamentu zostanie zużyte; dorzuć do kasetki na filament odpowiednią kwotę
 - skopiuj gcode na kartę SD. Uwaga: adapter microSD->SD ma przełącznik z zabezpieczeniem zapisu który lubi zmieniać swoje położenie, może być potrzeba przełączyć go w pozycję niezabezpieczoną
 
-## Prusa SLicer
+## Prusa Slicer
 
 - umieść obiekt na stole roboczym
 - w oknie po prawej znajdź rozwijalną listę "Printer" (1) i wybierz z niej jeden z profili FAST, BALANCED lub QUALITY
