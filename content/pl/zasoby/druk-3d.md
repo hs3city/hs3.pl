@@ -7,13 +7,13 @@ tags: ["hackerspace", "hs3", "hardware", "druk 3d", "ender", "creality"]
 
 ## Przygotowanie
 
-- na laptopie Hacklab-0x01 zainstalowany jest slicer Ultimaker Cura oraz Prusa Slicer, które są skonfigurowane pod drukarkę Ender (zobacz punkty poniżej odnoszące się do konkretnych programów)
+- Na laptopie Hacklab-0x01 zainstalowany jest slicer Ultimaker Cura oraz Prusa Slicer, które są skonfigurowane pod drukarkę Ender (zobacz punkty poniżej odnoszące się do konkretnych programów)
 - skopiuj pliki STL które chcesz wydrukować na laptopa, uruchom wybrany slicer i umieść modele na polu roboczym
-- użyj profili które zostały przygotowane w obu slicerach, jeśli ustawienia cię zadowalają to potnij model (czyli stwórz gcode do drukarki)
+- użyj profili które zostały przygotowane w obu slicerach, jeśli ustawienia Cię zadowalają to potnij model (czyli stwórz gcode do drukarki)
 - sprawdź jaki będzie czas druku i ile filamentu zostanie zużyte; dorzuć do kasetki na filament odpowiednią kwotę
 - skopiuj gcode na kartę SD. Uwaga: adapter microSD->SD ma przełącznik z zabezpieczeniem zapisu który lubi zmieniać swoje położenie, może być potrzeba przełączyć go w pozycję niezabezpieczoną
 
-## Prusa SLicer
+## Prusa Slicer
 
 - umieść obiekt na stole roboczym
 - w oknie po prawej znajdź rozwijalną listę "Printer" (1) i wybierz z niej jeden z profili FAST, BALANCED lub QUALITY
@@ -23,6 +23,16 @@ tags: ["hackerspace", "hs3", "hardware", "druk 3d", "ender", "creality"]
 
 ## Cura
 #TODO
+
+## Załadowanie filamentu
+
+- jeżeli drukarka nie ma załadowanej szpuli z filamentem, należy zrobić to samodzielnie przed wydrukiem
+- wybierz odpowiedni rodzaj filamentu pod swoje potrzeby (np. PLA lub PET-G)
+- wejdź w ustawienia drukarki i znajdź opcję 'Load Filament' - po jej wybraniu głowica drukarki rozpocznie nagrzewanie do odpowiedniej temperatury pod wybrany filament
+- obetnij końcówkę filamentu pod ostrym kątem - dzięki temu proces wprowadzania filamentu do ekstrudera będzie łatwiejszy
+- nałóż szpulę z filamentem, odegnij klips ekstrudera i zacznij wprowadzać filament aż poczujesz opór
+- jeśli z dyszy wydobywa się załadowany filament proces został zakończony - drukarka jest gotowa do pracy
+- jeśli dysza drukuje w innym kolorze, możliwe, że to resztka poprzedniego filamentu. Wtedy wystarczy pozwolić mu wypływać tak długo aż do dyszy dojdzie nasz załadowany materiał
 
 ## Druk
 
@@ -36,3 +46,7 @@ tags: ["hackerspace", "hs3", "hardware", "druk 3d", "ender", "creality"]
 - zdejmij swój model ze stołu używając do tego szpatułki
 - wyczyść stół przy pomocy IPA i ręczników papierowych
 - wyłącz drukarkę dopiero gdy głowica będzie miała poniżej 65 C. lub pozostaw drukarkę włączoną
+
+## Schemat drukarki 3D Ender
+
+![Schemat drukarki 3D Ender](/images/zasoby/3d-printer-ender-schema.jpg)
