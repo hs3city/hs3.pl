@@ -1,7 +1,6 @@
 [build]
 publish = "public"
 command = 'hugo version; hugo mod get; count=0; until hugo --minify || (( count++ >= 10 )); do echo "\n\n------------\nRETRYING\n--------\n\n"; done; cp _redirects public/'
-functions = "netlify/functions"
 
 [build.environment]
 HUGO_VERSION = "0.106.0"
