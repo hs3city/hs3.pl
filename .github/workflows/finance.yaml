@@ -3,10 +3,8 @@ name: "Update financial dashboard"
 on:
   push:
     paths:
-      - automation/finanse/finanse.csv
-      - .github/workflows/finance.yaml
-  schedule:
-    - cron: "0 4 * * 0"
+      - 'automation/finanse/finanse.csv'
+      - '.github/workflows/finance.yaml'
 
 jobs:
   dashboard:
