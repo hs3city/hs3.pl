@@ -4,6 +4,7 @@ command = 'hugo version; hugo mod get; count=0; until hugo --minify || (( count+
 
 [build.environment]
 HUGO_VERSION = "0.106.0"
+TZ = "Europe/Warsaw"
 
 [context.deploy-preview]
 command = 'hugo version; hugo mod get; count=0; until hugo --minify -b $DEPLOY_PRIME_URL || (( count++ >= 10 )); do echo "\n\n------------\nRETRYING\n--------\n\n"; done; cp _redirects public/'

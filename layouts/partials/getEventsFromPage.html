@@ -1,0 +1,246 @@
+{{/* documentation see bottom */}}
+{{ partial "check-parameters.html" (dict
+  "name" "layouts/partials/getEventsFromPage.html"
+  "parameters" .
+  "requiredParameters" (slice "page")
+  "optionalParameters" (slice))
+}}
+{{ $page := .page }}
+{{ $translations := $page.Translations | append $page }}
+{{ $translations_with_events := where $translations ".Params.EventInfo" "!=" nil }}
+{{ if (gt (len $translations_with_events) 1) }}
+  {{ errorf "For translated pages, at most one may have an EventInfo in front-matter: %s" $page.Title }}
+{{ end }}
+{{ $eventInfoPage := index $translations_with_events 0 | default $page }}
+
+{{ $eventInfo := default (dict) $eventInfoPage.Params.eventInfo }}
+{{ partial "check-parameters.html" (dict
+  "name" "layouts/partials/getEventsFromPage.html -- eventInfo"
+  "parameters" $eventInfo
+  "requiredParameters" (slice)
+  "optionalParameters" (slice "dates" "timezone" "organizer"))
+}}
+{{ $eventInfoDates := (default (dict) $eventInfo.dates) }}
+{{ partial "check-parameters.html" (dict
+  "name" "layouts/partials/getEventsFromPage.html -- eventInfo.dates"
+  "parameters" $eventInfoDates
+  "requiredParameters" (slice)
+  "optionalParameters" (slice "periodics" "cancelled" "extra" "changes"))
+}}
+{{ range $eventInfoDates.periodics }}
+  {{ partial "check-parameters.html" (dict
+    "name" "layouts/partials/getEventsFromEventInfo.html -- eventInfo.dates.periodics"
+    "parameters" .
+    "requiredParameters" (slice "start" "end" "rule" "starttime" "endtime" )
+    "optionalParameters" (slice "comment"))
+  }}
+{{ end }}
+
+{{ define "partials/GetStartEndDateTime.html" }}
+    {{ $date := .date }}{{/* Date object */}}
+    {{ $start := .start }}{{/* eg "18:00" */}}
+    {{ $end := .end }}{{/* eg "18:00" */}}
+    {{ $starttimesplit := split $start ":" }}
+    {{ $starthours := int (index $starttimesplit 0 ) }}
+    {{ $startminutes := int (index $starttimesplit 1 ) }}
+    {{ $startdatetime := $date.Add (time.ParseDuration (printf "%dh%dm" $starthours $startminutes)) }}
+    {{ $endtimesplit := split $end ":" }}
+    {{ $endhours := int (index $endtimesplit 0 ) }}
+    {{ $endminutes := int (index $endtimesplit 1 ) }}
+    {{ $enddatetime := $date.Add (time.ParseDuration (printf "%dh%dm" $endhours $endminutes)) }}
+    {{ $enddatetime := $enddatetime.AddDate 0 0 (cond (lt $enddatetime $startdatetime) 1 0) }}
+    {{ return (dict "startDateTime" $startdatetime "endDateTime" $enddatetime) }}
+{{ end }}
+
+{{ $site_timezone := (time "2002-01-02").Location }}
+{{ $TIMEZONE := $eventInfo.timezone | default $site_timezone}}
+{{ $ORDINAL_LOOKUP := dict
+    "first" 1
+    "second" 2
+    "third" 3
+    "fourth" 4
+    "fifth" 5
+    "last" -1
+    "penultimate" -2}}
+{{ $WEEKDAYS_LOOKUP := dict
+    "Sunday" 0
+    "Monday" 1
+    "Tuesday" 2
+    "Wednesday" 3
+    "Thursday" 4
+    "Friday" 5
+    "Saturday" 6
+}}
+{{ $DAYS_IN_WEEK := 7 }}
+
+{{ $s := newScratch }}
+
+{{ $shared_base_dict := dict "page" $page "organizer" $eventInfo.organizer}}
+{{ range $eventInfoDates.periodics }}
+    {{ $periodic := . }}
+    {{ $start := time .start $TIMEZONE }}
+    {{ $end := time .end $TIMEZONE }}
+    {{ $seconds := (sub $end.Unix $start.Unix) }}
+    {{/* Add 2 hours to compensate for DLS, then divide by seconds per day */}}
+    {{ $nrdays := (div (add $seconds 7200) (mul 3600 24)) }}
+    {{ $comment := .comment }}
+    {{ if (findRE `^(first|second|third|fourth|fifth|last|penultimate) (Sunday|Monday|Tuesday|Wednesday|Thursday|Friday|Saturday) of the month$` .rule) }}
+        {{ $ruleparts := split .rule " " }}
+        {{ $times := index $ruleparts 5 }}
+        {{ $ordinal := index $ORDINAL_LOOKUP (index $ruleparts 0) }}
+        {{ $weekday := index $WEEKDAYS_LOOKUP (index $ruleparts 1) }}
+        {{ $diffdays_other_month := int (mul -7 $ordinal) }}
+        {{ $diffdays_same_month := int (add $diffdays_other_month (cond (lt $diffdays_other_month 0) 7 -7)) }}
+        {{ $startday_offset := mod (add (sub $weekday $start.Weekday) $DAYS_IN_WEEK) $DAYS_IN_WEEK }}
+        {{ range $i := (seq $startday_offset $DAYS_IN_WEEK (sub $nrdays 1)) }}
+            {{ $date := $start.AddDate 0 0 $i }}
+            {{ if (and
+                ( ne $date.Month ($date.AddDate 0 0 $diffdays_other_month).Month)
+                ( eq $date.Month ($date.AddDate 0 0 $diffdays_same_month).Month)
+                ) }}
+                {{/* todo what if already exists? For now we don't care */}}
+                {{ $startEndDT := partial "GetStartEndDateTime" (dict "date" $date "start" $periodic.starttime "end" $periodic.endtime) }}
+                {{ $s.SetInMap "events" ($date.Format "2006-01-02") (merge $startEndDT (dict "source" "rule" "comment" $comment )) }}
+            {{ end }}
+        {{ end }}
+    {{ else if (findRE `^every \d+ days$` .rule) }}
+        {{ $ruleparts := split .rule " " }}
+        {{ $interval := int (index $ruleparts 1) }}
+        {{ range (seq 0 $interval (sub $nrdays 1)) }}
+            {{ $date := $start.AddDate 0 0 . }}
+            {{ $startEndDT := partial "GetStartEndDateTime" (dict "date" $date "start" $periodic.starttime "end" $periodic.endtime) }}
+            {{ $s.SetInMap "events" ($date.Format "2006-01-02") (merge $startEndDT (dict "source" "rule" "comment" $comment)) }}
+        {{ end }}
+    {{ else }}
+        {{ errorf "Don't understand rule \"%s\""  .rule }}
+    {{ end }}
+{{ end }}
+
+{{ range $key, $value := $eventInfoDates.cancelled }}
+    {{ if not (isset ($s.Get "events") $key) }}
+        {{ errorf "Trying to cancel event on %s but no such event" $key }}
+    {{ end }}
+    {{ $s.SetInMap "events" $key (merge (index ($s.Get "events") $key) (dict "cancelled" true "comment" $value)) }}
+{{ end }}
+
+{{ range $key, $value := $eventInfoDates.extra }}
+    {{ $splitkey := split $key " " }}
+    {{ $date := time (index $splitkey 0) $TIMEZONE}}
+    {{ $splittime := split (index $splitkey 1) "-" }}
+    {{ $starttime := index $splittime 0 }}
+    {{ $endtime := index $splittime 1 }}
+    {{ $datestring := $date.Format "2006-01-02" }}
+    {{ if isset ($s.Get "events") $datestring }}
+        {{ errorf "Trying to plan extra event on %s but already an event" $key }}
+    {{ end }}
+    {{ $startEndDT := partial "GetStartEndDateTime" (dict "date" $date "start" $starttime "end" $endtime) }}
+    {{ $s.SetInMap "events" $datestring (merge $startEndDT (dict "comment" $value "source" "extra")) }}
+{{ end }}
+
+{{ range $key, $value := $eventInfoDates.changes }}
+    {{/* TODO some regex to check it has the right format */}}
+    {{ $splitkey := split $key "->" }}
+    {{ $from := index $splitkey 0 }}
+    {{ $changes := newScratch }}
+    {{ $changes.Set "c" dict }}
+    {{ $changes.Set "t" dict }}
+    {{ $changes.SetInMap "c" "comment" $value }}
+    {{ if eq (len $splitkey) 1 }}
+        {{/* do nothing, since the comment is already set */}}
+    {{ else }}
+        {{ $to := index $splitkey 1 }}
+        {{ $splitto := split $to " " }}
+
+        {{ if eq (len $splitto) 2 }}
+            {{ $changes.SetInMap "t" "date" (time (index $splitto 0)) }}
+            {{ $changes.SetInMap "c" "dateChanged" true }}
+            {{ $splittime := split (index $splitto 1) "-" }}
+            {{ $starttime := index $splittime 0 }}
+            {{ $endtime := index $splittime 1 }}
+            {{ $changes.SetInMap "t" "start" $starttime }}
+            {{ $changes.SetInMap "t" "end" $endtime }}
+            {{ $changes.SetInMap "c" "timeChanged" true }}
+        {{ else }}
+            {{ if eq (len (split $to "-")) 2 }}
+                {{ $splittime := split $to "-" }}
+                {{ $starttime := index $splittime 0 }}
+                {{ $endtime := index $splittime 1 }}
+                {{ $changes.SetInMap "t" "start" $starttime }}
+                {{ $changes.SetInMap "t" "end" $endtime }}
+                {{ $changes.SetInMap "c" "timeChanged" true }}
+            {{ else }}
+                {{ $changes.SetInMap "t" "date" (time (index $splitto 0) $TIMEZONE) }}
+                {{ $changes.SetInMap "c" "dateChanged" true }}
+            {{ end }}
+        {{ end }}
+    {{ end }}
+    {{ if not (isset ($s.Get "events") $from) }}
+        {{ errorf "Trying to change event on %s but no such event" $key }}
+    {{ end }}
+    {{ $map := index ($s.Get "events") $from }}
+    {{ $s.DeleteInMap "events" $from }}
+    {{ $changes.SetInMap "c" "source" "rule+change" }}
+    {{ $newDateAndTimes := (merge (dict "date" (time $from $TIMEZONE) "start" ($map.startDateTime.Format "15:04") "end" ($map.endDateTime.Format "15:04")) ($changes.Get "t")) }}
+    {{ $startEndDT := partial "GetStartEndDateTime" $newDateAndTimes }}
+    {{ $map := merge $map ($changes.Get "c") $startEndDT }}
+    {{ $s.SetInMap "events" ($map.startDateTime.Format "2006-01-02") $map }}
+{{ end }}
+
+{{range $s.GetSortedMapValues "events"}}
+    {{ $s.SetInMap "return" (.startDateTime.Format "2006-01-02T15:04:05") (merge . $shared_base_dict) }}
+{{end}}
+
+{{/* Convert all datetimes to local timezone */}}
+{{ $return_with_local_datetimes := slice }}
+{{ range $event := ($s.GetSortedMapValues "return") }}
+  {{ $event_with_local_datetimes := merge $event (dict "startDateTime" $event.startDateTime.Local "endDateTime" $event.endDateTime.Local ) }}
+  {{ $return_with_local_datetimes = append $event_with_local_datetimes $return_with_local_datetimes  }}
+{{ end }}
+
+{{ return  $return_with_local_datetimes }}
+
+{{/*
+Wants a page as context, with the following keys:
+The page can have a key in the front-matter:
+- eventInfo(optional):
+  - timezone(optional): the timezone
+  - dates(optional):
+    - periodics(optional): list of dicts with keys:
+        - start: the start-date (YYYY-MM-DD) for the period that this periodic is active
+        - end: the end-date (YYYY-MM-DD) for this period. The range is EXCLUDING this date
+        - rule: The rule defining which days in this period the event is happening
+            - "(1) (2) of the month" (e.g. "last Friday of the month")
+                - (1) is one of "first|second|third|fourth|fifth|last|penultimate"
+                - (2) is one of the names of the days of the week in English
+            - "every X days" (e.g. every 14 days)
+        - starttime: the time (HH:MM) at which the event starts in this period
+        - endtime: the time (HH:MM) at which the event ends in this period
+        - comment (optional): default comment for this event
+    - extra(optional): extra, one-off, meetings; map, key of form "2022-12-07 18:00-19:00", value free text
+    - cancelled(optional): cancelled meetings; map, key of form "2022-12-07", value free text
+    - changes(optional): changes to regular schedule. Key one of the following formats (value free text):
+      - 2022-10-28 -- only extra message for this meeting
+      - 2022-10-28->2022-10-27 -- date change
+      - 2022-10-28->19:00-21:00 -- time change
+      - 2022-10-28->2022-10-27 19:00-21:00 -- date and time change
+
+
+returns a list of dicts with keys (note that boolean keys may be missing if false):
+    - startDateTime: time.Time in the site local timezone
+    - endDateTime: time.Time in the site local timezone. Note that if endtime < starttime, the enddate is going to be startdate + 1
+    - cancelled: true if cancelled
+    - source: one of "rule", "rule+change", "extra"
+    - dateChanged: true if rule+change and the date was changed
+    - timeChanged: true if rule+change and the time was changed
+    - comment: comment for this event, or missing
+
+The result it sorted by startDateTime of the event.
+
+
+Known limitations:
+- Events cannot last longer than 24 hours
+- If the periodics work so that there are multiple events on the same day, the latter event will overwrite the former one.
+- During DST change, no way to specify if you mean time before or after change (basically what the `is_dst` in `pytz` is for)
+
+*/}}
+

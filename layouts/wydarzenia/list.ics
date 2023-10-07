@@ -1,0 +1,14 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:{{.Title}}
+NAME:{{.Title}}
+UID:{{.Permalink}}
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+{{- $allPages := where (where .Site.AllPages "Type" "==" $.Page.Type) "Kind" "page" -}}
+{{- $pagesToShow := partial "getPreferredLanguagePages.html" (dict
+  "pages" $allPages
+  "preferredLanguage" .Lang
+) -}}
+{{- partial "eventViews.ics" (dict "pages" $pagesToShow) -}}
+END:VCALENDAR

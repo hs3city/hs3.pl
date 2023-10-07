@@ -1,0 +1,9 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:{{.Title}}
+NAME:{{.Title}}
+UID:{{.Permalink}}
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+{{- partial "eventViews.ics" (dict "pages" (slice .)) -}}
+END:VCALENDAR

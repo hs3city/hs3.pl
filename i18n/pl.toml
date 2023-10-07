@@ -21,3 +21,9 @@ other = "FAQ"
 
 [contact]
 other = "kontakt"
+
+[daynames]
+other = "niedziela,poniedziałek,wtorek,środa,czwartek,piątek,sobota"
+
+[monthnames]
+other = "styczeń,luty,marzec,kwiecień,maj,czerwiec,lipiec,sierpień,wrzesień,październik,listopad,grudzień"

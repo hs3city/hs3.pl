@@ -1,0 +1,35 @@
+{{/* documentation see bottom */}}
+{{ partial "check-parameters.html" (dict
+  "name" "layouts/partials/getEventsForPages.html"
+  "parameters" .
+  "requiredParameters" (slice "pages")
+  "optionalParameters" (slice))
+}}
+
+{{ $pages := .pages }}
+
+{{ $s := newScratch }}
+{{range $page := $pages}}
+  {{$events := (partial "getEventsFromPage" (dict
+      "page" $page
+  ))}}
+  {{range $event := $events }}
+    {{$uniqueKey := (printf "%s-%d" (string $event.startDateTime.UTC) (len (default (slice) ($s.Get "events"))))}}
+    {{$s.SetInMap "events" $uniqueKey $event}}
+  {{end}}
+{{end}}
+{{  return ($s.GetSortedMapValues "events") }}
+
+{{/*
+Given a number of pages (possibly one), it will look for pages with a .Params.eventDates and extract the events from those pages.
+
+Result is a slice of events, sorted by startDateTime (events with the same startDateTime are sorted by order of the page in the "pages" input)
+
+Example:
+
+{{$events := partial "getEventsForPages.html" (dict
+  "pages" (slice .)
+)
+}}
+
+*/}}

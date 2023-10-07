@@ -28,46 +28,21 @@
 </section>
 
 {{ $allPages := where (where .Site.AllPages "Type" "==" $.Page.Type) "Kind" "page" }}
-{{ $pageByTranslationKey := newScratch }}
-{{range $allPages }}
-{{ $pageByTranslationKey.Add .TranslationKey (slice .) }}
-{{end}}
-{{ $preferredPages:= newScratch }}
-{{ range $key,$pages := $pageByTranslationKey.Values }}
-  {{ $preferredPage := index (where $pages "Language.Lang" $.Page.Language.Lang | default $pages) 0 }}
-  {{ $preferredPages.Add "pages" (slice $preferredPage) }}
-{{ end }}
+{{ $pagesToShow := partial "getPreferredLanguagePages.html" (dict
+  "pages" $allPages
+  "preferredLanguage" .Lang
+) }}
 
 <section class="blog">
   <div class="container">
-    <div class="row">
-      {{ range (.Paginate ($preferredPages.Get "pages")).Pages }}
-      <div class="col-lg-4">
-        <article class="blog-post">
-          {{ if .Params.featureImage }}
-          <img src="{{ .Params.featureImage | absURL }}" alt="blog-images">
-          {{ else }}
-          <img src="/images/wydarzenia/null.png" alt="blog-images">
-          {{ end }}
-          <div class="blog-content">
-            <h3><a href="{{ .Permalink }}">{{ .Title}}</a></h3>
-            <p> {{truncate 100 .Summary}} </p>
-            <a class="more" href="{{ .Permalink }}">Read more <span>⟶</span></a>
-            {{ if (ne .Language.Lang $.Page.Language.Lang) }} 
-            <p>
-              (only in {{ .Language.LanguageName }}; or
-              <a href="http://translate.google.com/translate?{{(slice "js" "n" "sl" .Language.Lang "tl" site.Language.Lang "u" (.Permalink | absURL)) | querify | safeURL}}">
-              <img alt="Google translate" src="/images/google-translate.png">
-              </a>)
-            </p>
-            {{ end }}
-          </div>
-        </article>
-      </div>
-      {{end}}
-      <div class="col-12">
-        <div class="blog-pagination">
-          {{partial "pagination.html" . }}
+    <div class="row align-items-center">
+      <div class="col-lg-10">
+        <div class="story-content">
+          {{partial "eventViews.html" (dict
+            "pages" $pagesToShow
+            "long" true
+            "icsUrl" ((.OutputFormats.Get "calendar").RelPermalink | absURL)
+          )}}
         </div>
       </div>
     </div>

@@ -16,22 +16,16 @@
 </section>
 
 {{ $allPages := where (where $.Site.AllPages "Params.tags" "intersect" (slice .Data.Term)) "Kind" "page" }}
-{{ $pageByTranslationKey := newScratch }}
-{{range $allPages }}
-{{ $pageByTranslationKey.Add .TranslationKey (slice .) }}
-{{end}}
-{{ $preferredPages:= newScratch }}
-{{ range $key,$pages := $pageByTranslationKey.Values }}
-  {{ $preferredPage := index (where $pages "Language.Lang" $.Page.Language.Lang | default $pages) 0 }}
-  {{ $preferredPages.Add "pages" (slice $preferredPage) }}
-{{ end }}
+{{ $pagesToShow := partial "getPreferredLanguagePages.html" (dict
+  "pages" $allPages
+  "preferredLanguage" .Lang
+) }}
 
-
-{{ if gt (len $allPages) 0 }}
+{{ if gt (len $pagesToShow) 0 }}
 <section class="blog">
   <div class="container">
     <div class="row">
-      {{ range (.Paginate (sort ($preferredPages.Get "pages") "Date" "desc")).Pages }}
+      {{ range (.Paginate (sort $pagesToShow "Date" "desc")).Pages }}
       <div class="col-lg-4">
         <article class="blog-post">
           {{ if .Params.featureImage }}

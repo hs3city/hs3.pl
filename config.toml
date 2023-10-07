@@ -3,6 +3,7 @@ paginate = 9
 theme = "coHub"
 title = 'Hackerspace Trójmiasto'
 DefaultContentLanguage = "pl"
+timeZone = "Europe/Warsaw"  # Note: make sure this is the same as in netlify.toml
 
 [languages]
 [languages.pl]
@@ -25,6 +26,13 @@ openingDesc = "Otwarte całą dobę dla osób z kluczem."
 openingHours = "Jeśli nie masz klucza [zapytaj na Discord](https://hs3.pl/join) czy ktoś jest w środku."
 phone = "+48 661 691 133"
 
+[languages.pl.params.events]
+upcoming = "Nadchodzące"
+past = "Przeszłe"
+calendar = "Kalendarz"
+icsLink = "Zaimportuj ten kalendarz"
+icsLinkExplain = 'Pobierz ten plik i zaimportuj go do aplikacji kalendarza lub skopiuj adres URL łącza i użyj go jako "URL subskrypcji kalendarza". W ten sposób będziesz również otrzymywać aktualizacje.'
+
 [languages.en]
 title = "Hackerspace Trójmiasto (Three-city)"
 contentDir = 'content/en'
@@ -45,6 +53,14 @@ email = "kontakt@hs3.pl"
 openingDesc = "Open 24/7 for members with a key."
 openingHours = "For members without key and non-members: [ask on Discord](https://hs3.pl/join) if someone is there (in English or Polish)."
 phone = "+48 661 691 133"
+
+[languages.en.params.events]
+upcoming = "Upcoming"
+past = "Past"
+calendar = "Calendar"
+icsLink = "Import this calendar"
+icsLinkExplain = 'Either download this file and import it into your calendar app, or copy the link URL, and use it as "Calendar subscription URL". In this way, you will also receive the updates.'
+
 
 [params.map]
 APIkey = "AIzaSyC9rV6yesIygoVKTD6QLf_iCa9eiIIHqZ0"
@@ -93,7 +109,7 @@ name = "Privacy Policy"
 url = "/privacy/"
 weight = 1
 
-# Socail icons
+# Social icons
 [[params.social]]
 icon = "ti-facebook"
 url = "https://www.facebook.com/hackerspacetrojmiasto"

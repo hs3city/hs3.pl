@@ -20,6 +20,11 @@
           <img src="/images/wydarzenia/null.png" alt="blog-images">
           {{ end }}
         </div>
+        {{partial "eventViews.html" (dict
+          "pages" (slice .)
+          "long" false
+          "icsUrl" ((.OutputFormats.Get "calendar").RelPermalink | absURL)
+        )}}
         <div class="post-body">
           {{ .Content }}
         </div>
