@@ -1,3 +1,10 @@
+## READ ME FIRST
+
+For now events should be made and edited on Discord
+
+## /READ ME FIRST
+
+
 This document describes for meeting-owners how they can change their meetings.
 Let's look at this (fictional) calendar for the picnic:
 

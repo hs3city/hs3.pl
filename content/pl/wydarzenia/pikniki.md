@@ -4,17 +4,6 @@ tags: ["hs3", "piknik"]
 eventInfo:
   organizer:
     name: Hackerspace Trójmiasto
-  dates:
-    periodics:
-    - start: 2022-10-01
-      end: 2025-01-02
-      rule: last Friday of the month
-      starttime: 18:00
-      endtime: 23:00
-    cancelled:
-      2022-12-30: because of silvester
-    changes:
-      2022-10-28: "moved to Hevelanium Retrocomputing"
 ---
 
 Pikniki Hackerspace Trójmiasto odbywają się w każdy ostatni piątek miesiąca.
