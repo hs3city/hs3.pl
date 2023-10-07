@@ -41,12 +41,12 @@
     {{ $start := .start }}{{/* eg "18:00" */}}
     {{ $end := .end }}{{/* eg "18:00" */}}
     {{ $starttimesplit := split $start ":" }}
-    {{ $starthours := int (index $starttimesplit 0 ) }}
-    {{ $startminutes := int (index $starttimesplit 1 ) }}
+    {{ $starthours := int (strings.ReplaceRE "^0" "" (index $starttimesplit 0 )) }}
+    {{ $startminutes := int (strings.ReplaceRE "^0" "" (index $starttimesplit 1 )) }}
     {{ $startdatetime := $date.Add (time.ParseDuration (printf "%dh%dm" $starthours $startminutes)) }}
     {{ $endtimesplit := split $end ":" }}
-    {{ $endhours := int (index $endtimesplit 0 ) }}
-    {{ $endminutes := int (index $endtimesplit 1 ) }}
+    {{ $endhours := int (strings.ReplaceRE "^0" "" (index $endtimesplit 0 )) }}
+    {{ $endminutes := int (strings.ReplaceRE "^0" "" (index $endtimesplit 1 )) }}
     {{ $enddatetime := $date.Add (time.ParseDuration (printf "%dh%dm" $endhours $endminutes)) }}
     {{ $enddatetime := $enddatetime.AddDate 0 0 (cond (lt $enddatetime $startdatetime) 1 0) }}
     {{ return (dict "startDateTime" $startdatetime "endDateTime" $enddatetime) }}
