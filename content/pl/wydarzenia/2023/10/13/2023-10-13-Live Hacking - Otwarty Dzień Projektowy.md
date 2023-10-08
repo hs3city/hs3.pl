@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1159113240459096124
   link: https://discord.com/events/762566311930101761/1159113240459096124
-  interested: 6
+  interested: 7
   organizer: bartykraus
   location: Hackerspace Trójmiasto, aleja Wojska Polskiego 41, Gdańsk
 featureImage: https://cdn.discordapp.com/guild-events/1159113240459096124/3916a0743796a1d1f3f40596c4a88401.png?size=1024
