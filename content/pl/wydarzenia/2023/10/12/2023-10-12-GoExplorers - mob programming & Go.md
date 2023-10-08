@@ -8,7 +8,7 @@ discord_event:
   id: 1158506810160988160
   link: https://discord.com/events/762566311930101761/1158506810160988160
   interested: 3
-  organizer: 418798476265127937
+  organizer: szmktk
   location: Hackerspace Trójmiasto, aleja Wojska Polskiego 41, 80-268 Gdańsk
 featureImage: https://cdn.discordapp.com/guild-events/1158506810160988160/b6ef84b7900f3e404473b83e06a00a06.png?size=1024
 eventInfo:

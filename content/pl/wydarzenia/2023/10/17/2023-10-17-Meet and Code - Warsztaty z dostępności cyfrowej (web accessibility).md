@@ -8,7 +8,7 @@ discord_event:
   id: 1158871876576231475
   link: https://discord.com/events/762566311930101761/1158871876576231475
   interested: 1
-  organizer: 734802957530300416
+  organizer: leszekm.
   location: Hackerspace Trójmiasto Gdańsk Al. Wojska Polskiego 41
 featureImage: https://cdn.discordapp.com/guild-events/1158871876576231475/05b556ba9d99af0a8053b08114f53b5a.png?size=1024
 eventInfo:

@@ -8,7 +8,7 @@ discord_event:
   id: 1159104596543807529
   link: https://discord.com/events/762566311930101761/1159104596543807529
   interested: 3
-  organizer: 781797629558259732
+  organizer: arkadio_ac
   location: Hackerspace
 featureImage: https://cdn.discordapp.com/guild-events/1159104596543807529/4ccf237f86858e2731493411d1a7a06e.png?size=1024
 eventInfo:
