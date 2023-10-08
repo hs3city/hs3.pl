@@ -27,3 +27,6 @@ other = "Sunday,Monday,Tuesday,Wednesday,Thursday,Friday,Saturday"
 
 [monthnames]
 other = "January,February,March,April,May,June,July,August,September,October,November,December"
+
+[register-on-discord]
+other = "Register on Discord"

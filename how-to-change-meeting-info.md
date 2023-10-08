@@ -1,6 +1,22 @@
 ## READ ME FIRST
 
-For now events should be made and edited on Discord
+For now events should be made and edited on Discord.
+
+The recurring events as were available in Hugo (as described below) are therefore a bit less useful right now (e.g. event pages will get a bit messy if a single page has dozens of events).
+
+Also, we now allow fields in the front-matter such as:
+```
+discord_event:
+    id: 1159104596543807529
+    link: https://discord.com/events/762566311930101761/1159104596543807529
+    interested: 3
+    organizer: arkadio_ac
+    location: Hackerspace Trójmiasto, aleja Wojska Polskiego 41, 80-268 Gdańsk
+```
+which makes sense for a single event, but not really for recurring event (e.g. for a recurring event you need an interested count per event-instance).
+
+
+So some stuff will have to be redesigned in the future if we want Hugo to become leading.
 
 ## /READ ME FIRST
 
