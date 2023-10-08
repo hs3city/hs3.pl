@@ -9,7 +9,7 @@ featureImage: https://cdn.discordapp.com/guild-events/1150766668948193310/90ba74
 eventInfo:
   dates:
     extra:
-      2023-11-04 09:00-21:00: Event
+      2023-11-04 10:00-22:00: Event
 ---
 Register: <https://discord.com/events/762566311930101761/1150766668948193310>
 

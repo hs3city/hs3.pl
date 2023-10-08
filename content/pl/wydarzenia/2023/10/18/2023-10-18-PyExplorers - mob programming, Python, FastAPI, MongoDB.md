@@ -9,11 +9,11 @@ featureImage: https://cdn.discordapp.com/guild-events/1159115632932044941/70ce4a
 eventInfo:
   dates:
     extra:
-      2023-10-18 16:00-19:00: Event
+      2023-10-18 18:00-21:00: Event
 ---
 Register: <https://discord.com/events/762566311930101761/1159115632932044941>
 
-Registered users: 1
+Registered users: 2
 
 Location: Hackerspace Trójmiasto, aleja Wojska Polskiego 41, 80-268 Gdańsk
 
