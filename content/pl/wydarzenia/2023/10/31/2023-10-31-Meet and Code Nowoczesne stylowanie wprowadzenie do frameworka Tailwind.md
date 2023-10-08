@@ -4,21 +4,18 @@ tags: ["hs3"]
 outputs:
 - html
 - calendar
-discord_event_id: 1158874193073541264
+discord_event:
+  id: 1158874193073541264
+  link: https://discord.com/events/762566311930101761/1158874193073541264
+  interested: 1
+  organizer: 734802957530300416
+  location: Hakcerspace Trójmiasto al Wojska Polskiego 41
 featureImage: https://cdn.discordapp.com/guild-events/1158874193073541264/078279f3c7cdd9ca493d9ed6da537c71.png?size=1024
 eventInfo:
   dates:
     extra:
-      2023-10-31 17:00-21:00: Event
+      2023-10-31 17:00-21:00: null
 ---
-Register: <https://discord.com/events/762566311930101761/1158874193073541264>
-
-Registered users: 1
-
-Location: Hakcerspace Trójmiasto al Wojska Polskiego 41
-
-Creator: leszekm. (734802957530300416)
-
 Meet and Code 
 info i zapisy -> https://app.evenea.pl/event/meetandcode2023/
 

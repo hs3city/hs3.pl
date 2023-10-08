@@ -4,21 +4,18 @@ tags: ["hs3"]
 outputs:
 - html
 - calendar
-discord_event_id: 1158872789667811368
+discord_event:
+  id: 1158872789667811368
+  link: https://discord.com/events/762566311930101761/1158872789667811368
+  interested: 1
+  organizer: 734802957530300416
+  location: Hackerspace Trójmiasto Gdańsk al Wojska Polskiego 41
 featureImage: https://cdn.discordapp.com/guild-events/1158872789667811368/d82b57ad85a8a5192362f14766294c02.png?size=1024
 eventInfo:
   dates:
     extra:
-      2023-10-24 17:00-21:00: Event
+      2023-10-24 17:00-21:00: null
 ---
-Register: <https://discord.com/events/762566311930101761/1158872789667811368>
-
-Registered users: 1
-
-Location: Hackerspace Trójmiasto Gdańsk al Wojska Polskiego 41
-
-Creator: leszekm. (734802957530300416)
-
 Meet and Code 
 info i zapisy - > https://app.evenea.pl/event/meetandcode2023/
 

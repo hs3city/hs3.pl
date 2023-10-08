@@ -4,21 +4,18 @@ tags: ["hs3"]
 outputs:
 - html
 - calendar
-discord_event_id: 1158871876576231475
+discord_event:
+  id: 1158871876576231475
+  link: https://discord.com/events/762566311930101761/1158871876576231475
+  interested: 1
+  organizer: 734802957530300416
+  location: Hackerspace Trójmiasto Gdańsk Al. Wojska Polskiego 41
 featureImage: https://cdn.discordapp.com/guild-events/1158871876576231475/05b556ba9d99af0a8053b08114f53b5a.png?size=1024
 eventInfo:
   dates:
     extra:
-      2023-10-17 17:00-21:00: Event
+      2023-10-17 17:00-21:00: null
 ---
-Register: <https://discord.com/events/762566311930101761/1158871876576231475>
-
-Registered users: 1
-
-Location: Hackerspace Trójmiasto Gdańsk Al. Wojska Polskiego 41
-
-Creator: leszekm. (734802957530300416)
-
 info i zapisy -> https://app.evenea.pl/event/meetandcode2023/
 
 Samodzielnie tworzysz strony internetowe i aplikacje. Słyszałeś coś o dostępności cyfrowej, accessibility i WCAG, ale nie znasz konkretów? Nie wiesz co zrobić by były w pełni dostępne, dla wszystkich użytkowników, także tych posługujących się nietypowymi narzędziami czy obsługujących strony w nietypowy sposób?
