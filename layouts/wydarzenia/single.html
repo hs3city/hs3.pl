@@ -6,13 +6,6 @@
         <div class="post-title">
           <h2>{{.Title}}</h2>
         </div>
-        <div class="post-meta">
-          <p>{{ if .PublishDate }}<span>{{ .PublishDate.Format "January 2, 2006" }}</span> in {{ end }}
-            {{ range (.GetTerms "tags") }}
-              <a class="tags" href="{{ .Permalink }}">{{ .LinkTitle }}</a>
-            {{ end }}
-          </p>
-        </div>
         <div class="post-image">
           {{ if .Params.featureImage }}
           <img src="{{ .Params.featureImage | absURL }}" alt="feature-image">
@@ -20,13 +13,27 @@
           <img src="/images/wydarzenia/null.png" alt="blog-images">
           {{ end }}
         </div>
-        {{/* not showing this until we have recuring events again
-        {{partial "eventViews.html" (dict
+        {{$events := partial "getEventsForPages.html" (dict
           "pages" (slice .)
+        )}}
+        {{partial "eventList.html" (dict
           "long" false
-          "icsUrl" ((.OutputFormats.Get "calendar").RelPermalink | absURL)
-        ) }}
-        */}}
+          "events" $events
+        )}}
+        <div class="discord-info">
+        {{ if .Params.discord_event.organizer}}
+          <span class="event-organizer">{{.Params.discord_event.organizer}}</span>
+        {{ end }}
+        {{ if .Params.discord_event.interested}}
+          <span class="event-interested">{{.Params.discord_event.interested}}</span>
+        {{ end }}
+        {{ if .Params.discord_event.link}}
+        <a class="event-discord-link" href="{{.Params.discord_event.link}}">{{ i18n "register-on-discord" }}</a>
+        {{ end }}
+        {{ if .Params.discord_event.location}}
+          <span class="event-location">{{.Params.discord_event.location}}</span>
+        {{ end }}
+        </div>
         <div class="post-body">
           {{ .Content }}
         </div>

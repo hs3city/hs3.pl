@@ -32,7 +32,17 @@
     {{if $event.comment}}<span class="comment">{{ $event.comment }}</span>{{end}}
     {{ if $long }}
         <h1 class="p-name">{{$event.page.Title}}</h1>
-      <span class="p-description">{{$event.page.Summary}}</span>
+          {{ if (or $event.page.Params.discord_event.organizer $event.page.Params.discord_event.interested) }}
+            <div class="discord-info">
+            {{ if $event.page.Params.discord_event.organizer}}
+              <span class="event-organizer">{{$event.page.Params.discord_event.organizer}}</span>
+            {{ end }}
+            {{ if $event.page.Params.discord_event.interested}}
+              <span class="event-interested">{{$event.page.Params.discord_event.interested}}</span>
+            {{ end }}
+        </div>
+        {{ end }}
+        <span class="p-description">{{$event.page.Summary}}</span>
       </a>
     {{ end }}
   </article>
