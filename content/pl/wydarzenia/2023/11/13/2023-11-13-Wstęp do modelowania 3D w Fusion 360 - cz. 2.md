@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1163070655596593223
   link: https://discord.com/events/762566311930101761/1163070655596593223
-  interested: 5
+  interested: 9
   organizer: pjoterros
   location: HackerSpace
 featureImage: https://cdn.discordapp.com/guild-events/1163070655596593223/dcb0f1e4379fd9343bbd97a36f8ce7bb.png?size=1024
