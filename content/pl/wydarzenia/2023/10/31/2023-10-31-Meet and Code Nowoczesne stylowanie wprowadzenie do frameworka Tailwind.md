@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1158874193073541264
   link: https://discord.com/events/762566311930101761/1158874193073541264
-  interested: 4
+  interested: 5
   organizer: leszekm.
   location: Hakcerspace Trójmiasto al Wojska Polskiego 41
 featureImage: https://cdn.discordapp.com/guild-events/1158874193073541264/078279f3c7cdd9ca493d9ed6da537c71.png?size=1024
