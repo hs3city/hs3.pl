@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1164528040865431603
   link: https://discord.com/events/762566311930101761/1164528040865431603
-  interested: 2
+  interested: 4
   organizer: marcin.mlynski
   location: HS3
 featureImage: https://cdn.discordapp.com/guild-events/1164528040865431603/457e1b3a883d55f8cea5f1ca2e8bc05c.png?size=1024
