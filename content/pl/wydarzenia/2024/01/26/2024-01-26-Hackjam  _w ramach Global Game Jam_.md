@@ -6,10 +6,10 @@ outputs:
 - calendar
 discord_event:
   id: 1166323517315354624
-  link: https://discord.com/events/762566311930101761/1166323517315354624
+  link: "https://discord.com/events/762566311930101761/1166323517315354624"
   interested: 2
-  organizer: marcin.mlynski
-  location: GPNT
+  organizer: "marcin.mlynski"
+  location: "GPNT"
 featureImage: https://cdn.discordapp.com/guild-events/1166323517315354624/04bd0db6cb04828ef41c5deee65370d0.png?size=1024
 eventInfo:
   dates:

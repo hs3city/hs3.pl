@@ -6,10 +6,10 @@ outputs:
 - calendar
 discord_event:
   id: 1150766668948193310
-  link: https://discord.com/events/762566311930101761/1150766668948193310
-  interested: 12
-  organizer: dreat
-  location: IKM, Targ Rakowy 11, Gdańsk
+  link: "https://discord.com/events/762566311930101761/1150766668948193310"
+  interested: 13
+  organizer: "dreat"
+  location: "IKM, Targ Rakowy 11, Gda\u0144sk"
 featureImage: https://cdn.discordapp.com/guild-events/1150766668948193310/90ba748cf0ec76c7293723cf5d7a9524.png?size=1024
 eventInfo:
   dates:
