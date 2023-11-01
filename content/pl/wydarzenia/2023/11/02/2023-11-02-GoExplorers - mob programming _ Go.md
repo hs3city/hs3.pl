@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1165682673226874951
   link: "https://discord.com/events/762566311930101761/1165682673226874951"
-  interested: 3
+  interested: 4
   organizer: "szmktk"
   location: "Hackerspace Tr\u00f3jmiasto, aleja Wojska Polskiego 41, 80-268 Gda\u0144sk"
 featureImage: https://cdn.discordapp.com/guild-events/1165682673226874951/13203560691d53abc0a0a182f16e79d2.png?size=1024

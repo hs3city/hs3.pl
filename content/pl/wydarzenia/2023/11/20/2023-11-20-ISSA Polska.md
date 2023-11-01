@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1166322801620295721
   link: "https://discord.com/events/762566311930101761/1166322801620295721"
-  interested: 7
+  interested: 8
   organizer: "marcin.mlynski"
   location: "HS3"
 

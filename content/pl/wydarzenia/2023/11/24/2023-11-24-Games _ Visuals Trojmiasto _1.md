@@ -18,4 +18,6 @@ eventInfo:
 ---
 Meetup dla osób zainteresowanych gamedevem i sztukami multimedialnymi.
 
+Wydarzenie: https://www.meetup.com/pl-PL/hs3city/events/297066152/
+
 More info soon...
