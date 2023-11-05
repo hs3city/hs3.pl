@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2.5.0
       - name: Run bot
         env:
-          DISCORD_TOKEN: ${{ secrets.DiscordToken }}
+          DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
         run: |
           cd content/pl/wydarzenia
           docker run -e DISCORD_TOKEN="$DISCORD_TOKEN" -v "$PWD":/home/appuser/bot/events ghcr.io/hs3city/kronos:main
