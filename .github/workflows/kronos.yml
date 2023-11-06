@@ -1,13 +1,14 @@
 name: Sync events
 
 on:
-  schedule:
-    - cron:  '30 5,17 * * *'
+  #schedule:
+  #  - cron:  '30 5,17 * * *'
   workflow_dispatch:
 
 jobs:
   kronos:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     name: Sync events
     steps:
       - uses: actions/checkout@v2.5.0
