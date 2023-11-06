@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1168895704970838148
   link: "https://discord.com/events/762566311930101761/1168895704970838148"
-  interested: 3
+  interested: 8
   organizer: "bartykraus"
   location: "Hackerspace Tr\u00f3jmiasto, aleja Wojska Polskiego 41, 80-268 Gda\u0144sk"
 featureImage: https://cdn.discordapp.com/guild-events/1168895704970838148/456e044562def66f67d759fea79c935a.png?size=1024

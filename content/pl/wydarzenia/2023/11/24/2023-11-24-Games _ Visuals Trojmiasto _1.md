@@ -7,17 +7,34 @@ outputs:
 discord_event:
   id: 1166065940543328386
   link: "https://discord.com/events/762566311930101761/1166065940543328386"
-  interested: 3
+  interested: 7
   organizer: "arkadio_ac"
   location: "Hackerspace Tr\u00f3jmiasto"
-
+featureImage: https://cdn.discordapp.com/guild-events/1166065940543328386/6e1f8015f7d9fa2a4d30fb11307b45d1.png?size=1024
 eventInfo:
   dates:
     extra:
       2023-11-24 18:00-19:00: null
 ---
-Meetup dla osób zainteresowanych gamedevem i sztukami multimedialnymi.
+Wychodzimy z inicjatywą cyklicznych spotkań dla osób powiązanych z tworzeniem gier i sztuk multimedialnych, takich jak filmy, animacje, prezentacje, itp.
 
-Wydarzenie: https://www.meetup.com/pl-PL/hs3city/events/297066152/
+Tworząc doświadczenia multimedialne, niezbędne jest wiele talentów. Przydają się one niezależnie od tego czy robimy grę czy film. Wiele obszarów działań z tych branż pokrywa się. Dlatego jeśli jesteś:
+- programistą lub deweloperem konkretnego silnika
+- pisarzem, scenarzystą, reżyserem, tworzysz narracje
+- grafikiem 2d lub 3d, animatorem
+- tworzysz muzykę lub dźwięki
+- tworzysz efekty specjalne
+- robisz design, UX, UI
+- a ponad wszystko uwielbiasz gry, filmy, animacje  i inne tego typu rzeczy to...
+
+To spotkanie jest dla Ciebie!
+
+Podczas meetupu odbędą się dwie ok. 40 minutowe prelekcje i trochę słów organizacyjnych, a resztę czasu spędzimy na networkingu.
+
+PRELEGENCI:
 
 More info soon...
+
+Autorka grafiki na plakacie: Zuzanna Nieczuja-Ostrowska 'kimbapae'
+
+Wydarzenie: https://www.meetup.com/pl-PL/hs3city/events/297066152/
