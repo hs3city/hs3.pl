@@ -9,14 +9,14 @@ discord_event:
   link: "https://discord.com/events/762566311930101761/1166065940543328386"
   interested: 7
   organizer: "arkadio_ac"
-  location: "Hackerspace Tr\u00f3jmiasto"
-featureImage: https://cdn.discordapp.com/guild-events/1166065940543328386/6e1f8015f7d9fa2a4d30fb11307b45d1.png?size=1024
+  location: "Hackerspace Tr\u00f3jmiasto, Wojska Polskiego 41, 80-268 Gda\u0144sk"
+featureImage: https://cdn.discordapp.com/guild-events/1166065940543328386/a68a1c9d1d99d8e94056de250d519dc0.png?size=1024
 eventInfo:
   dates:
     extra:
       2023-11-24 18:00-19:00: null
 ---
-Wychodzimy z inicjatywą cyklicznych spotkań dla osób powiązanych z tworzeniem gier i sztuk multimedialnych, takich jak filmy, animacje, prezentacje, itp.
+Wychodzimy z inicjatywą cyklicznych spotkań stacjonarnych dla osób powiązanych z tworzeniem gier i sztuk multimedialnych, takich jak filmy, animacje, prezentacje, itp.
 
 Tworząc doświadczenia multimedialne, niezbędne jest wiele talentów. Przydają się one niezależnie od tego czy robimy grę czy film. Wiele obszarów działań z tych branż pokrywa się. Dlatego jeśli jesteś:
 - programistą lub deweloperem konkretnego silnika
