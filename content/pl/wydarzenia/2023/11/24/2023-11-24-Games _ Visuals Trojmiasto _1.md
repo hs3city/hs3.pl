@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1166065940543328386
   link: "https://discord.com/events/762566311930101761/1166065940543328386"
-  interested: 7
+  interested: 14
   organizer: "arkadio_ac"
   location: "Hackerspace Tr\u00f3jmiasto, Wojska Polskiego 41, 80-268 Gda\u0144sk"
 featureImage: https://cdn.discordapp.com/guild-events/1166065940543328386/a68a1c9d1d99d8e94056de250d519dc0.png?size=1024
