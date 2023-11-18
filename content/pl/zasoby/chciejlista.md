@@ -80,7 +80,6 @@ Czyli co chcielibyśmy mieć w HS3 by czuć się lepiej i móc robić fajne proj
 - HackRF One
 - Flipper Zero (+WiFi Devboard)
 
-
 ## Akcesoria
 
 - kartony Pappis
@@ -130,7 +129,6 @@ Czyli co chcielibyśmy mieć w HS3 by czuć się lepiej i móc robić fajne proj
 - szlifierka kątowa z regulacją obrotów 
 - wiertarka stołowa
 - Voltera V-One, drukarka do płytek PCB
-    
 
 ## Smarty
 
@@ -141,12 +139,14 @@ Czyli co chcielibyśmy mieć w HS3 by czuć się lepiej i móc robić fajne proj
 
 ## Druk 3d (aktualizacja na dzień 09.11.2023 by Pjoter)
 
-- **Drukarki 3D:**
+### Drukarki 3D
+
 - Prusa XL z zestawem 5 narzędzi (~20k PLN)
 - Drukarka "nowej generacji" z zamkniętą komorą, uniwersalna pod względem materiałów - np Bambu X1C, Creality K1, Creality K1 Max (2 - 8k PLN)
 - 2x drukarka na wymianę Endera-3 v2 (nowsze, szybsze itd) - np Elegoo Neptune 4 Pro, Anycubic Kobra 2 Pro, Ender-3 v3 KE (1-2k PLN / drukarka)
- 
-- **Rzeczy naokoło druku 3D:**
+
+### Rzeczy naokoło druku 3D
+
 - Terminal do postawienia klippera na kilka drukarek spejsowych - zależnie od potrzeb (poleasingowy z allegro 500 - 1000 PLN)
 - Suszarka do filamentu, albo jedna na kilka szpul albo minimum dwie na pojedyncze szpule (200 PLN / suszarka na 1 szpule)
 - Pudło na otwarte filamenty - pudło w którym można by było trzymać otwarte filamenty i albo z pudła ciągnąć filament do drukarki albo wyjmować z pudła na czas druku (np https://www.printables.com/model/551828-unoriginal-prusa-drybox) (? ~500 PLN)
