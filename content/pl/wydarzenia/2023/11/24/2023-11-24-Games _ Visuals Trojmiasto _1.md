@@ -16,8 +16,6 @@ eventInfo:
     extra:
       2023-11-24 18:00-19:00: null
 ---
-Wychodzimy z inicjatywą cyklicznych spotkań stacjonarnych dla osób powiązanych z tworzeniem gier i sztuk multimedialnych, takich jak filmy, animacje, prezentacje, itp.
-
 Tworząc doświadczenia multimedialne, niezbędne jest wiele talentów. Przydają się one niezależnie od tego czy robimy grę czy film. Wiele obszarów działań z tych branż pokrywa się. Dlatego jeśli jesteś:
 - programistą lub deweloperem konkretnego silnika
 - pisarzem, scenarzystą, reżyserem, tworzysz narracje
@@ -29,12 +27,14 @@ Tworząc doświadczenia multimedialne, niezbędne jest wiele talentów. Przydaj�
 
 To spotkanie jest dla Ciebie!
 
-Podczas meetupu odbędą się dwie ok. 40 minutowe prelekcje i trochę słów organizacyjnych, a resztę czasu spędzimy na networkingu.
-
 PRELEGENCI:
+
+M.Karmen Radtke, https://www.linkedin.com/in/m-karmen-radtke/
+Temat: Co się stanie, jak połączymy artystę i developera.
 
 More info soon...
 
-Autorka grafiki na plakacie: Zuzanna Nieczuja-Ostrowska 'kimbapae'
+
+Grafika na plakacie: Zuzanna Nieczuja-Ostrowska 'kimbapae'
 
 Wydarzenie: https://www.meetup.com/pl-PL/hs3city/events/297066152/
