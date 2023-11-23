@@ -32,6 +32,9 @@ PRELEGENCI:
 M.Karmen Radtke, https://www.linkedin.com/in/m-karmen-radtke/
 Temat: Co się stanie, jak połączymy artystę i developera.
 
+Krzysztof Kluczek aka KK
+Temat: Dread - Triki i historia powstania
+
 More info soon...
 
 
