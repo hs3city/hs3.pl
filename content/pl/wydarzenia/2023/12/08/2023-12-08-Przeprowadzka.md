@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1177582531256783028
   link: "https://discord.com/events/762566311930101761/1177582531256783028"
-  interested: 12
+  interested: 14
   organizer: "doomhammerng"
   location: "Hackerspace Tr\u00f3jmiasto, Wojska Polskiego 41, Gda\u0144sk"
 featureImage: https://cdn.discordapp.com/guild-events/1177582531256783028/59b9b6cb31807573ec58d966232437bd.png?size=1024

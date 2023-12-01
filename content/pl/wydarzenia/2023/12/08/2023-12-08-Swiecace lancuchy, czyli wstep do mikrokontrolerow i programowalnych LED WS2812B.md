@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1173323693993242724
   link: "https://discord.com/events/762566311930101761/1173323693993242724"
-  interested: 4
+  interested: 6
   organizer: "doomhammerng"
   location: "https://discord.com/channels/762566311930101761/1172163857402314903"
 featureImage: https://cdn.discordapp.com/guild-events/1173323693993242724/4167b89daeedb7893c6d7525ae6cc6bd.png?size=1024
