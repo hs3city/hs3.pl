@@ -27,7 +27,7 @@ What does this move mean for you?
 
 More space for projects. More space for new tools that we can use together. Greater opportunities for organizing meetings, workshops, hackathons, etc. And maybe more tables for pizza...
 
-New possibilities also mean new dreams and desires. If you'd like to contribute something to our collective workshop, check out what's on our {{% link ref=/zasoby/chciejlista/}}Wishlist{{/link}}.
+New possibilities also mean new dreams and desires. If you'd like to contribute something to our collective workshop, check out what's on our {{% link ref=/zasoby/chciejlista/ %}}Wishlist{{% /link %}}.
 
 Perhaps you have some equipment that you don't use often and would like to share with other hackers. Sharing knowledge and sharing tools are fundamental to any hackerspace.
 
