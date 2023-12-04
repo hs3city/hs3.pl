@@ -27,7 +27,7 @@ Co ta przeprowadzka oznacza dla Was?
 
 Więcej miejsca na projekty. Więcej miejsca na nowe narzędzia z których wspólnie możemy korzystać. Większe możliwości na organizację spotkań, warsztatów, hackathonów, itp. No i może więcej stołów na pizzę...
 
-Nowe możliwości to także nowe marzenia i nowe zachcianki. Jeśli chcielibyście dorzucić coś do naszej kolektywnej pracowni to zerknijcie co znajduje się na [Chciejliście](https://hs3.pl/zasoby/chciejlista/).
+Nowe możliwości to także nowe marzenia i nowe zachcianki. Jeśli chcielibyście dorzucić coś do naszej kolektywnej pracowni to zerknijcie co znajduje się na {{% link ref=/zasoby/chciejlista/ %}}Chciejliście{{% /link %}}.
 
 Może macie jakiś sprzęt z którego nie korzystacie za często a który chcielibyście udostępnić innym hackerom. Współdzielenie wiedzy i współdzielenie narzędzi to jedna z podstaw każdego hackerspace.
 
