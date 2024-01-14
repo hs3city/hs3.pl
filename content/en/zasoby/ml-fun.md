@@ -1,6 +1,7 @@
 ---
 title: ML FUN
 tags: ["hs3", "machine learning", "akademia hs3"]
+category: edukacja
 ---
 
 # ML-FUN
