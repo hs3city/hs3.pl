@@ -29,7 +29,7 @@ collections:
       - {label: "Tags", name: "tags", widget: "list", allow_add: true}
   - name: "zasoby"
     label: "[PL] Zasoby"
-    summary: "{{fields.category}} {{title}}"
+    summary: "{{title}}"
     folder: "content/pl/zasoby"
     create: true
     slug: "{{slug}}"
@@ -53,12 +53,15 @@ collections:
           - software
           - wydarzenia
         hint: "**Dokumentacja** dotyczy dokumentów, regulaminów i opisów, **edukacja** materiałów edukacyjnych, a **wydarzenia** tych związanych z eventami hs3. W **grafice** znajdziesz materiały graficzne i marketingowe. **Hardware** to urządzenia i narzędzia, a **software** oprogramowanie. **Outside-the-box** to kategoria dla osób, które nie chcą trzymać się schematów."
+    view_groups:
+      - label: "kategoria"
+        field: "category"
   - name: "zasoby-en"
     label: "[ENG] Resources"
     folder: "content/en/zasoby"
     create: true
     slug: "{{slug}}"
-    summary: "{{fields.category}} {{title}}"
+    summary: "{{title}}"
     fields:
       - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
@@ -78,4 +81,6 @@ collections:
           - software
           - wydarzenia
         hint: "**Dokumentacja** is for documents, rules and descriptions, **edukacja** is for educational materials, and **wydarzenia** for those connected with events in hs3. In **grafika** you can find graphic and marketing. **Hardware** are devices and tools and **software** is programs etc. **Out-of-the-box** is a category for people who think outside the box."
-
+    view_groups:
+      - label: "category"
+        field: "category"

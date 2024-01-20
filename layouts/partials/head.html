@@ -20,8 +20,6 @@
     <link rel="shortcut icon" href="{{"/images/favicon.ico" | absURL}}" type="image/x-icon" />
     <link rel="icon" href="{{"/images/favicon.png" | absURL}}" type="image/x-icon" />
 
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
   {{ $calendarOutput := .OutputFormats.Get "Calendar" }}
   {{ if $calendarOutput }}
     <link ref="alternate" type="text/calendar" href="{{$calendarOutput.RelPermalink | absURL}}" />
