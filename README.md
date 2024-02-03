@@ -19,4 +19,4 @@ There are 2 main ways of contributing to the website.
 
 Both ways of contribution require a review from the website's maintainers before the changes can be integrated.
 
-You can acccess Decap CMS via localhost at localhost:1313/admin. Be mindful that no matter where you access Decap CMS - whether running locally, or in your published site — it will always fetch and commit files in the hosted repository. You can read more about it [here](https://decapcms.org/docs/configuration-options/).
+Be mindful that no matter where you access Decap CMS - whether running locally, or in your published site — it will always fetch and commit files in the hosted repository. You can read more about it [here](https://decapcms.org/docs/configuration-options/).
