@@ -1,6 +1,7 @@
 ---
 title: Organizacja wydarzeń w Hackerspace Trójmiasto
 tags: ["hs3", "wydarzenia"]
+category: wydarzenia
 ---
 
 # Checklista wydarzeniowa

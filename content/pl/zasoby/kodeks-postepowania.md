@@ -1,6 +1,7 @@
 ---
 title: Kodeks Postępowania Hackerspace Trójmiasto
 tags: ["hs3"]
+category: dokumentacja
 ---
 
 Niniejszy kodeks postępowania odnosi się do przestrzeni online Hackerspace Trójmiasto (Discord, GitHub, fora, komentarze, wydarzenia online i hybrydowe).

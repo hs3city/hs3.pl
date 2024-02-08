@@ -1,6 +1,7 @@
 ---
 title: Teoria Hackerspace
 tags: ["hackerspace"]
+category: dokumentacja
 ---
 
 Tłumaczenie za <https://wiki.hackerspaces.org/Theory>. Większość poniższych materiałów dostępna w języku angielskim.

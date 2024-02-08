@@ -1,6 +1,7 @@
 ---
 title: CODE:ME a Hackerspace Trójmiasto
 tags: ["hs3"]
+category: dokumentacja
 ---
 
 Hackerspace Trójmiasto (HS3) jest społecznością założoną przy wsparciu Fundacji CODE:ME, która związana jest z edukacją w branży IT.
