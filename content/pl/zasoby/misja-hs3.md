@@ -1,6 +1,7 @@
 ---
 title: "Misja Hackerspace Trójmiasto"
 tags: ["hs3", "misja"]
+category: dokumentacja
 ---
 
 Misją Hackerspace Trójmiasto jest stworzenie otwartej przestrzeni technologicznej i budowanie społeczności ludzi wspierających się w rozwoju oraz dzielących wiedzą w przyjaznej atmosferze.
