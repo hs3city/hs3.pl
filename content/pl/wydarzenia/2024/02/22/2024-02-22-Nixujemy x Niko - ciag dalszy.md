@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1205153164937003018
   link: "https://discord.com/events/762566311930101761/1205153164937003018"
-  interested: 6
+  interested: 8
   organizer: "allgreed"
   location: "Na miejscu"
 
