@@ -18,14 +18,16 @@ eventInfo:
 ---
 Czwarte spotkanie GVT nadchodzi!
 
+Główne info, opisy, linki i kontakty:
 https://www.meetup.com/pl-PL/hs3city/events/298626100/
 
-Prelegenci:
+W skrócie:
+Tym razem zmieniamy lekko formułę:
+18:00 - Wstępniak (start punktualnie i zachęcamy do przybycia na czas)
+18:05 - Dycha z ŻeWeTe: Matematyka dla gejmdeva i grafika #1
+18:15 - Prelekcja Bogdan Panov: Lokalizacja gier za pomocą narzędzi AI
+19:00 - 15 minutowa przerwa na pogaduchy
+19:15 - Prelekcja: Sergey Lerg - Shadery. Proste sztuczki do wykorzystania w grach.
+20:00 - Zakończenie części oficjalnej i networking do ostatniego klucznika lokalu.
 
-Sergey Lerg - Shaders. Proste sztuczki do wykorzystania w grach.
-Kanał YT Sergeya - https://www.youtube.com/@SergeyLergDev
-
-Grafika: Asia Długosz. Kadr z animacji “The Card Players” Paul Cézanne. Pełną animację możesz obejrzeć tutaj; https://vimeo.com/179953961. 
-kontakt do Asi: joannadlugosz11@wp.pl.
-
-More info soon...
+Grafika: Joanna Długosz. Kadr z animacji “The Card Players” Paul Cézanne.
