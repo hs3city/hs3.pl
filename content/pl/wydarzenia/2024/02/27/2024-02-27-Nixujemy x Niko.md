@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1209287875380903936
   link: "https://discord.com/events/762566311930101761/1209287875380903936"
-  interested: 2
+  interested: 6
   organizer: "allgreed"
   location: "Hackerspace Tr\u00f3jmiasto"
 
