@@ -1,6 +1,6 @@
 ---
 title: "Evil Submarine"
-tags: ["hackerspace", "gry", "hardware", "arduino", "Raspberry Pi", "LED", "WS2812", "Game Jam", "Hack Jam", "łódź podwodna"]
+tags: ["hackerspace", "games", "hardware", "Arduino", "Raspberry Pi", "LED", "WS2812", "Game Jam", "Hack Jam", "submarine"]
 featureImage: /images/projekty/evil-submarine/a1-big.jpeg
 ---
 
@@ -48,6 +48,12 @@ The code for Arduinos, the HUB75 LED display, and for PiDP11 was written in C an
 
 
 ## Authors:
-    Michał "Traq" Zuchowski, Aleksandra "Xella" Krzyszewska, Krzysztof "kk" Kluczyk, Piotr "DoomHammer" Gaczkowski, Leszek Miotk 
+
+    - Michał "Traq" Zuchowski
+    - Aleksandra "Xella" Krzyszewska
+    - Krzysztof "kk" Kluczyk 
+    - Piotr "DoomHammer" Gaczkowski
+    - Leszek Miotk 
+
 
 

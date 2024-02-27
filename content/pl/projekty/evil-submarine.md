@@ -4,7 +4,8 @@ tags: ["hackerspace", "gry", "hardware", "arduino", "Raspberry Pi", "LED", "WS28
 featureImage: /images/projekty/evil-submarine/a1-big.jpeg
 ---
 
-[Intro]({{< ref "evil-submarine.md#Intro" >}} "O projekcie") [Autorzy]({{< ref "evil-submarine.md#Autorzy" >}} "Autorzy gry") [Fabuła]({{< ref "evil-submarine.md#Fabuła" >}} "Fabuła gry") [Hardware]({{< ref "evil-submarine.md#Intro" >}} "Wykorzystywany sprzęt") [Software]({{< ref "evil-submarine.md#Software" >}} "Wykorzystywane oprogramowanie") [Dziennik Pokładowy]({{< ref "evil-submarine.md#Dziennik Pokładowy" >}} "Aktualności w postaci wpisów do dziennika pokładowego")
+[Intro]({{< ref "evil-submarine.md#intro" >}} "O projekcie") [Autorzy]({{< ref "evil-submarine.md#autorzy" >}} "Autorzy gry") [Fabuła]({{< ref "evil-submarine.md#fabuła" >}} "Fabuła gry") [Hardware]({{< ref "evil-submarine.md#hardware" >}} "Wykorzystywany sprzęt") [Software]({{< ref "evil-submarine.md#software" >}} "Wykorzystywane oprogramowanie") [Dziennik Pokładowy]({{< ref "evil-submarine.md#dziennik-pokładowy" >}} "Aktualności w postaci wpisów do dziennika pokładowego")
+
 
 ## Intro
 W ramach HackJam: Hackerspace Game Jam zrobilismy grę wykorzystujacą stare sprzęty, które znaleźlimy w naszych garażach, piwnicach i w Hackerspace. 
@@ -12,7 +13,18 @@ W ramach HackJam: Hackerspace Game Jam zrobilismy grę wykorzystujacą stare spr
 
 ## Autorzy 
 
-    Michał "Traq" Zuchowski, Aleksandra "Xella" Krzyszewska, Krzysztof "kk" Kluczyk, Piotr "DoomHammer" Gaczkowski, Leszek Miotk 
+    - Michał "Traq" Zuchowski
+    - Aleksandra "Xella" Krzyszewska
+    - Krzysztof "kk" Kluczyk 
+    - Piotr "DoomHammer" Gaczkowski
+    - Leszek Miotk 
+    
+
+    - ...
+    - ... 
+    - Tu może byc Twoje imię. Jesteśmy otwarci na rozbudowę gry o rózne moduły. Masz pomysł, który chciałbyś zrealizować? Odezwij się do nas na Discordzie Hackerspace Trójmiasto
+    
+
 
 
 ## Fabuła 
@@ -39,6 +51,8 @@ Do dyspozycji na łodzi podwodnej masz:
 - Izolatoinator
 - Złączator
 
+
+
 ## Hardware
  - Replika PiDP11 z Raspberry Pi na pokładzie jako główny komputer, który sterował wszystkimi pozostałymi urządzeniami. Pełnił rolę huba i dystrubytora informacji.  
  - Wyświetlacz z 4 paneli ledowych P5 64x32 HUB75. Całkowita rozdzielczość 128x64, dyfuzor zrobiony z czarnego worka na śmieci.  
@@ -54,8 +68,11 @@ Do dyspozycji na łodzi podwodnej masz:
  - 4 łańcuchy światełek choinkowych, każdy zrobiony ze 100 diód LED WS2812B
  - Sodowa lampa uliczna model Thorn Beta 5 MK16 SOX z UK 
 
+
+
 ## Software
   Kod na Arduino, wyświetlacz LED HUB75 i dla PiDP11 został napisany w C i C++. Kod na swiatła reaktora został napisany CircuitPython
+
 
 ## Dziennik Pokładowy 
 - Todo 
