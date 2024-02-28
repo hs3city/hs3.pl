@@ -14,7 +14,7 @@ W ramach HackJam: Hackerspace Game Jam zrobilismy grę wykorzystujacą stare spr
 ## Autorzy 
 
     - Michał "Traq" Zuchowski
-    - Aleksandra "Xella" Krzyszewska
+    - Aleksandra "Xellas" Krzyszewska
     - Krzysztof "kk" Kluczyk 
     - Piotr "DoomHammer" Gaczkowski
     - Leszek Miotk 
