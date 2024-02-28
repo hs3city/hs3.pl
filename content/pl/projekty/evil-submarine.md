@@ -71,7 +71,7 @@ Do dyspozycji na łodzi podwodnej masz:
 
 
 ## Software
-  Kod na Arduino, wyświetlacz LED HUB75 i dla PiDP11 został napisany w C i C++. Kod na swiatła reaktora został napisany CircuitPython
+  Kod na Arduino, wyświetlacz LED HUB75 i dla PiDP11 został napisany w C i C++. Kod na swiatła reaktora został napisany w CircuitPython
 
 
 ## Dziennik Pokładowy 
