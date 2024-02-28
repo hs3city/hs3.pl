@@ -15,7 +15,7 @@ W ramach HackJam: Hackerspace Game Jam zrobilismy grę wykorzystujacą stare spr
 
     - Michał "Traq" Zuchowski
     - Aleksandra "Xellas" Krzyszewska
-    - Krzysztof "kk" Kluczyk 
+    - Krzysztof "KK" Kluczek 
     - Piotr "DoomHammer" Gaczkowski
     - Leszek Miotk 
     
