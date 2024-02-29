@@ -50,8 +50,8 @@ The code for Arduinos, the HUB75 LED display, and for PiDP11 was written in C an
 ## Authors:
 
     - Michał "Traq" Zuchowski
-    - Aleksandra "Xella" Krzyszewska
-    - Krzysztof "kk" Kluczyk 
+    - Aleksandra "Xellas" Krzyszewska
+    - Krzysztof "KK" Kluczek 
     - Piotr "DoomHammer" Gaczkowski
     - Leszek Miotk 
 

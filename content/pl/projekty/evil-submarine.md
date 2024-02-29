@@ -22,7 +22,8 @@ W ramach HackJam: Hackerspace Game Jam zrobilismy grę wykorzystujacą stare spr
 
     - ...
     - ... 
-    - Tu może byc Twoje imię. Jesteśmy otwarci na rozbudowę gry o rózne moduły. Masz pomysł, który chciałbyś zrealizować? Odezwij się do nas na Discordzie Hackerspace Trójmiasto
+    - Tu może byc Twoje imię. 
+Jesteśmy otwarci na rozbudowę gry o rózne moduły. Masz pomysł, który chciałbyś zrealizować? Odezwij się do nas na Discordzie Hackerspace Trójmiasto
     
 
 
