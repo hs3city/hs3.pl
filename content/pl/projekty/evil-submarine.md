@@ -76,4 +76,51 @@ Do dyspozycji na łodzi podwodnej masz:
 
 
 ## Dziennik Pokładowy 
-- Todo 
+- [2024-03-01]({{< ref "evil-submarine.md#2024-03-01" >}} "Wpis z dnia 2024-03-01")
+- [2024-02-28]({{< ref "evil-submarine.md#2024-02-28" >}} "Wpis z dnia 2024-02-28")
+
+### 2024-03-01
+Piątek. Tradycyjnie część ekipy postanowiła odpocząć, a część działać na naszą łodzią. 
+
+Co zrobiliśmy: 
+
+- Nowy kadłub, wymieniliśmy karton rufy.
+- Nowe mocniejsze nitowanie, z każdej strony.
+- Nowa kotwica ( postanowiliśmy, że to będzie miejsce na naklejki)
+- Podłączyliśmy zasilanie na kluczyk
+- Zawiesiliśmy sieć i nurka
+- Poprawione małe bomby
+- Łódź ma teraz okno bulaj za którym są rybki (duży potencjał na włożenia tam jakieś ekranu i wyświetlanie tego co w okolicy łodzi)
+- Podłączyliśmy głośnik do generatora RC przez kabel BNC
+
+Tip: Wiercenie w kartonie pod nity to dobry pomysł : )
+
+### 2024-02-28
+
+Popłynęliśmy nasza łodzią na konferencję [DevGAMM w Gdańsku](https://devgamm.com/gdansk2024/). Nasza gra przyciągała była bardzo popularna i wywoływała uśmiech na twarzy graczy. 
+
+Kilka wypowiedzi uczestników konferencji: 
+
+> To jest szalone i wspaniałe.
+> 
+
+> Czy to naprawdę panel od pralki?
+> 
+
+> Najlepsza gra na tej konferencji.
+> 
+
+> Jak to zrobiliście i dlaczego?
+> 
+
+> Skąd macie ten stary sprzęt?
+> 
+
+> Granie na fizycznych kontrolerach daje sporo frajdy.
+> 
+
+> Czy mogę zrobić zdjęcie?
+> 
+
+> Czy wrzucamy ją na platformę Steam?
+> 
