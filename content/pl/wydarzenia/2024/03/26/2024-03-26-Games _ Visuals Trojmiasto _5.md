@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1210180836260057112
   link: "https://discord.com/events/762566311930101761/1210180836260057112"
-  interested: 9
+  interested: 10
   organizer: "arkadio_ac"
   location: "Hackerspace Tr\u00f3jmiasto"
 featureImage: https://cdn.discordapp.com/guild-events/1210180836260057112/535db193c1383f111ae7c875f58064e9.png?size=1024
