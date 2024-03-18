@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1218244512527417344
   link: "https://discord.com/events/762566311930101761/1218244512527417344"
-  interested: 4
+  interested: 5
   organizer: "leszekm."
   location: "Hackerspace Tr\u00f3jmiasto"
 featureImage: https://cdn.discordapp.com/guild-events/1218244512527417344/a39ac103815968a88b1a26dd801a88f3.png?size=1024
