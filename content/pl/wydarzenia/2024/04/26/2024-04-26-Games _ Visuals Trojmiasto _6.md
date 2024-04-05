@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1222597259724587088
   link: "https://discord.com/events/762566311930101761/1222597259724587088"
-  interested: 4
+  interested: 3
   organizer: "arkadio_ac"
   location: "HackerSpace Tr\u00f3jmiasto"
 
