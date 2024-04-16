@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1224774817299828848
   link: "https://discord.com/events/762566311930101761/1224774817299828848"
-  interested: 2
+  interested: 10
   organizer: "doomhammerng"
   location: "Centrum Hevelianum"
 featureImage: https://cdn.discordapp.com/guild-events/1224774817299828848/0b34c09f1ea76258f83160f4caa26f75.png?size=1024

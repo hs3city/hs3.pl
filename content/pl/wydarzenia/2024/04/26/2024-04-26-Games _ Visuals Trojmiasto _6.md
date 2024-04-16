@@ -7,10 +7,10 @@ outputs:
 discord_event:
   id: 1222597259724587088
   link: "https://discord.com/events/762566311930101761/1222597259724587088"
-  interested: 3
+  interested: 6
   organizer: "arkadio_ac"
   location: "HackerSpace Tr\u00f3jmiasto"
-featureImage: https://cdn.discordapp.com/guild-events/1222597259724587088/ce1276a70f7f60e3baa7a7a77c482d01.png?size=1024
+featureImage: https://cdn.discordapp.com/guild-events/1222597259724587088/ae522135ffca8179b852aa3602bcd84d.png?size=1024
 eventInfo:
   dates:
     extra:
@@ -23,7 +23,7 @@ Agenda spotkania:
 18:05 - Dycha z ŻeWeTe: Matematyka dla gejmdeva i grafika #2
 18:15 - Prelekcja: Izabella Sawicka "Praca na etacie w game dev vs. Freelance w branży reklamowej i artystycznej"
 19:00 - 15 minutowa przerwa na pogaduchy
-19:15 - Prelekcja: Anna Nojek "Miecz UX ma dwa końce. O wrażeniach końcowych... i wszystkich przed nimi"
+19:15 - Prelekcja: Paweł Jacheć "Człowiek, który nic nie umiał a został producentem w game devie"
 20:00 - Lightning Talki dla chętnych (max 5 min per osoba)
 20:15 - Zakończenie części oficjalnej i networking do ostatniego klucznika lokalu i zwykle wyjście na piwko.
 
