@@ -14,6 +14,6 @@ discord_event:
 eventInfo:
   dates:
     extra:
-      2024-04-21 17:00-20:00: null
+      2024-04-22 17:00-20:00: null
 ---
 
