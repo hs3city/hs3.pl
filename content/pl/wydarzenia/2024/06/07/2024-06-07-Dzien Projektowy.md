@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1242402312853655562
   link: "https://discord.com/events/762566311930101761/1242402312853655562"
-  interested: 4
+  interested: 8
   organizer: "venguss"
   location: "Hackerspace Tr\u00f3jmiasto"
 

@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1220047800977592440
   link: "https://discord.com/events/762566311930101761/1220047800977592440"
-  interested: 7
+  interested: 9
   organizer: "andrzejpiotrowski"
   location: "IssaLocalPolska - Gdynia #18 - O tych rzeczach nie gada sie na konferencjach :)"
 
