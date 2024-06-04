@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1245382643437142027
   link: "https://discord.com/events/762566311930101761/1245382643437142027"
-  interested: 2
+  interested: 3
   organizer: "marcin.mlynski"
   location: "Hack4change - hackathon ekologiczny"
 featureImage: https://cdn.discordapp.com/guild-events/1245382643437142027/17e8dbef5a5d590aaf50ae6ae8548207.png?size=1024

@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1222597796092313741
   link: "https://discord.com/events/762566311930101761/1222597796092313741"
-  interested: 6
+  interested: 8
   organizer: "arkadio_ac"
   location: "HackerSpace Tr\u00f3jmiasto"
 featureImage: https://cdn.discordapp.com/guild-events/1222597796092313741/af3600cbdc43db43f6a53cf90eb21f13.png?size=1024
@@ -17,6 +17,7 @@ eventInfo:
       2024-06-14 18:00-20:30: null
 ---
 Ósme i ostatnie przed wakacjami spotkanie GVT nadchodzi!
+https://www.meetup.com/pl-PL/hs3city/events/300045328/
 
 Agenda spotkania:
 18:00 - Wstępniak (start punktualnie - zachęcamy do przybycia na czas)
