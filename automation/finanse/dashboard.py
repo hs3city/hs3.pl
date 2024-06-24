@@ -118,5 +118,5 @@ if __name__ == "__main__":
     args = parser.parse_args()
 
     export_dashboard_cashflow(args.source_path, args.offline, args.standalone)
-    print("Graph plotted and exported successfully to HTML")
     update_html(args.source_path)
+    print("Graph plotted and exported successfully to HTML")
