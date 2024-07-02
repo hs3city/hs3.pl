@@ -35,7 +35,7 @@
       {
         packages.dashboard = pkgs.stdenv.mkDerivation {
           name = "dashboard";
-          src = self;
+          src = ./.;
           buildPhase = "${pythonEnv}/bin/python ${self}/automation/finanse/dashboard.py --source_path=${self}/automation/finanse --dest_path=./.";
           installPhase = "cp ./finanse.html $out";
         };
