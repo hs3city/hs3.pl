@@ -5,13 +5,14 @@ import plotly.graph_objects as go
 from bs4 import BeautifulSoup
 
 
-def export_dashboard_cashflow(source_path, offline=False, standalone=False):
+def export_dashboard_cashflow(source_path, dest_path="", offline=False, standalone=False):
     """
     Returns HTML file with cashflow plot
 
     Params
     ------
     source_path : path with finanse.csv and current index.html included
+    dest_path   : path to which the resulting file will be written
     offline     : if True returns html with plotly.js included (+3MB)
                   if False plotly.js requires internet connection to load
     standalone  : if True returns full html with html tag
@@ -19,8 +20,10 @@ def export_dashboard_cashflow(source_path, offline=False, standalone=False):
 
     """
 
+    if dest_path == "":
+        dest_path = source_path
     source_file = os.path.join(source_path, "finanse.csv")
-    output_file = os.path.join(source_path, "../../layouts/shortcodes/finanse.html")
+    output_file = os.path.join(dest_path, "finanse.html")
 
     include_plotlyjs = "cdn"
     if offline:
@@ -88,16 +91,16 @@ def export_dashboard_cashflow(source_path, offline=False, standalone=False):
     fig.write_html(output_file, include_plotlyjs=include_plotlyjs, full_html=standalone)
 
 
-def update_html(source_path):
+def update_html(source_path, dest_path):
 
     with open(
-        os.path.join(source_path, "../../layouts/shortcodes/finanse.html"),
+        os.path.join(dest_path, "finanse.html"),
         encoding="utf-8",
     ) as cashflow:
         soup_cashflow = BeautifulSoup(cashflow, "html.parser")
 
         with open(
-            os.path.join(source_path, "../../layouts/shortcodes/finanse.html"),
+            os.path.join(dest_path, "finanse.html"),
             mode="w",
             encoding="utf-8",
         ) as output:
@@ -108,6 +111,7 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--source_path", type=str, default="")
+    parser.add_argument("--dest_path", type=str, default="")
     parser.add_argument(
         "--offline", default=False, action=argparse.BooleanOptionalAction
     )
@@ -117,6 +121,6 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    export_dashboard_cashflow(args.source_path, args.offline, args.standalone)
-    update_html(args.source_path)
+    export_dashboard_cashflow(args.source_path, args.dest_path, args.offline, args.standalone)
+    update_html(args.source_path, args.dest_path)
     print("Graph plotted and exported successfully to HTML")

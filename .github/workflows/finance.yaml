@@ -17,7 +17,8 @@ jobs:
         run: |
           cd automation/finanse
           nix build
-          flake check
+          cp result ../../layouts/shortcodes/finanse.html
+          nix flake check
           git add ../../layouts/shortcodes/finanse.html
       - name: Commit Changes
         uses: stefanzweifel/git-auto-commit-action@v4.15.3
