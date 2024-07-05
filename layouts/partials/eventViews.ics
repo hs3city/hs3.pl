@@ -8,7 +8,11 @@
 {{- $events := partial "getEventsForPages.html" (dict
   "pages" $pages
 ) -}}
-{{- range $event := $events}}
+
+{{if $events }}
+{{ $now := now }}
+{{ $future := where $events "startDateTime" ">=" $now }}
+{{- range $event := $future}}
 BEGIN:VEVENT
 {{ with $event.organizer}}ORGANIZER;CN="{{ .name }}":mailto:{{ .email }}{{ end }}
 SUMMARY:{{if $event.cancelled}}CANCELLED: {{end}}{{$event.page.Title}}{{with $event.comment}} -- {{.}}{{end}}
@@ -22,3 +26,4 @@ LOCATION:TBD
 URL:{{$event.page.Permalink}}
 END:VEVENT
 {{end -}}
+{{ end }}
