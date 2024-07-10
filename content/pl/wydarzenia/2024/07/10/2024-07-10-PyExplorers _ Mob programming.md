@@ -5,16 +5,16 @@ outputs:
 - html
 - calendar
 discord_event:
-  id: 1254419015523373157
-  link: "https://discord.com/events/762566311930101761/1254419015523373157"
-  interested: 5
-  organizer: "karolglomski"
+  id: 1260254989461225532
+  link: "https://discord.com/events/762566311930101761/1260254989461225532"
+  interested: 6
+  organizer: "leszekm."
   location: "Hackerspace Tr\u00f3jmiasto"
-
+featureImage: https://cdn.discordapp.com/guild-events/1260254989461225532/d2260e3368a58ee75a6d2018025e6c11.png?size=1024
 eventInfo:
   dates:
     extra:
-      2024-07-10 18:00-15:00: null
+      2024-07-10 18:00-21:00: null
 ---
 Zapraszamy na spotkanie z serii PyExplorers.
 
