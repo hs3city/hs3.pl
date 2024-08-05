@@ -16,6 +16,10 @@ eventInfo:
     extra:
       2024-08-22 17:30-19:00: null
 ---
+https://meetu.ps/e/Nn0ql/JmkMY/i
+
+(Event in Polish or English, depending on the participants 😊)
+
 This time we're trying out a new format of our meetings. There will be no well-defined presentations, and instead "bring your own topic". If you're interested in anything related to the Kotlin ecosystem, or have a complex problem where could you cloud pick brains of more experienced Kotlin developers, it may be a good candidate for a topic to start on the meeting! It's also a good opportunity to exchange experience in a free discussion.
 
 Some ideas for the topics to discuss:
