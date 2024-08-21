@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1268616983822340148
   link: "https://discord.com/events/762566311930101761/1268616983822340148"
-  interested: 1
+  interested: 2
   organizer: "krzema12"
   location: "Hackerspace Tr\u00f3jmiasto, Gda\u0144sk al. Wojska Polskiego 41"
 featureImage: https://cdn.discordapp.com/guild-events/1268616983822340148/a4840a5a4759979975e8dfec0b7150a3.png?size=1024
