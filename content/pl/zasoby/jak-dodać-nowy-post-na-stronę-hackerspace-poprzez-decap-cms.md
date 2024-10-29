@@ -1,7 +1,7 @@
 ---
 layout: blog
 title: Jak dodać nowy post na stronę hackerspace poprzez Decap CMS?
-featureImage: /static/images/zasoby/decap-cms.png
+featureImage: /images/projekty/decap-cms.png
 category:
   - dokumentacja
 ---
