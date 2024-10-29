@@ -11,6 +11,7 @@ collections:
     label: "[PL] Projekty" # Used in the UI
     folder: "content/pl/projekty" # The path to the folder where the documents are stored
     media_folder: "/static/images/projekty" # The path to the folder where images are stored
+    public_folder: "/images/projekty" # The src attribute for uploaded media
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., title.md
     fields: # The fields for each document, usually in front matter
@@ -23,6 +24,7 @@ collections:
     label: "[ENG] Projects"
     folder: "content/en/projekty"
     media_folder: "/static/images/projekty"
+    public_folder: "/images/projekty"
     create: true
     slug: "{{slug}}"
     fields:
@@ -36,6 +38,7 @@ collections:
     summary: "{{title}}"
     folder: "content/pl/zasoby"
     media_folder: "/static/images/zasoby"
+    public_folder: "/images/projekty"
     create: true
     slug: "{{slug}}"
     sortable_fields: ['commit_date', 'title', 'tags', 'category']
@@ -65,6 +68,7 @@ collections:
     label: "[ENG] Resources"
     folder: "content/en/zasoby"
     media_folder: "/static/images/zasoby"
+    public_folder: "/images/projekty"
     create: true
     slug: "{{slug}}"
     summary: "{{title}}"
