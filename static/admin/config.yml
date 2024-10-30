@@ -38,7 +38,7 @@ collections:
     summary: "{{title}}"
     folder: "content/pl/zasoby"
     media_folder: "/static/images/zasoby"
-    public_folder: "/images/projekty"
+    public_folder: "/images/zasoby"
     create: true
     slug: "{{slug}}"
     sortable_fields: ['commit_date', 'title', 'tags', 'category']
@@ -68,7 +68,7 @@ collections:
     label: "[ENG] Resources"
     folder: "content/en/zasoby"
     media_folder: "/static/images/zasoby"
-    public_folder: "/images/projekty"
+    public_folder: "/images/zasoby"
     create: true
     slug: "{{slug}}"
     summary: "{{title}}"
