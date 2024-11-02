@@ -5,7 +5,7 @@ featureImage: /images/zasoby/decap-cms.png
 category:
   - dokumentacja
 ---
-## Wstęp
+### Wstęp
 
 Strona [hs3.pl](https://hs3.pl/) jest stworzona w [Hugo](https://gohugo.io/), a hostowana w [Netlify](https://www.netlify.com/). Edytować można ją bezpośrednio w repozytorium z kodem źródłowym strony: [hs3city/hs3.pl](https://github.com/hs3city/hs3.pl).
 
@@ -14,7 +14,7 @@ Jednak istnieje również opcja wykorzystania [GUI](https://pl.wikipedia.org/wik
 * <https://hs3.pl/projekty/>
 * <https://hs3.pl/zasoby/>
 
-## Dodanie nowego postu krok po kroku
+### Dodanie nowego postu krok po kroku
 
 1. **(Wymaganie wstępne)** Stwórz konto na <https://github.com/> Będzie Ci potrzebne do autoryzacji. Jednak nie martw się! By edytować posty tą metodą, nie musisz mieć wiedzy o kodzie źródłowym strony Hackerspace.
 2. Wejdź do panelu administracyjnego strony hs3: <https://hs3.pl/admin/>
@@ -29,6 +29,7 @@ Jednak istnieje również opcja wykorzystania [GUI](https://pl.wikipedia.org/wik
 11. Po merge'u PR Twój post pojawi się na produkcyjnej wersji strony [hs3.pl](https://hs3.pl/). Powinno nastąpić to niemal od razu po zmerge'owaniu. 🥳
 12. **(Uwaga dla programistów)** Decap CMS automatycznie tworzy fork repozytorium [hs3city/hs3.pl](https://github.com/hs3city/hs3.pl) na Twoim koncie GitHub, a gdy korzystasz z GUI wprowadza na nim odpowiednie zmiany. Gdy tworzysz draft postu, tworzy nowy branch, a gdy zmieniasz jego status na 'In review' otwiera PR na repo [hs3city/hs3.pl](https://github.com/hs3city/hs3.pl). Wszystko możesz sobie zobaczyć ze swojego konta GitHub i w razie problemów z GUI kontynuować pracę tam. A gdy chcesz już zakończyć pracę ze stroną Hackerspace Trójmiasto, możesz bezpiecznie usunąć swój fork.[](https://hs3.pl/admin/)
 
-## Pytania i uwagi
+
+### Pytania i uwagi
 
 Wszelkie pytania i uwagi odnośnie działania Decap CMS na stronie hs3.pl można kierować do [Marty Sienkiewicz](https://github.com/MartaSien).
