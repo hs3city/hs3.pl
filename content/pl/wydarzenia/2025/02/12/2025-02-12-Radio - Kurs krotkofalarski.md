@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1333814469494837359
   link: "https://discord.com/events/762566311930101761/1333814469494837359"
-  interested: 1
+  interested: 2
   organizer: "km.kinter"
   location: "Hackerspace Tr\u00f3jmiasto, Al. Wojska Polskiego 41"
 featureImage: https://cdn.discordapp.com/guild-events/1333814469494837359/60828de90c03632c6c206037e0f1ec5d.png?size=1024

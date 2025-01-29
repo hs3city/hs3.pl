@@ -19,7 +19,7 @@ eventInfo:
 Zapraszamy na serię prelekcji o różnym stopniu zaawansowania, poświęconych tematyce Linuksa, cyberbezpieczeństwa i technologii open source. W programie:
 
 - OpenTelemetry – monitorowanie i analiza systemów.
-- Platformy IdP – historia i przykłady.
+- Internal Developer Platforms - Historia i przykłady.
 - Linux na desktopie i WSL – pierwsze kroki z Linuksem na Windowsie.
 - Strefy czasowe – jak radzić sobie z ich zawiłościami.
 - Bezpieczeństwo aplikacji webowych – zagrożenia i sposoby ich eliminacji.
