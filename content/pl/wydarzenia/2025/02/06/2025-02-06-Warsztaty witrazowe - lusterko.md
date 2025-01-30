@@ -1,0 +1,22 @@
+---
+title: "Warsztaty witra\u017cowe - lusterko"
+tags: ["hs3"]
+outputs:
+- html
+- calendar
+discord_event:
+  id: 1334292592115978430
+  link: "https://discord.com/events/762566311930101761/1334292592115978430"
+  interested: 1
+  organizer: "leszekm."
+  location: "Hackerspace Tr\u00f3jmiasto"
+featureImage: https://cdn.discordapp.com/guild-events/1334292592115978430/686d80ebc2db19710ceb66129dbb481c.png?size=1024
+eventInfo:
+  dates:
+    extra:
+      2025-02-06 17:30-21:00: null
+---
+Zapisy -> będzie link 
+płatne: tu bedzie cena 
+
+Zbite lusterko to nie 7 lat nieszczęścia, tylko milion nowych możliwości ;) Szukasz inspiracji i alternatywy dla kolejnego wieczoru na sofie? A może brakuje Ci koloru we wnętrzu? Zapraszamy na ciekawy i bardzo kreatywny warsztat, gdzie w jedno przedpołudnie lub popołudnie w dogodnej lokalizacji w Gdańsku nauczysz się robić witraże. Dasz drugie życie odpadom szklanym. Nauczysz się łączyć kolory i kształty w spójną formę użytkową, a przede wszystkim samodzielnie zrobisz witrażowe lusterko. Warsztat będzie składał się z krótkiej części teoretycznej, czyli omówienia zagadnień związanych z rzemiosłem witrażu oraz części praktycznej, gdzie samodzielnie wykonamy witraż. Poznasz metodę Tiffan’ego czyli łączenie szkiełek przez owijanie taśmą miedzianą i lutowanie cyną. Wykonane lusterko zabierzesz do domu, aby zdobiło Twoją przestrzeń. Witraż jest sztuką szlachetną, sztuką barwy i światła.
