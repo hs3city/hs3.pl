@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1332000525377474560
   link: "https://discord.com/events/762566311930101761/1332000525377474560"
-  interested: 9
+  interested: 10
   organizer: "_traq"
   location: "Hackerspace Tr\u00f3jmiasto aleja Wojska Polskiego 41 \u00b7 Gda\u0144sk"
 featureImage: https://cdn.discordapp.com/guild-events/1332000525377474560/872f8014393d090c68267c5aacd1799d.png?size=1024
