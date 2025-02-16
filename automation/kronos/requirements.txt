@@ -1,0 +1,3 @@
+discord.py==2.4.0 # https://pypi.org/project/discord.py/
+python-dotenv==1.0.1 # https://pypi.org/project/python-dotenv/
+pytz==2024.2 # https://pypi.org/project/pytz/
