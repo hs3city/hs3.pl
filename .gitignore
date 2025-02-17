@@ -8,3 +8,7 @@ hugo.darwin
 node_modules
 
 automation/finanse/result
+
+venv
+.env
+*.pyc
