@@ -7,7 +7,7 @@ outputs:
 discord_event:
   id: 1336057490227593256
   link: "https://discord.com/events/762566311930101761/1336057490227593256"
-  interested: 2
+  interested: 3
   organizer: "ninufar"
   location: "Hackerspace Tr\u00f3jmiasto"
 featureImage: https://cdn.discordapp.com/guild-events/1336057490227593256/81f2736dac83ca19af14c0e76939813d.png?size=1024
