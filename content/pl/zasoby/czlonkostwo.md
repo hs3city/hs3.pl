@@ -11,4 +11,12 @@ Składkowicze zyskują dostęp do naszej fizycznej przestrzeni i obecnego tam sp
 
 Dołącz do nas [na Patronite](https://patronite.pl/hs3)!
 
+Możesz również dokonać wpłaty poprzez tradycyjny przelew na fundację CODE:ME. {{% link ref=/zasoby/relacja-codeme-to-hs3 %}}Więcej o relacji między Hackerspace Trójmiasto a CODE:ME{{% /link %}}.
+
+- Fundacja CODE:ME
+- MBANK 39 1140 2004 0000 3302 7648 8799
+- z dopiskiem 'darowizna na cele statutowe - hs3'
+
+&nbsp;
+
 Zasoby dostępne tylko dla składkowiczów (obsługa alarmu, dostęp do infrastruktury, kody zniżkowe, itp.) znajdują się w dziale [Podziemny Krąg](https://github.com/hs3city/podziemny_krag).
