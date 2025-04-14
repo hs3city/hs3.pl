@@ -54,40 +54,6 @@
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
     crossorigin=""></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const mapDiv = document.getElementById("map");
-      if (!mapDiv) return;
-
-      const lat = parseFloat(mapDiv.dataset.lat);
-      const lon = parseFloat(mapDiv.dataset.long);
-      const pinImage = mapDiv.dataset.pin;
-      const pinUrl = mapDiv.dataset.url;
-
-      const map = L.map('map').setView([lat, lon], 12);
-
-      L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-        maxZoom: 19,
-      }).addTo(map);
-
-      const params = pinImage ? {
-        icon: L.icon({
-          iconUrl: pinImage,
-          iconSize: [32, 32],
-          iconAnchor: [16, 32],
-        })
-      } : {};
-      const marker = L.marker([lat, lon], params).addTo(map);
-      if (pinUrl) {
-        marker.on('click', function () {
-          if (pinUrl) {
-            window.open(pinUrl, '_blank');
-          }
-        });
-      }
-    });
-  </script>
 
   {{ "<!-- VENDOR JS -->" | safeHTML }}
   <script src="{{"vendor/jQuery/jquery.min.js" | absURL }}"></script>
@@ -96,9 +62,9 @@
   <script src="{{"vendor/aos/aos.js" | absURL}}"></script>
   <script src="{{"vendor/match-height/match-height.js" | absURL}}"></script>
   <script src="{{"vendor/magnific-popup/magnific-popup.min.js" | absURL}}"></script>
-  <script src="{{"vendor/g-map/gmap.js" | absURL}}"></script>
   {{ $formhandler := resources.Get "js/formhandler.js" | minify}} 
   <script src="{{ $formhandler.Permalink}}"></script>
+  
   {{ $script := resources.Get "js/script.js" | minify}} 
   <script src="{{ $script.Permalink}}"></script>
   
