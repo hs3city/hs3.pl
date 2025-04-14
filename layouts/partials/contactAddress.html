@@ -4,7 +4,11 @@
     <div class="row no-gutters">
       <div class="col-lg-6">
         {{ $map := .Site.Params.map }}
-        <div id="map" data-lat={{ $map.latitude }} data-long={{ $map.longitude }} data-pin={{ $map.pinImage | absURL }}>
+        <div id="map"
+             data-lat={{ $map.latitude }}
+             data-long={{ $map.longitude }}
+             data-pin={{ $map.pinImage | absURL }}
+             data-url={{ $map.pinUrl }}>
         </div>
       </div>
       <div class="col-lg-6">

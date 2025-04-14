@@ -61,12 +61,11 @@ calendar = "Calendar"
 icsLink = "Import this calendar"
 icsLinkExplain = 'Either download this file and import it into your calendar app, or copy the link URL, and use it as "Calendar subscription URL". In this way, you will also receive the updates.'
 
-
 [params.map]
-APIkey = "AIzaSyC9rV6yesIygoVKTD6QLf_iCa9eiIIHqZ0"
-latitude = "54.3896193"
-longitude = "18.58178"
+latitude = 54.3897425
+longitude = 18.5815294
 pinImage = "/images/pin.png"
+pinUrl = "https://maps.app.goo.gl/GxMMjVquHcxkinQ2A"
 
 [Menu]
 # Main Menu
