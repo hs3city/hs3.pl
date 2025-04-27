@@ -1,3 +1,7 @@
+iframe {
+  border: none;
+}
+  
 .main-nav .navbar-nav .nav-item .nav-link {
   &::first-letter {
     // capitalize on whole string makes "about us" to "About Us". We want "About us"
