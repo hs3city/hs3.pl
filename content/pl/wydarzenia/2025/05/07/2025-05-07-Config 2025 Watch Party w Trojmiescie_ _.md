@@ -1,5 +1,5 @@
 ---
-title: "Config 2025 Watch Party w Tr\u00f3jmie\u015bcie! \ud83c\udf89"
+title: "Config 2025 Watch Party w Tr\u00f3jmie\u015bcie!"
 tags: ["hs3"]
 outputs:
 - html
