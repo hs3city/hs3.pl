@@ -1,21 +1,22 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Update calendar local
+name: Update Calendar
 
 on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  # Run every 3 hours
+  schedule:
+    - cron: '0 */3 * * *'
 
 # Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
 # However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
 concurrency:
-  group: "update"
+  group: 'update'
   cancel-in-progress: false
 
 env:
   DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
 
 jobs:
-  # Run Python script to fetch REST API info
   update:
     runs-on: ubuntu-latest
     permissions:
@@ -25,18 +26,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: '3.12'
+
       - name: Install dependencies
         working-directory: ./automation/kronos
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      - name: Generate files
+
+      - name: Update Discord events
         working-directory: ./automation/kronos
-        run: python kronos.py
+        run: |
+          python kronos.py
+          if [ $? -ne 0 ]; then
+            echo "Script failed with exit code $?"
+            exit $?
+          fi
+
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v5
         with:

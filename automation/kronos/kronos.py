@@ -1,22 +1,21 @@
-import json
+import asyncio
 import logging
 import os
+import sys
+from pathlib import Path
 
 import discord
-from pathlib import Path
-from pytz import timezone
+from add_discord_events import add_discord_events
+from delete_future_discord_events import delete_future_discord_events
 from dotenv import load_dotenv
-
-from sanitize import sanitize, remove_emoji
 
 # Relative path to Hugo website events directory
 relative_event_dir = "../../content/pl/wydarzenia"
-
 cwd = Path.cwd()
+event_dir = (cwd / relative_event_dir).resolve()
 
 load_dotenv(verbose=True)
 discord_token = os.getenv("DISCORD_TOKEN")
-event_dir = (cwd / relative_event_dir).resolve()
 
 # Logging configuration
 logging.basicConfig(level=logging.INFO)
@@ -25,72 +24,42 @@ logging.basicConfig(level=logging.INFO)
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
 
-local_timezone = timezone("Europe/Warsaw")
+
+async def connect_discord():
+    logging.info("Starting Discord client...")
+    connected = asyncio.Event()
+
+    async def on_ready():
+        connected.set()
+
+    client.event(on_ready)
+    await client.login(discord_token)
+    asyncio.create_task(client.connect(reconnect=False))
+    await asyncio.wait_for(connected.wait(), timeout=30.0)
+    logging.info("Discord client started")
 
 
-@client.event
-async def on_ready():
-    guilds_total = len(client.guilds)
-    guilds_processed = 0
-    for guild in client.guilds:
-        guilds_processed += 1
-        logging.info(f"Scraping {guild}")
-        logging.info(f"{client.user} has connected to Discord server {guild}!")
-        for event in guild.scheduled_events:
-            full_event = await guild.fetch_scheduled_event(event.id)
-            event = full_event
-            start_time = event.start_time.astimezone(local_timezone)
-            end_time = event.end_time.astimezone(local_timezone)
-            logging.info(event)
-            logging.info(event.creator)
-            logging.info(event.creator_id)
-            logging.info(event.description)
-            logging.info(start_time)
-            date = start_time.strftime("%Y-%m-%d")
-            directory = event_dir.joinpath(start_time.strftime("%Y/%m/%d"))
-            print(directory)
-            start_time = start_time.strftime("%H:%M")
-            end_time = end_time.strftime("%H:%M")
-            filename = f"{date}-{sanitize(event.name)}.md"
-            if event.cover_image is not None:
-                feature_image = f"featureImage: {event.cover_image.url}"
-            else:
-                feature_image = ""
-            fields = f"""---
-title: {json.dumps(remove_emoji(event.name))}
-tags: ["hs3"]
-outputs:
-- html
-- calendar
-discord_event:
-  id: {json.dumps(event.id)}
-  link: {json.dumps(event.url)}
-  interested: {json.dumps(event.user_count)}
-  organizer: {json.dumps(event.creator.name)}
-  location: {json.dumps(event.location)}
-{feature_image}
-eventInfo:
-  dates:
-    extra:
-      {date} {start_time}-{end_time}: null
----
-{event.description}
-"""
-            print(fields)
-            try:
-                os.makedirs(directory, mode=0o777, exist_ok=True)
-            except FileExistsError:
-                logging.exception("We can't create a tree. Why, oh why?")
-            try:
-                with open(directory.joinpath(filename), "w", encoding="utf-8") as f:
-                    f.write(fields)
-            except PermissionError:
-                logging.exception("Oops, we can't write here!")
-        logging.info(
-            f"Guilds processed: {guilds_processed}, guilds total: {guilds_total}"
-        )
-        if guilds_processed == guilds_total:
+async def main():
+    try:
+        await connect_discord()
+
+        delete_future_discord_events(event_dir)
+        await add_discord_events(client, event_dir)
+        logging.info("Successfully processed all Discord events")
+        return 0
+
+    except asyncio.TimeoutError:
+        logging.error("Timeout while connecting to Discord")
+        return 1
+    except Exception as e:
+        logging.error(f"Error during processing: {e}")
+        return 2
+    finally:
+        if client.is_ready():
             await client.close()
 
 
-client.run(discord_token)
+if __name__ == "__main__":
+    exit_code = asyncio.run(main())
+    logging.info(f"Finished processing discord events, exit code: {exit_code}")
+    sys.exit(exit_code)
