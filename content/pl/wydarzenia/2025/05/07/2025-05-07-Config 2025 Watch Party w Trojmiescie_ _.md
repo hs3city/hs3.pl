@@ -1,21 +1,24 @@
 ---
-title: "Config 2025 Watch Party w Tr\u00f3jmie\u015bcie! "
-tags: ["hs3"]
+title: 'Config 2025 Watch Party w Trójmieście! '
+tags:
+  - hs3
 outputs:
-- html
-- calendar
+  - html
+  - calendar
 discord_event:
   id: 1361968485202133063
-  link: "https://discord.com/events/762566311930101761/1361968485202133063"
-  interested: 2
-  organizer: "dat.boi."
-  location: "Hackerspace Tr\u00f3jmiasto al. Wojska Polskiego 41, Gda\u0144sk"
-featureImage: https://cdn.discordapp.com/guild-events/1361968485202133063/96dfd2dd22412f5a9d68eb570e42dfd9.png?size=1024
+  link: https://discord.com/events/762566311930101761/1361968485202133063
+  interested: 1
+  organizer: dat.boi.
+  location: Hackerspace Trójmiasto al. Wojska Polskiego 41, Gdańsk
 eventInfo:
   dates:
     extra:
       2025-05-07 17:30-21:30: null
+featureImage: https://cdn.discordapp.com/guild-events/1361968485202133063/96dfd2dd22412f5a9d68eb570e42dfd9.png?size=1024
+
 ---
+
 Razem z Hackerspace Trójmiasto i teacode.io zapraszamy Was na wspólne oglądanie Config 2025
 
 📺 W planie:
