@@ -4,8 +4,8 @@ import logging
 import yaml
 
 
-def delete_future_discord_events(event_dir, local_timezone):
-    today = datetime.datetime.now(local_timezone).date()
+def delete_future_discord_events(event_dir):
+    today = datetime.date.today()
     logging.info(f"Current date: {today}, deleting future Discord events...")
 
     for year_dir in event_dir.glob("*"):
@@ -30,7 +30,9 @@ def delete_future_discord_events(event_dir, local_timezone):
                     )
                     continue
 
-                if event_date < today:
+                # Ignore today's events, even if they were deleted,
+                # otherwise we may remove an event that was already finished (and was removed automatically in Discord)
+                if event_date <= today:
                     continue
 
                 for event_file in day_dir.glob("*.md"):

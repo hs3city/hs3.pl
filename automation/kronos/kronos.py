@@ -8,7 +8,6 @@ import discord
 from add_discord_events import add_discord_events
 from delete_future_discord_events import delete_future_discord_events
 from dotenv import load_dotenv
-from pytz import timezone
 
 # Relative path to Hugo website events directory
 relative_event_dir = "../../content/pl/wydarzenia"
@@ -24,8 +23,6 @@ logging.basicConfig(level=logging.INFO)
 # Discord configuration
 intents = discord.Intents.default()
 client = discord.Client(intents=intents)
-
-local_timezone = timezone("Europe/Warsaw")
 
 
 async def connect_discord():
@@ -46,8 +43,8 @@ async def main():
     try:
         await connect_discord()
 
-        delete_future_discord_events(event_dir, local_timezone)
-        await add_discord_events(client, event_dir, local_timezone)
+        delete_future_discord_events(event_dir)
+        await add_discord_events(client, event_dir)
         logging.info("Successfully processed all Discord events")
         return 0
 
