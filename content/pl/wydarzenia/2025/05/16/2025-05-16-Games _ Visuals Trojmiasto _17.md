@@ -22,9 +22,12 @@ featureImage: https://cdn.discordapp.com/guild-events/1362088329457172551/4fab50
 Kolejne spotkanie już w piątek, 16 maj o 18:00 w Hackerspace Trójmiasto!
 Po prelekcj - tradycyjnie - networking przy piwku w pobliskim pubie.
 
-Prelegentka ;
-W tym miesiącu będziemy mieli szczególnego gościa !
-Ogłoszenie już jutro.
+Prelegentka: Monika Michalak
+https://www.linkedin.com/in/tanknintendo/ 
 
-🎨 Grafika plakatu: Kasia Pieciukonis @Skorpion2Delta 
-Kontakt - LinkedIn https://www.linkedin.com/in/kasia-pieciukonis-101b6631b/
+Temat prelekcji: Co słychać w gamedevie? Zarobki, trendy, nastroje.
+
+Monika od niemal 14 lat wspiera studia gamedev w rozbudowie zespołów. Pracowała z ponad 100 firmami z całego świata - od studiów AAA po niezależnych deweloperów, działając jako rekruterka wewnętrzna, konsultantka, i wreszcie CEO marki rekrutacyjnej. Jej firma 8Bit jest jedną z najbardziej rozpoznawalnych w Europie agencji specjalizujących się w skalowaniu studiów gamedev i pozyskiwaniu talentów w branży gier.
+
+🎨 Grafika plakatu: Kasia Pieciukonis @Skorpion2Delta.  
+Kontakt - https://www.linkedin.com/in/kasia-pieciukonis-101b6631b/
