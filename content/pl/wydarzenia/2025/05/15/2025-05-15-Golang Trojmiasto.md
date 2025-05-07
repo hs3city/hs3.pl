@@ -6,9 +6,9 @@ outputs:
   - html
   - calendar
 discord_event:
-  id: 1354758507584290836
-  link: https://discord.com/events/762566311930101761/1354758507584290836
-  interested: 4
+  id: 1369728200367673504
+  link: https://discord.com/events/762566311930101761/1369728200367673504
+  interested: 3
   organizer: mm996606
   location: Hackerspace Trójmiasto
 eventInfo:
