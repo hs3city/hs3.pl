@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1364588411335479296
   link: https://discord.com/events/762566311930101761/1364588411335479296
-  interested: 3
+  interested: 4
   organizer: km.kinter
   location: HackerSpace Trójmiasto, Al. Wojska Polskiego 41, Gdańsk
 eventInfo:
