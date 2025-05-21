@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1374377428662620211
   link: https://discord.com/events/762566311930101761/1374377428662620211
-  interested: 1
+  interested: 2
   organizer: mateuszbelczowski
   location: Pub Lawendowa
 eventInfo:
