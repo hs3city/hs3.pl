@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1368947209764081725
   link: https://discord.com/events/762566311930101761/1368947209764081725
-  interested: 4
+  interested: 5
   organizer: km.kinter
   location: Al. Wojska Polskiego 41, HS3
 eventInfo:
