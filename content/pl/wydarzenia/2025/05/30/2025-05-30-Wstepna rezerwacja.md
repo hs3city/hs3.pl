@@ -14,7 +14,7 @@ discord_event:
 eventInfo:
   dates:
     extra:
-      2025-05-30 18:00-20:00: null
+      2025-05-30 08:00-16:00: null
 
 ---
 
