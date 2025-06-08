@@ -12,7 +12,7 @@
     {{ "<!-- Critical CSS -->" | safeHTML }}
     {{$style :=  resources.Get "scss/critical.scss" | resources.ToCSS | resources.Minify }}
     <link href="{{ $style.Permalink }}" rel="stylesheet" />
-  
+
     {{$style :=  resources.Get "scss/custom.scss" | resources.ToCSS | resources.Minify }}
     <link href="{{ $style.Permalink }}" rel="stylesheet" />
 
@@ -24,6 +24,9 @@
   {{ if $calendarOutput }}
     <link ref="alternate" type="text/calendar" href="{{$calendarOutput.RelPermalink | absURL}}" />
   {{ end }}
+  {{ with .OutputFormats.Get "rss" }}
+    {{ printf `<link rel=%q type=%q href=%q title=%q>` .Rel .MediaType.Type .Permalink site.Title | safeHTML }}
+  {{ end }}
 
 
     {{ with .Site.Params.googleAnalytics }}
@@ -33,14 +36,14 @@
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
-  
+
       gtag('config', '{{ . }}');
-      
+
     </script>
     {{ end }}
 
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
-    
+
   </head>
