@@ -16,3 +16,4 @@ node_bundler = "esbuild"
 for = "/directory/*"
 [headers.values]
 access-control-allow-origin = "*"
+access-control-allow-headers = "*"
