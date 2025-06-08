@@ -9,6 +9,10 @@ if (!(globalThis as any).eventViewsRun) {
     document.querySelectorAll(".eventDates").forEach((el) => {
       fixTabs(el as HTMLDivElement);
       createEventViewsForDiv(el as HTMLDivElement);
+      if (window.location.hash !== "") {
+        const tabName = window.location.hash.slice(1)
+        selectTab(el as HTMLDivElement, tabName)
+      }
     });
   }
 
@@ -30,6 +34,21 @@ if (!(globalThis as any).eventViewsRun) {
     image: string | undefined;
   }
 
+  function selectTab(parentElement: HTMLDivElement, tabToSelect: string) {
+    const tabs = [
+      ...parentElement.querySelectorAll(".grid-tab"),
+    ] as HTMLElement[];
+    const allTabs = tabs.map((el) => el.classList[1]);
+    if (allTabs.indexOf(tabToSelect) === -1) {
+      console.warn(
+        `Cannot select tab ${tabToSelect}, does not exist in ${allTabs.join(", ")}`)
+      return
+    }
+    allTabs.forEach((klass) => parentElement.classList.remove(klass));
+    parentElement.classList.add(tabToSelect)
+    window.location.hash = `#${tabToSelect}`
+  }
+
   function fixTabs(parentElement: HTMLDivElement) {
     const tabs = [
       ...parentElement.querySelectorAll(".grid-tab"),
@@ -37,8 +56,7 @@ if (!(globalThis as any).eventViewsRun) {
     const all_classes = tabs.map((el) => el.classList[1]);
     tabs.forEach((tab) => {
       tab.addEventListener("click", () => {
-        all_classes.forEach((klass) => parentElement.classList.remove(klass));
-        parentElement.classList.add(tab.classList[1]);
+        selectTab(parentElement, tab.classList[1])
       });
     });
   }
