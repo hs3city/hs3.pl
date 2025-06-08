@@ -1,0 +1,156 @@
+{
+  "News": [
+    {
+      "title": "Blog Hackerspace Tr\u00f3jmiasto on Hackerspace Tr\u00f3jmiasto",
+      "favicon": false,
+      "url": "https:\/\/hs3.pl\/blog\/",
+      "feed": "https:\/\/hs3.pl\/blog\/index.xml",
+      "description": "Recent content in Blog Hackerspace Tr\u00f3jmiasto on Hackerspace Tr\u00f3jmiasto",
+      "votes": 100
+    },
+    {
+      "title": "Blog Hackerspace Tr\u00f3jmiasto on Hackerspace Tr\u00f3jmiasto (Three-city)",
+      "favicon": false,
+      "url": "https:\/\/hs3.pl\/en\/blog\/",
+      "feed": "https:\/\/hs3.pl\/en\/blog\/index.xml",
+      "description": "Recent content in Blog Hackerspace Tr\u00f3jmiasto on Hackerspace Tr\u00f3jmiasto (Three-city)",
+      "votes": 100
+    },
+    {
+      "title": "Hackerspace Tr\u00f3jmiasto",
+      "favicon": "https:\/\/www.youtube.com\/favicon.ico",
+      "url": "https:\/\/www.youtube.com\/channel\/UC1MjdZvgtGZwSAaveL-Z8CA",
+      "feed": "https:\/\/www.youtube.com\/feeds\/videos.xml?channel_id=UC1MjdZvgtGZwSAaveL-Z8CA",
+      "description": null,
+      "votes": 100
+    },
+    {
+      "title": "Hackerspace Tr\u00f3jmiasto",
+      "favicon": "https:\/\/0x3c.pl\/favicon.ico",
+      "url": "https:\/\/0x3c.pl\/@hs3",
+      "feed": "https:\/\/0x3c.pl\/@hs3.rss",
+      "description": "Public posts from @hs3@0x3c.pl",
+      "votes": 100
+    },
+    {
+      "title": "Hackerspace Tr\u00f3jmiasto - Latest topics",
+      "favicon": "https:\/\/kb.s.hs3.pl\/uploads\/default\/optimized\/1X\/_129430568242d1b7f853bb13ebea28b3f6af4e7_2_32x32.png",
+      "url": "https:\/\/kb.s.hs3.pl\/latest",
+      "feed": "https:\/\/kb.s.hs3.pl\/latest.rss",
+      "description": "Latest topics",
+      "votes": 100
+    },
+    {
+      "title": "Blog \u2013 Hackaday",
+      "favicon": "https:\/\/hackaday.com\/wp-content\/themes\/hackaday-2\/favicon.ico?v=3",
+      "url": "https:\/\/hackaday.com",
+      "feed": "https:\/\/hackaday.com\/blog\/feed\/",
+      "description": "Fresh hacks every day",
+      "votes": 100
+    },
+    {
+      "title": "SP6HACK",
+      "favicon": "https:\/\/mastodon.radio\/system\/site_uploads\/files\/000\/000\/004\/16\/6b819a0aaf5970cf.png",
+      "url": "https:\/\/mastodon.radio\/@SP6HACK",
+      "feed": "https:\/\/mastodon.radio\/@SP6HACK.rss",
+      "description": "Public posts from @SP6HACK@mastodon.radio",
+      "votes": 100
+    },
+    {
+      "title": "Forum HS:Wro - Aktualne wpisy",
+      "favicon": "https:\/\/forum.hswro.org\/uploads\/default\/optimized\/1X\/d6717182a7731d39ff9107ea0c14edc53e4fbd76_2_32x32.png",
+      "url": "https:\/\/forum.hswro.org",
+      "feed": "https:\/\/forum.hswro.org\/posts.rss",
+      "description": "Aktualne wpisy",
+      "votes": 100
+    },
+    {
+      "title": "Hackerspace Krak\u00f3w",
+      "favicon": "https:\/\/social.hackerspace.pl\/packs\/media\/icons\/favicon-16x16-c58fdef40ced38d582d5b8eed9d15c5a.png",
+      "url": "https:\/\/social.hackerspace.pl\/@hskrk",
+      "feed": "https:\/\/social.hackerspace.pl\/@hskrk.rss",
+      "description": "Public posts from @hskrk@hackerspace.pl",
+      "votes": 100
+    },
+    {
+      "title": "Hakierspejs (\u0141\u00f3d\u017a Hackerspace)",
+      "favicon": "https:\/\/mas.to\/packs\/media\/icons\/favicon-16x16-c58fdef40ced38d582d5b8eed9d15c5a.png",
+      "url": "https:\/\/mas.to\/@hslodz",
+      "feed": "https:\/\/mas.to\/@hslodz.rss",
+      "description": "Public posts from @hslodz@mas.to",
+      "votes": 100
+    },
+    {
+      "title": "Forum Hakierspejs \u0141\u00f3d\u017a - Aktualne wpisy",
+      "favicon": "https:\/\/forum.hs-ldz.pl\/uploads\/default\/optimized\/1X\/35fbbda10e0207715998c17ae79b69c68cca7de9_2_32x32.svg",
+      "url": "https:\/\/forum.hs-ldz.pl",
+      "feed": "https:\/\/forum.hs-ldz.pl\/posts.rss",
+      "description": "Aktualne wpisy",
+      "votes": 100
+    },
+    {
+      "title": "Knyfyrtel Hackerspace Pozna\u0144's public events feed on Mobilizon Polska",
+      "favicon": "https:\/\/mobilizon.pl\/img\/icons\/apple-touch-icon-152x152.png",
+      "url": "https:\/\/mobilizon.pl\/@hspoz_group",
+      "feed": "https:\/\/mobilizon.pl\/@hspoz_group\/feed\/atom",
+      "description": null,
+      "votes": 100
+    },
+    {
+      "title": "Hackerspace Pomorze",
+      "favicon": "https:\/\/0x3c.pl\/favicon.ico",
+      "url": "https:\/\/0x3c.pl\/@hspsh",
+      "feed": "https:\/\/0x3c.pl\/@hspsh.rss",
+      "description": "Public posts from @hspsh@0x3c.pl",
+      "votes": 100
+    },
+    {
+      "title": "Hackerspace Pomorze",
+      "favicon": "https:\/\/0x3c.pl\/favicon.ico",
+      "url": "https:\/\/0x3c.pl\/@hspsh",
+      "feed": "https:\/\/0x3c.pl\/@hspsh.rss",
+      "description": "Public posts from @hspsh@0x3c.pl",
+      "votes": 100
+    },
+    {
+      "title": "Hackerspace Wroc\u0142aw's public events feed on Mobilizon Polska",
+      "favicon": "https:\/\/mobilizon.pl\/img\/icons\/apple-touch-icon-152x152.png",
+      "url": "https:\/\/mobilizon.pl\/@hswro",
+      "feed": "https:\/\/mobilizon.pl\/@hswro\/feed\/atom",
+      "description": null,
+      "votes": 100
+    },
+    {
+      "title": "Hakierspejs \u0141\u00f3d\u017a's public events feed on Mobilizon Polska",
+      "favicon": "https:\/\/mobilizon.pl\/img\/icons\/apple-touch-icon-152x152.png",
+      "url": "https:\/\/mobilizon.pl\/@hakierspejs_lodz",
+      "feed": "https:\/\/mobilizon.pl\/@hakierspejs_lodz\/feed\/atom",
+      "description": null,
+      "votes": 100
+    },
+    {
+      "title": "Knyfyrtel Hackerspace Pozna\u0144",
+      "favicon": "https:\/\/hspoz.pl\/favicon.svg",
+      "url": "https:\/\/hspoz.pl\/",
+      "feed": "https:\/\/hspoz.pl\/rss.xml",
+      "description": "Budujemy hakerspejs w Poznaniu.",
+      "votes": 100
+    },
+    {
+      "title": "Knyfyrtel Hackerspace Pozna\u0144",
+      "favicon": "https:\/\/cdn.fosstodon.org\/site_uploads\/files\/000\/000\/007\/16\/91cda647d1c18689.png",
+      "url": "https:\/\/fosstodon.org\/@hspoz",
+      "feed": "https:\/\/fosstodon.org\/@hspoz.rss",
+      "description": "Public posts from @hspoz@fosstodon.org",
+      "votes": 100
+    },
+    {
+      "title": "P.I.W.O. Pozna\u0144",
+      "favicon": "https:\/\/cdn.fosstodon.org\/site_uploads\/files\/000\/000\/007\/16\/91cda647d1c18689.png",
+      "url": "https:\/\/fosstodon.org\/@piwo",
+      "feed": "https:\/\/fosstodon.org\/@piwo.rss",
+      "description": "Public posts from @piwo@fosstodon.org",
+      "votes": 100
+    }
+  ]
+}
