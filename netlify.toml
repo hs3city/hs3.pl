@@ -11,3 +11,9 @@ command = 'hugo version; hugo mod get; count=0; until hugo --minify -b $DEPLOY_P
 
 [functions]
 node_bundler = "esbuild"
+
+[[headers]]
+for = "/directory/*"
+[headers.values]
+access-control-allow-origin = "*"
+access-control-allow-headers = "*"
