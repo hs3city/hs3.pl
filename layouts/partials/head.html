@@ -42,6 +42,15 @@
     </script>
     {{ end }}
 
+  {{ block "meta_tags" . }}
+    {{ with .Params.description }}<meta name="description" content="{{ . }}"/>{{ end }}
+    <meta property="og:title" content="{{ .Params.meta_title | default .Title }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="{{ .Permalink }}"/>
+    {{ with .Params.featureImage | default .Site.Params.seo.meta_og_image }}<meta property="og:image" content="{{ . | absURL }}"/>{{ end }}
+    {{ with .Params.description }}<meta property="og:description" content="{{ . }}"/>{{ end }}
+  {{ end }}
+
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
      crossorigin=""/>
