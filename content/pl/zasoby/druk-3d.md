@@ -77,5 +77,10 @@ Profile do wszystkich drukarek są dostępne w OrcaSlicerze (wybierz odpowiedni�
 ## Schemat drukarki 3D Ender
 
 ![Schemat drukarki 3D Ender](/images/zasoby/3d-printer-ender-schema.jpg)
+
+## Schemat drukarki 3D Creality K1 Max
+
 ![Schemat drukarki 3D Creality K1 Max](/images/zasoby/3d-printer-creality-k1-max.png)
+
+## Schemat drukarki 3D Elegoo Neptune 4 Pro
 ![Schemat drukarki 3D Elegoo Neptune 4 Pro](/images/zasoby/3d-printer-elegoo-neptune-4-pro.png)
