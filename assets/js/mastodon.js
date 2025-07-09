@@ -15,7 +15,7 @@ class TootFeed extends HTMLElement {
       content.shift();
     }
 
-    if (content.length != 2) {
+    if (content.length !== 2) {
       this.innerHTML = `<p>Username is not Valid!</p>`;
 
       return;
@@ -24,7 +24,7 @@ class TootFeed extends HTMLElement {
     this.username = content[0];
     this.instance = content[1];
 
-    let refreshRate = this.getAttribute("refresh-rate");
+    let refreshRate = parseInt(this.getAttribute("refresh-rate"));
 
     if (refreshRate > 0 && refreshRate != null) {
       this.refreshRate = refreshRate;
@@ -55,6 +55,7 @@ class TootFeed extends HTMLElement {
 
       if (accounts.length != 1) {
         this.innerHTML = `<p>Es wurde kein passender Account gefunden.</p>`;
+        return;
       }
 
       this.userid = accounts[0].id;
@@ -92,7 +93,7 @@ class TootFeed extends HTMLElement {
 
         let timeString = new Date(element.reblog.created_at).toLocaleString();
 
-        this.addMediaAttchments(contentToot, element.reblog);
+        this.addMediaAttachments(contentToot, element.reblog);
 
         contentToot.innerHTML +=
           `<small>reblog <a href="${element.reblog.account.url}">${element.reblog.account.username}</a> - ${timeString} </small>`;
@@ -102,7 +103,7 @@ class TootFeed extends HTMLElement {
 
         let timeString = new Date(element.created_at).toLocaleString();
 
-        this.addMediaAttchments(contentToot, element);
+        this.addMediaAttachments(contentToot, element);
 
         contentToot.innerHTML += `<small>${timeString}</small>`;
       }
@@ -110,15 +111,15 @@ class TootFeed extends HTMLElement {
       this.appendChild(contentToot);
     });
 
-    setTimeout((e) => {
+    setTimeout((_) => {
       this.fetchFeed();
     }, this.refreshRate);
   }
 
-  addMediaAttchments(contentToot, element) {
+  addMediaAttachments(contentToot, element) {
     if (element.media_attachments.length > 0) {
       element.media_attachments.forEach((media) => {
-        if (media.type == "image") {
+        if (media.type === "image") {
           contentToot.innerHTML +=
             `<img loading="lazy" src="${media.url}" alt="${media.description}"></img>`;
         }
