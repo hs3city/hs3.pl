@@ -4,7 +4,7 @@ paginate = 9
 theme = "coHub"
 title = 'Hackerspace Trójmiasto'
 DefaultContentLanguage = "pl"
-timeZone = "Europe/Warsaw"  # Note: make sure this is the same as in netlify.toml
+timeZone = "Europe/Warsaw"       # Note: make sure this is the same as in netlify.toml
 
 [languages]
 [languages.pl]
@@ -133,7 +133,7 @@ weight = 4
 [[params.social]]
 icon = "ti-video-camera"
 url = "https://www.twitch.tv/hs3city"
-weight = 5  
+weight = 5
 [[params.social]]
 icon = "ti-github"
 url = "https://github.com/hs3city"
