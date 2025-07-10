@@ -19,7 +19,7 @@ featureImage: https://cdn.discordapp.com/guild-events/1390251171071000616/306b30
 
 ---
 
-Wszystkie osoby neuroatypowe – zapraszamy!
+Zapraszamy wszystkie osoby neuroróżnorodne!
 
 Masz dość zaczynania hobby, których nigdy nie kończysz? Dołącz do nas na wieczór swobodnej, kreatywnej zabawy – bez presji, bez poczucia winy, bez konieczności kończenia czegokolwiek.
 
