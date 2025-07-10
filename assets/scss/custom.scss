@@ -1,7 +1,7 @@
 iframe {
   border: none;
 }
-  
+
 .main-nav .navbar-nav .nav-item .nav-link {
   &::first-letter {
     // capitalize on whole string makes "about us" to "About Us". We want "About us"
@@ -246,4 +246,27 @@ img[src="/images/google-translate.png"] {
 
 article img {
   max-width: 100%;
+}
+
+.toots {
+  margin: auto;
+  max-width: inherit;
+}
+
+.toots .user {
+  @media (max-width: 767px) {
+    margin-top: 1em;
+  }
+}
+
+.news {
+  padding: 100px 0;
+
+  @media (max-width: 767px) {
+    padding: 50px 0px 0px;
+  }
+
+  @media (max-width: 1199px) {
+    padding: 70px 0px 50px;
+  }
 }
