@@ -9,7 +9,7 @@ class TootFeed extends HTMLElement {
   constructor() {
     super();
 
-    let content = this.textContent.split("@");
+    const content = this.textContent.split("@");
 
     if (content[0] == "") {
       content.shift();
@@ -24,7 +24,7 @@ class TootFeed extends HTMLElement {
     this.username = content[0];
     this.instance = content[1];
 
-    let refreshRate = parseInt(this.getAttribute("refresh-rate"));
+    const refreshRate = parseInt(this.getAttribute("refresh-rate"));
 
     if (refreshRate > 0 && refreshRate != null) {
       this.refreshRate = refreshRate;
@@ -32,7 +32,7 @@ class TootFeed extends HTMLElement {
       this.refreshRate = 30000;
     }
 
-    let hostInstance = this.getAttribute("host");
+    const hostInstance = this.getAttribute("host");
 
     if (hostInstance != null) {
       this.instance = hostInstance;
@@ -49,7 +49,7 @@ class TootFeed extends HTMLElement {
 
   getUserData() {
     fetch(this.url).then((request) => request.json()).then((data) => {
-      let accounts = data["accounts"].filter((item) => {
+      const accounts = data["accounts"].filter((item) => {
         return item.url == `https://${this.instance}/@${this.username}`;
       });
 
@@ -83,7 +83,7 @@ class TootFeed extends HTMLElement {
     this.innerHTML = "";
 
     jsonResponse.forEach((element) => {
-      let contentToot = document.createElement("div");
+      const contentToot = document.createElement("div");
 
       contentToot.classList.add("tooted");
 
@@ -91,7 +91,7 @@ class TootFeed extends HTMLElement {
         contentToot.innerHTML =
           `<span class="content">${element.reblog.content}</span>`;
 
-        let timeString = new Date(element.reblog.created_at).toLocaleString();
+        const timeString = new Date(element.reblog.created_at).toLocaleString();
 
         this.addMediaAttachments(contentToot, element.reblog);
 
@@ -101,7 +101,7 @@ class TootFeed extends HTMLElement {
         contentToot.innerHTML =
           `<span class="content">${element.content}</span>`;
 
-        let timeString = new Date(element.created_at).toLocaleString();
+        const timeString = new Date(element.created_at).toLocaleString();
 
         this.addMediaAttachments(contentToot, element);
 
