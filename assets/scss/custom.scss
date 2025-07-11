@@ -251,11 +251,12 @@ article img {
 .toots {
   margin: auto;
   max-width: inherit;
-}
-
-.toots .user {
-  @media (max-width: 767px) {
-    margin-top: 1em;
+  font-family: inherit;
+  
+  @media (max-width: 576px) {
+    .user {
+      margin-top: 2em;
+    }
   }
 }
 
