@@ -9,6 +9,15 @@
       content="width=device-width, initial-scale=1, maximum-scale=1"
     />
     {{hugo.Generator}}
+    
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+      integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+      crossorigin=""/>
+
+    <script type="module" src="https://esm.sh/emfed@1"></script>
+    <link rel="stylesheet" type="text/css"
+      href="https://esm.sh/emfed@1/toots.css">
+
     {{ "<!-- Critical CSS -->" | safeHTML }}
     {{$style :=  resources.Get "scss/critical.scss" | resources.ToCSS | resources.Minify }}
     <link href="{{ $style.Permalink }}" rel="stylesheet" />
@@ -41,13 +50,4 @@
 
     </script>
     {{ end }}
-
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
-     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
-     crossorigin=""/>
-
-    <script type="module" src="https://esm.sh/emfed@1"></script>
-    <link rel="stylesheet" type="text/css"
-      href="https://esm.sh/emfed@1/toots.css">
-
   </head>
