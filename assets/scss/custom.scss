@@ -47,7 +47,7 @@ img[src="/images/google-translate.png"] {
   }
   &.upcoming > .grid-tab.upcoming,
   &.past > .grid-tab.past,
-  &.calendar > .grid-tab.calendar,
+  &.calendar > .grid-tab.calendar
   {
     background-color: unset;
     padding-top: .2em;
@@ -73,7 +73,7 @@ img[src="/images/google-translate.png"] {
   }
   &.upcoming > .grid-body.upcoming,
   &.past > .grid-body.past,
-  &.calendar > .grid-body.calendar,
+  &.calendar > .grid-body.calendar
   {
     display: block;
   }
@@ -251,11 +251,12 @@ article img {
 .toots {
   margin: auto;
   max-width: inherit;
-}
-
-.toots .user {
-  @media (max-width: 767px) {
-    margin-top: 1em;
+  font-family: inherit;
+  
+  @media (max-width: 576px) {
+    .user {
+      margin-top: 2em;
+    }
   }
 }
 
