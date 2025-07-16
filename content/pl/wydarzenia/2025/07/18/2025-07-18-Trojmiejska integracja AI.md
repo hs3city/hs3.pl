@@ -1,5 +1,5 @@
 ---
-title: Wakacje z Bielikiem
+title: Trójmiejska integracja AI
 tags:
   - hs3
 outputs:
@@ -15,7 +15,7 @@ eventInfo:
   dates:
     extra:
       2025-07-18 18:00-21:00: null
-featureImage: https://cdn.discordapp.com/guild-events/1394707088848191488/6082c5ba9b7557cc20fff6651b2407ac.png?size=1024
+featureImage: https://cdn.discordapp.com/guild-events/1394707088848191488/fd9b820bf1a6be027cd3e2e48cf30579.png?size=1024
 
 ---
 
