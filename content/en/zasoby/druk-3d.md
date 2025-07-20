@@ -76,7 +76,7 @@ Profiles for all printers are available in OrcaSlicer (select the appropriate pr
 
 ## 3D Printer Ender Diagram
 
-![3D Printer Ender Diagram](/images/zasoby/3d-printer-ender-schema.jpg)
+![3D Printer Ender Diagram](/images/zasoby/3d-printer-ender-schema-eng.jpg)
 
 ## 3D Printer Creality K1 Max Diagram
 
