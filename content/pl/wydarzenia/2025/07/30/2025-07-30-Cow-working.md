@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1399719356061057187
   link: https://discord.com/events/762566311930101761/1399719356061057187
-  interested: 2
+  interested: 3
   organizer: doomhammerng
   location: Hackerspace Trójmiasto
 eventInfo:
