@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1401928566152757498
   link: https://discord.com/events/762566311930101761/1401928566152757498
-  interested: 11
+  interested: 25
   organizer: marcin.mlynski
   location: HS3
 eventInfo:
