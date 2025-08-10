@@ -15,7 +15,7 @@ eventInfo:
   dates:
     extra:
       2025-08-29 18:00-18:00: null
-featureImage: https://cdn.discordapp.com/guild-events/1399479212552753273/64b8c5f37848f4ce69235caae91c366b.png?size=1024
+featureImage: https://cdn.discordapp.com/guild-events/1399479212552753273/d0096fdfdfe8262183f70522f20c8040.png?size=1024
 
 ---
 
