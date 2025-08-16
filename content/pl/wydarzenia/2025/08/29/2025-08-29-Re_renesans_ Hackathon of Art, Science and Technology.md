@@ -10,7 +10,7 @@ discord_event:
   link: https://discord.com/events/762566311930101761/1399479212552753273
   interested: 4
   organizer: leszekm.
-  location: https://app.evenea.pl/event/rerenesans/
+  location: https://evenea.pl/pl/wydarzenie/rerenesans
 eventInfo:
   dates:
     extra:
@@ -19,7 +19,7 @@ featureImage: https://cdn.discordapp.com/guild-events/1399479212552753273/d0096f
 
 ---
 
-Zapisy -> https://app.evenea.pl/event/rerenesans/
+Zapisy -> https://evenea.pl/pl/wydarzenie/rerenesans
 
 nterdyscyplinarne wydarzenie, którego kulminacją będzie wyjątkowy hackathon. Uczestnicy stworzą projekty inspirowane hasłem: „Łączy nas światło”. To przestrzeń, gdzie technika spotyka sztukę, a kreatywność nie zna granic. Zależy nam, żeby każdy, niezależnie od umiejętności mógł stworzyć wyjątkowy projekt.
 
