@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1407709849520967812
   link: https://discord.com/events/762566311930101761/1407709849520967812
-  interested: 5
+  interested: 6
   organizer: leszekm.
   location: https://evenea.pl/pl/wydarzenie/rerenesans
 eventInfo:
