@@ -47,8 +47,10 @@
 
 
   {{ "<!-- Non Critical CSS -->" | safeHTML }}
-  {{$style :=  resources.Get "scss/non-critical.scss" | resources.ToCSS | resources.Minify }}
-  <link href="{{ $style.Permalink }}" rel="stylesheet" />
+  {{ with resources.Get "scss/non-critical.scss" }}
+    {{ $style :=  . | css.Sass | resources.Minify }}
+    <link href="{{ $style.Permalink }}" rel="stylesheet" />
+  {{ end }}
 
   {{ "<!-- OpenStreetMap -->" | safeHTML }}
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
