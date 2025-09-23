@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1418898687391957053
   link: https://discord.com/events/762566311930101761/1418898687391957053
-  interested: 1
+  interested: 2
   organizer: leszekm.
   location: HS3
 eventInfo:
