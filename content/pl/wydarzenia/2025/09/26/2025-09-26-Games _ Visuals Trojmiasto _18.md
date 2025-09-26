@@ -24,7 +24,7 @@ Kolejne spotkanie już w piątek, 26 września o 18:00 w Hackerspace Trójmiasto
 Po prelekcj - tradycyjnie - networking przy piwku w pobliskim pubie.
 
 💬 Bartosz Idzikowski - "Self-publishing on Steam - when and how should you do it?"
-
+💬 Yura Zhdanovich - "Indie Game Development Mistakes You Can't Avoid and Why it's Better for You"
 
 [EN]
 The next meetup is already this Friday, September 26 at 6:00 PM in Hackerspace Trójmiasto!
