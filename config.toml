@@ -1,6 +1,7 @@
 baseURL = "https://hs3.pl/"
 languageCode = 'pl-pl'
-paginate = 9
+[pagination]
+pagerSize = 9
 theme = "coHub"
 title = 'Hackerspace Trójmiasto'
 DefaultContentLanguage = "pl"
