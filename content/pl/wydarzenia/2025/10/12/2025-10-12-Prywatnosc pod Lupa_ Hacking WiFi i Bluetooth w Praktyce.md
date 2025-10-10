@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1425384779049599028
   link: https://discord.com/events/762566311930101761/1425384779049599028
-  interested: 1
+  interested: 2
   organizer: leszekm.
   location: https://evenea.pl/pl/wydarzenie/prywatnosc-pod-lupa/
 eventInfo:
