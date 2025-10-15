@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1427914355416109077
   link: https://discord.com/events/762566311930101761/1427914355416109077
-  interested: 2
+  interested: 3
   organizer: asia_lena
   location: HS3
 eventInfo:
