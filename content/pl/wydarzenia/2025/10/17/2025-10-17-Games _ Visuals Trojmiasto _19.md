@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1426325201825562804
   link: https://discord.com/events/762566311930101761/1426325201825562804
-  interested: 1
+  interested: 2
   organizer: xorboo
   location: Hackerspace Trójmiasto, al. Wojska Polskiego 41, 80-268 Gdańsk
 eventInfo:
