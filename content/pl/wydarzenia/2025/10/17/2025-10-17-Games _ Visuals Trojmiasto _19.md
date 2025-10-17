@@ -21,6 +21,7 @@ featureImage: https://cdn.discordapp.com/guild-events/1426325201825562804/f15799
 
 https://www.meetup.com/hs3city/events/311462064
 
-Prelegenci: TBD
+Prelegenci:
+Yura Zhdanovich: Introduction to modern Pixel Art
 
 🎨 Grafika plakatu: Jakub Wilczek
