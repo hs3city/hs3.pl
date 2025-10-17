@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1427629923375382719
   link: https://discord.com/events/762566311930101761/1427629923375382719
-  interested: 2
+  interested: 3
   organizer: unsolaci
   location: Hackerspace Trójmiasto, al. Wojska Polskiego 41, 80-268 Gdańsk
 eventInfo:
