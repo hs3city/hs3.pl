@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1428325254710956172
   link: https://discord.com/events/762566311930101761/1428325254710956172
-  interested: 4
+  interested: 5
   organizer: maciej_d.
   location: Hackerspace Trójmiasto
 eventInfo:
