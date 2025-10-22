@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1430542665786589345
   link: https://discord.com/events/762566311930101761/1430542665786589345
-  interested: 2
+  interested: 3
   organizer: szmktk
   location: Hackerspace Trójmiasto
 eventInfo:
