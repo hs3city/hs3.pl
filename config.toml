@@ -142,3 +142,7 @@ weight = 6
 icon = "ti-wallet"
 url = "https://patronite.pl/hs3/description"
 weight = 7
+[[params.social]]
+icon = "ti-comments"
+url = "https://kb.hs3.pl/"
+weight = 8
