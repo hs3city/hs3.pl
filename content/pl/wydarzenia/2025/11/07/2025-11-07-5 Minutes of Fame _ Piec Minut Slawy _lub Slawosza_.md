@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1435353766303105085
   link: https://discord.com/events/762566311930101761/1435353766303105085
-  interested: 2
+  interested: 4
   organizer: ninufar
   location: Hackerspace Trójmiasto
 eventInfo:
