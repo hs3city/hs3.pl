@@ -14,7 +14,7 @@ discord_event:
 eventInfo:
   dates:
     extra:
-      2025-11-07 20:00-22:00: null
+      2025-11-07 18:00-20:00: null
 featureImage: https://cdn.discordapp.com/guild-events/1435353766303105085/a4449c111bc5e7acb51beacc669f50c2.png?size=1024
 
 ---
