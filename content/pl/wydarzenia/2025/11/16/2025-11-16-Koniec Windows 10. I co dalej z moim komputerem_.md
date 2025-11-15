@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1439318844400209960
   link: https://discord.com/events/762566311930101761/1439318844400209960
-  interested: 1
+  interested: 2
   organizer: gregorentoo
   location: https://meet.jit.si/moderated/3fc84f8d37251cd1f28bb7d16858e0626584c269786dd96906c851c410051564
 eventInfo:
