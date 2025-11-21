@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1440109836770611283
   link: https://discord.com/events/762566311930101761/1440109836770611283
-  interested: 2
+  interested: 3
   organizer: leszekm.
   location: Uniwersytet Gdański, wydział MFI  Wita Stwosza 57 · Gdańsk
 eventInfo:
