@@ -19,6 +19,8 @@ featureImage: https://cdn.discordapp.com/guild-events/1442556670202085598/71bc26
 
 ---
 
+You can also join on [Meetup](https://www.meetup.com/pl-pl/hs3city/events/312154423/?recId=56f4a1e3-87cd-4fe1-a4ec-263159a2e520&recSource=event-search&searchId=b50299e2-2f3d-48be-9c93-1edd62b9e07a&eventOrigin=find_page%24all)
+
 Dear Friends,
 
 BLÅHAJ just had the most wonderful vacation, but somehow it's already December! BLÅHAJ is not sure how it happened and is sorry for not inviting you to a conversation sooner. 

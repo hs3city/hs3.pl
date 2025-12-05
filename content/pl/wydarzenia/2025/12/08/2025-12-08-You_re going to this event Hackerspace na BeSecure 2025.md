@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1446111750624903311
   link: https://discord.com/events/762566311930101761/1446111750624903311
-  interested: 2
+  interested: 3
   organizer: leszekm.
   location: Gdańsk AmberEXPO
 eventInfo:
