@@ -1,0 +1,20 @@
+{{- partial "check-parameters.html" (dict
+  "name" "partials/eventViews.html"
+  "parameters" .
+  "requiredParameters" (slice "pages")
+  "optionalParameters" (slice )
+) -}}
+{{- $pages := .pages -}}
+{{- $events := partial "getEventsForPages.html" (dict
+  "pages" $pages
+) -}}
+{{- range $event := $events}}
+{{ with $event.organizer}}ORGANIZER;CN="{{ .name }}":mailto:{{ .email }}{{ end }}
+{
+  "title": "{{if $event.cancelled}}CANCELLED: {{end}}{{$event.page.Title}}{{with $event.comment}} -- {{.}}{{end}}",
+ "startDate": "{{dateFormat "20060102T150405Z" $event.startDateTime.UTC}}",
+ "endDate": "{{dateFormat "20060102T150405Z" $event.endDateTime.UTC}}",
+ "url": "{{$event.page.Permalink}}"
+},
+{{end -}}
+

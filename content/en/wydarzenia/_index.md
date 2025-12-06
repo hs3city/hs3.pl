@@ -5,6 +5,8 @@ cascade:
   outputs:
     - HTML
     - calendar
+    - rss
+    - json
 ---
 
 Do you want to organise an event with us? Read the {{% link ref="/zasoby/organizacja-wydarzen" %}}how to organise your event{{%/link%}}.

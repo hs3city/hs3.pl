@@ -1,0 +1,9 @@
+[
+{{- $allPages := where (where .Site.AllPages "Type" "==" $.Page.Type) "Kind" "page" -}}
+{{- $pagesToShow := partial "getPreferredLanguagePages.html" (dict
+  "pages" $allPages
+  "preferredLanguage" .Lang
+) -}}
+{{- partial "eventViews.json" (dict "pages" $pagesToShow) -}}
+{}
+]
