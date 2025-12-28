@@ -3,7 +3,7 @@ title: "EndOf10: życie po Windows 10"
 date: 2025-12-28
 draft: false
 slug: endof10
-summary: "Wsparcie Windows 10 kończy się 13.10.2026. Pomagamy w migracji na bezpieczny, wygodny i darmowy Linux."
+summary: "Wsparcie dla Windows 10 kończy się 13.10.2026. Pomagamy w migracji na bezpieczny, wygodny i darmowy system Linux."
 tags: ["projekt", "Linux", "migracja", "EndOf10"]
 featureImage: "/images/tux-banner.png"
 ---
@@ -12,9 +12,9 @@ featureImage: "/images/tux-banner.png"
 
 Rozszeszone wsparcie dla Windows 10 kończy się 13 października 2026 roku. Po tej dacie system nie będzie już otrzymywał aktualizacji bezpieczeństwa. Korzystanie z niego stanie się coraz mniej bezpieczne i może powodować problemy z działaniem programów.
 
-Nie trzeba jednak kupować nowego komputera. Proponujemy przejście na system Linux. To nowoczesny, bezpieczny i darmowy system, który dobrze działa także na starszych urządzeniach.
+Nie musisz jednak kupować nowego komputera. Proponujemy przejście na system Linux. To nowoczesny, bezpieczny i darmowy system, który działa dobrze również na starszych urządzeniach.
 
-Więcej informacji o inicjatywie znajdziesz na stronie: https://endof10.org/pl/
+Więcej informacji o tej inicjatywie znajdziesz na stronie: https://endof10.org/pl/
 
 ## Jak pomagamy?
 
@@ -34,7 +34,7 @@ Więcej informacji o inicjatywie znajdziesz na stronie: https://endof10.org/pl/
 
 ## Dla kogo?
 
-To rozwiązanie jest dobre, jeśli masz komputer z lat 2013–2019 (lub podobnie starszy), nie chcesz inwestować w nowy sprzęt i potrzebujesz bezpiecznie korzystać z internetu, poczty, dokumentów i prostych programów.
+Jeśli masz komputer z 2013 roku lub nowszy, nie chcesz inwestować w nowy sprzęt i potrzebujesz bezpiecznie korzystać z Internetu, poczty, dokumentów i prostych programów.
 
 ## Co przygotować wcześniej?
 
@@ -53,7 +53,7 @@ To rozwiązanie jest dobre, jeśli masz komputer z lat 2013–2019 (lub podobnie
 ## Co z moimi programami?
 
 - Przeglądarka, poczta, komunikatory i pakiet biurowy są dostępne bezpłatnie.
-- Wiele popularnych aplikacji ma odpowiedniki na Linuxa.
+- Wiele popularnych aplikacji ma odpowiedniki na Linuksa.
 - Jeśli używasz specjalistycznego oprogramowania działającego tylko na Windows, poszukamy rozwiązań (np. alternatywy, wersje webowe, wirtualizacja).
 
 ## Kontakt i materiały
@@ -69,13 +69,13 @@ Więcej o akcji: https://endof10.org/pl/
 
 ## Pytania i odpowiedzi
 
-**Czy moje pliki zostaną?**
+**Czy moje pliki zostaną zachowane?**
 
 Przed instalacją robimy kopię zapasową wskazanych folderów. Po instalacji przywracamy dane do nowego systemu.
 
 **Czy mogę wrócić do Windows?**
 
-Tak. Jeśli będzie taka potrzeba, można przywrócić wcześniejszy system lub skonfigurować uruchamianie dwóch systemów obok siebie.
+Tak. Jeśli będzie taka potrzeba, można przywrócić wcześniejszy system lub skonfigurować wybór spośród obu systemów podczas uruchamiania komputera.
 
 **Czy będę umiał obsługiwać nowy system?**
 
@@ -95,7 +95,7 @@ Najczęściej znajdziemy odpowiedniki. W trudnych przypadkach poszukamy rozwiąz
 - Kopie zapasowe: pokażemy, jak łatwo robić regularne kopie ważnych plików.
 - Pomoc: w razie pytań możesz do nas napisać. Wiele odpowiedzi znajdziesz też w prostych poradnikach, które udostępnimy.
 
-## Pierwsze kroki w Linuxie
+## Pierwsze kroki w Linuksie
 
 - Menu programów: w lewym dolnym rogu (lub na pasku) znajdziesz listę aplikacji.
 - Sklep z aplikacjami: możesz instalować programy jednym kliknięciem.
