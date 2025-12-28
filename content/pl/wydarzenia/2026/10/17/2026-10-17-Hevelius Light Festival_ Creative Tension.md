@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1451954055499743575
   link: https://discord.com/events/762566311930101761/1451954055499743575
-  interested: 3
+  interested: 4
   organizer: leszekm.
   location: Gdańsk
 eventInfo:
