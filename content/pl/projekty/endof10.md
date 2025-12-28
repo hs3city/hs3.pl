@@ -1,16 +1,16 @@
 ---
 title: "EndOf10: życie po Windows 10"
-date: 2025-09-15
+date: 2025-12-28
 draft: false
 slug: endof10
-summary: "Wsparcie Windows 10 kończy się 14.10.2025. Pomagamy w migracji na bezpieczny, wygodny i darmowy Linux."
+summary: "Wsparcie Windows 10 kończy się 13.10.2026. Pomagamy w migracji na bezpieczny, wygodny i darmowy Linux."
 tags: ["projekt", "Linux", "migracja", "EndOf10"]
 featureImage: "/images/tux-banner.png"
 ---
 
 ## Co się dzieje?
 
-14 października 2025 roku kończy się wsparcie techniczne dla Windows 10. Po tej dacie system nie będzie już otrzymywał aktualizacji bezpieczeństwa. Korzystanie z niego stanie się coraz mniej bezpieczne i może powodować problemy z działaniem programów.
+Rozszeszone wsparcie dla Windows 10 kończy się 13 października 2026 roku. Po tej dacie system nie będzie już otrzymywał aktualizacji bezpieczeństwa. Korzystanie z niego stanie się coraz mniej bezpieczne i może powodować problemy z działaniem programów.
 
 Nie trzeba jednak kupować nowego komputera. Proponujemy przejście na system Linux. To nowoczesny, bezpieczny i darmowy system, który dobrze działa także na starszych urządzeniach.
 
