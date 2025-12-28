@@ -58,14 +58,14 @@ To rozwiązanie jest dobre, jeśli masz komputer z lat 2013–2019 (lub podobnie
 
 ## Kontakt i materiały
 
-Napisz do nas: [endof10@s.hs3.pl](mailto:endof10@s.hs3.pl)
+Napisz do nas: [endof10@hs3.pl](mailto:endof10@hs3.pl)
 
 Więcej o akcji: https://endof10.org/pl/
 
 |  |  |  |
 |---|---|---|
-| ![QR: endof10.org](https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fendof10.org%2Fpl%2F) | &nbsp;&nbsp;&nbsp;&nbsp; | ![QR: e‑mail endof10@s.hs3.pl](https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=mailto%3Aendof10%40s.hs3.pl) |
-| endof10.org/pl |  | e‑mail: endof10@s.hs3.pl |
+| ![QR: endof10.org](https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https%3A%2F%2Fendof10.org%2Fpl%2F) | &nbsp;&nbsp;&nbsp;&nbsp; | ![QR: e‑mail endof10@hs3.pl](https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=mailto%3Aendof10%40hs3.pl) |
+| endof10.org/pl |  | e‑mail: endof10@hs3.pl |
 
 ## Pytania i odpowiedzi
 
