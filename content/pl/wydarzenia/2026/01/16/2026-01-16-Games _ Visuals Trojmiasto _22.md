@@ -24,6 +24,7 @@ Spotykamy się w piątek, 16 stycznia o 18:00 w Hackerspace Trójmiasto.
 Po prelekcjach niezmiennie zapraszamy na networking.
 
 Prelegenci:
-Już niedługo – wypatrujcie kolejnych ogłoszeń 👀
+💬 **Pascal Ehrlich** - Level Design and World Building
+💬 TBD
 
 Grafika plakatu: Elwira K.
