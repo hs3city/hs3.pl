@@ -25,6 +25,6 @@ Po prelekcjach niezmiennie zapraszamy na networking.
 
 Prelegenci:
 💬 **Pascal Ehrlich** - Level Design and World Building
-💬 TBD
+💬 **Elwira Kolber** - Survival kit młodego artysty
 
 Grafika plakatu: Elwira K.
