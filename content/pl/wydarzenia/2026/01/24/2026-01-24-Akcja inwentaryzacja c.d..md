@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1445705025354596352
   link: https://discord.com/events/762566311930101761/1445705025354596352
-  interested: 6
+  interested: 7
   organizer: asia_lena
   location: Wojska Polskiego 41
 eventInfo:
