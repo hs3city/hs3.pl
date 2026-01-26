@@ -15,7 +15,7 @@ eventInfo:
   dates:
     extra:
       2026-01-26 17:30-18:30: null
-featureImage: https://cdn.discordapp.com/guild-events/1464510213448142868/1bb9e6342a04c534c35f394a6d053ef5.png?size=1024
+featureImage: https://cdn.discordapp.com/guild-events/1464510213448142868/d20cff1a790dc461da451cf2b8b5e7c3.png?size=1024
 
 ---
 
