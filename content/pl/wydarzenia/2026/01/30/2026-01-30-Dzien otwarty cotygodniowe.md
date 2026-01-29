@@ -15,6 +15,7 @@ eventInfo:
   dates:
     extra:
       2026-01-30 18:00-20:59: null
+featureImage: https://cdn.discordapp.com/guild-events/1438922233862164550/20ed524131541abe1918760bc4a60f90.png?size=1024
 
 ---
 
