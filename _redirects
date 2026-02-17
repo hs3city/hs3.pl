@@ -14,6 +14,6 @@
 /gvt-video		https://www.youtube.com/playlist?list=PL97f0is2Y4VnWVgBYOlmYNJIRINzCwPvz
 /linuxday     https://hs3.pl/wydarzenia/2025/02/08/2025-02-08-linux-day-x-tlug/
 /workshopping https://docs.google.com/spreadsheets/d/1SAU_a3OohKst0FHJ1HzmE-uEbp0itiqxBrbpCIO0T84/edit?gid=1002977074#gid=1002977074
-/.well-known/matrix/*  https://matrix.in.hs3.pl/.well-known/matrix/:splat
-/_matrix/*      https://matrix.in.hs3.pl:8448/_matrix/:splat
+/.well-known/matrix/*  https://matrix.hs3.pl/.well-known/matrix/:splat
+/_matrix/*      https://matrix.hs3.pl:8448/_matrix/:splat
 /db/*     https://kb.hs3.pl/t/:splat                
