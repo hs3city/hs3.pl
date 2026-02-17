@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1473051544747249887
   link: https://discord.com/events/762566311930101761/1473051544747249887
-  interested: 3
+  interested: 4
   organizer: asia_lena
   location: Wojska Polskiego 41, Gdańsk
 eventInfo:
