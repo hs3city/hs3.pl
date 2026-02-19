@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1471247056373809172
   link: https://discord.com/events/762566311930101761/1471247056373809172
-  interested: 6
+  interested: 7
   organizer: lemingnorweski
   location: Hackerspace Trójmiasto
 eventInfo:
