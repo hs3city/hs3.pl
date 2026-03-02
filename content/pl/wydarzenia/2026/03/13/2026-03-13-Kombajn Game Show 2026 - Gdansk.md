@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1473471447585521716
   link: https://discord.com/events/762566311930101761/1473471447585521716
-  interested: 1
+  interested: 2
   organizer: leszekm.
   location: Uniwersytet Gdański
 eventInfo:
