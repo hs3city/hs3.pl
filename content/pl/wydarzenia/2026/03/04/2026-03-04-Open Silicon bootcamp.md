@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1476672003040870642
   link: https://discord.com/events/762566311930101761/1476672003040870642
-  interested: 2
+  interested: 3
   organizer: magnetofield.
   location: Hs3
 eventInfo:
