@@ -13,12 +13,17 @@ class MyDumper(yaml.Dumper):
 
 
 def _process_event(event, event_dir):
-    logging.info(f"Proicessing event: {event.name}...")
+    logging.info(f"Processing event: {event.name}...")
+    
     logging.info(
         f"Creator: {event.creator} [{event.creator_id}], description: {event.description}, time: {event.start_time}"
     )
     start_time = event.start_time.astimezone(local_timezone)
-    end_time = event.end_time.astimezone(local_timezone)
+    if event.channel:
+        formatted_time = start_time.strftime('%Y-%m-%d %H:%M')
+    else:
+        end_time = event.end_time.astimezone(local_timezone)
+        formatted_time = start_time.strftime('%Y-%m-%d %H:%M')
 
     front_matter = {
         "title": remove_emoji(event.name),
@@ -34,7 +39,7 @@ def _process_event(event, event_dir):
         "eventInfo": {
             "dates": {
                 "extra": {
-                    f"{start_time.strftime('%Y-%m-%d %H:%M')}-{end_time.strftime('%H:%M')}": None
+                    formatted_time: None
                 }
             }
         },
@@ -72,4 +77,7 @@ async def add_discord_events(client, event_dir):
 
         for event in guild.scheduled_events:
             event = await guild.fetch_scheduled_event(event.id)
+            if event.channel and not event.channel.permissions_for(guild.default_role).connect:
+                logging.info(f"Skipping private channel event: {event.name}")
+                continue
             _process_event(event, event_dir)
