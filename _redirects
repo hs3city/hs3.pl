@@ -17,3 +17,4 @@
 /.well-known/matrix/*  https://matrix.hs3.pl/.well-known/matrix/:splat
 /_matrix/*      https://matrix.hs3.pl:8448/_matrix/:splat
 /db/*     https://kb.hs3.pl/t/:splat                
+/15 https://hs3.pl/blog/przekaz-1-5-sarigato/
