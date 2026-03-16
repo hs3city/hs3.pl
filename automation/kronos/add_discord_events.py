@@ -23,7 +23,7 @@ def _process_event(event, event_dir):
         formatted_time = start_time.strftime('%Y-%m-%d %H:%M')
     else:
         end_time = event.end_time.astimezone(local_timezone)
-        formatted_time = start_time.strftime('%Y-%m-%d %H:%M')
+        formatted_time = f"{start_time.strftime('%Y-%m-%d %H:%M')}-{end_time.strftime('%H:%M')}"
 
     front_matter = {
         "title": remove_emoji(event.name),
@@ -39,7 +39,7 @@ def _process_event(event, event_dir):
         "eventInfo": {
             "dates": {
                 "extra": {
-                    formatted_time: None
+                    formatted_time : None
                 }
             }
         },
