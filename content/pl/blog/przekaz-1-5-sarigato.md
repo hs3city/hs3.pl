@@ -1,6 +1,6 @@
 ---
 title: "Przekaż 1.5% na HS3 z Sarigato"
-date: 2024-03-25T19:00:00+01:00
+date: 2026-03-16T19:00:00+01:00
 featureImage: /images/blog/sarigato.jpg
 tags: ["hackerspace", "hs3", "1,5%"]
 ---
@@ -24,3 +24,13 @@ Pozyskane środki pozwolą nam na utrzymanie przestrzeni, zakup nowych narzędzi
 Pomóż nam tworzyć jeszcze więcej innowacyjnych projektów i wspierać lokalną społeczność nie płacąc ani grosza z własnej kieszeni!
  
 Dziękujemy za Wasze wsparcie i jak zawsze zapraszamy do odwiedzin!
+
+Zbiórkę kontynuujemy już drugi rok.
+
+Dzięki Waszemu wsparciu w roku 2025 zakupiliśmy:
+- nowy podnośnik samochodowy
+- groty do lutownic
+- świecące ledowe paseczki
+- kable dla muzykantów
+- niezbędne w każdym hackerspace pojemniki plastikowe typu SAMLA
+- i… jeszcze inne ciekawe sprzęciki i zabawki (przyjdźcie zobaczyć sami)

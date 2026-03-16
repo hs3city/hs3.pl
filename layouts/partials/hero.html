@@ -25,9 +25,9 @@
             </div>
 
             {{ if .cta }}
-            <div class="hero-cta">
+            <div class="hero-cta mt-3">
               {{ range .cta }}
-              <a href="{{ .url | absURL }}" class="btn btn-{{ .style }}">{{ .label }}</a>
+              <a href="{{ .url | absURL }}" class="btn btn-{{ .style }} btn-sm">{{ .label }}</a>
               {{ end }}
             </div>
             {{ end }}

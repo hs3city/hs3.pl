@@ -6,5 +6,5 @@ herosVideoDesc: "<span> <strong>Hackerspace Trójmiasto w </strong> 370 sekund</
 cta:
   - label: "Przekaż 1,5% na wsparcie Hackerspace Trójmiasto"
     url: "/15"
-    style: "primary"
+    style: "success"
 ---
