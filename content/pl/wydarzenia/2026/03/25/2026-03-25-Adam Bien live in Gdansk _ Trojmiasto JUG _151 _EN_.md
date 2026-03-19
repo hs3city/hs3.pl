@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1483872378671857684
   link: https://discord.com/events/762566311930101761/1483872378671857684
-  interested: 1
+  interested: 2
   organizer: leszekm.
   location: Instytut informatyki  UG - Uniwersytet Gdański, wydział MFI  Wita Stwosza
     57 · Gdańsk
