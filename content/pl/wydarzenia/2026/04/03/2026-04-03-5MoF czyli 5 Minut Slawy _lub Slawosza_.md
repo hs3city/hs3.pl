@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1481631025158426666
   link: https://discord.com/events/762566311930101761/1481631025158426666
-  interested: 1
+  interested: 2
   organizer: kingbob
   location: ''
 eventInfo:
