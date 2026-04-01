@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1481614457992909010
   link: https://discord.com/events/779727338002186261/1481614457992909010
-  interested: 1
+  interested: 2
   organizer: frozone
   location: ''
 eventInfo:
