@@ -6,16 +6,16 @@ outputs:
   - html
   - calendar
 discord_event:
-  id: 1481631025158426666
-  link: https://discord.com/events/762566311930101761/1481631025158426666
-  interested: 3
+  id: 1488840313576493106
+  link: https://discord.com/events/779727338002186261/1488840313576493106
+  interested: 0
   organizer: kingbob
   location: ''
 eventInfo:
   dates:
     extra:
       2026-04-03 18:00-19:00: null
-featureImage: https://cdn.discordapp.com/guild-events/1481631025158426666/82abd079d5a94dab4433899d12e9db25.png?size=1024
+featureImage: https://cdn.discordapp.com/guild-events/1488840313576493106/50c2587744adb707f04ef11815b3de05.png?size=1024
 
 ---
 
