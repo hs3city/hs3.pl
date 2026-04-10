@@ -7,7 +7,7 @@ outputs:
   - calendar
 discord_event:
   id: 1438922233862164550
-  link: https://discord.com/events/762566311930101761/1438922233862164550
+  link: https://hs3.pl/join
   interested: 9
   organizer: ivan.push
   location: Hackerspace Trójmiasto Gdańsk al. Wojska Polskiego 41

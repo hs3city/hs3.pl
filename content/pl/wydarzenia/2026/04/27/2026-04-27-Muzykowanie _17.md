@@ -7,7 +7,7 @@ outputs:
   - calendar
 discord_event:
   id: 1488840302570639480
-  link: https://discord.com/events/762566311930101761/1488840302570639480
+  link: https://hs3.pl/join
   interested: 0
   organizer: kingbob
   location: ''
