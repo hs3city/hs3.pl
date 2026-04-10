@@ -31,7 +31,7 @@ def _process_event(event, event_dir):
         "outputs": ["html", "calendar"],
         "discord_event": {
             "id": event.id,
-            "link": event.url,
+            "link": "https://hs3.pl/join",
             "interested": event.user_count,
             "organizer": event.creator.name,
             "location": event.location,
