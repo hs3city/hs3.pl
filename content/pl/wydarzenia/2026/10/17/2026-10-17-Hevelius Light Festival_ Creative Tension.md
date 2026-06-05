@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1451954055499743575
   link: https://hs3.pl/join
-  interested: 7
+  interested: 8
   organizer: leszekm.
   location: Gdańsk
 eventInfo:
