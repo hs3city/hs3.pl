@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1519791702452474058
   link: https://hs3.pl/join
-  interested: 6
+  interested: 5
   organizer: lemingnorweski
   location: Hackerspace Trójmiasto
 eventInfo:
