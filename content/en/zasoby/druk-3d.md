@@ -1,6 +1,18 @@
 ---
-title: "3D Printing at HS3"
-tags: ["hackerspace", "hs3", "hardware", "3d printing", "ender", "creality", "k1max", "elegoo", "neptune"]
+title: 3D Printing at HS3
+featureImage: /images/zasoby/3d-printers.jpg
+tags:
+  - hackerspace
+  - hs3
+  - hardware
+  - 3d printing
+  - ender
+  - creality
+  - k1max
+  - elegoo
+  - neptune
+category:
+  - hardware
 ---
 
 # 3D Printing
