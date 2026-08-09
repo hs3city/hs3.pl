@@ -1,6 +1,18 @@
 ---
-title: "Druk 3D w HS3"
-tags: ["hackerspace", "hs3", "hardware", "druk 3d", "ender", "creality", "k1max", "elegoo", "neptune"]
+title: Druk 3D w HS3
+featureImage: /images/zasoby/3d-printers.jpg
+tags:
+  - hackerspace
+  - hs3
+  - hardware
+  - druk 3d
+  - ender
+  - creality
+  - k1max
+  - elegoo
+  - neptune
+category:
+  - hardware
 ---
 
 # Druk 3D
