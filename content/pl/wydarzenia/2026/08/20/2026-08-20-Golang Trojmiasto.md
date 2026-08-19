@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1387825134039072951
   link: https://hs3.pl/join
-  interested: 6
+  interested: 7
   organizer: mm996606
   location: Hackerspace Trójmiasto
 eventInfo:
