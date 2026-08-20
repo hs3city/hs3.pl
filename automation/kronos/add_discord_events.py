@@ -1,5 +1,6 @@
 import logging
 
+from discord import ScheduledEventStatus
 import yaml
 from pytz import timezone
 from sanitize import remove_emoji, sanitize
@@ -77,6 +78,9 @@ async def add_discord_events(client, event_dir):
 
         for event in guild.scheduled_events:
             event = await guild.fetch_scheduled_event(event.id)
+            if event.status is ScheduledEventStatus.canceled:
+                logging.info(f"Skipping canceled event: {event.name}")
+                continue
             if event.channel and not event.channel.permissions_for(guild.default_role).connect:
                 logging.info(f"Skipping private channel event: {event.name}")
                 continue
