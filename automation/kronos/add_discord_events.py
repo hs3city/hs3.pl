@@ -16,7 +16,7 @@ def _process_event(event, event_dir):
     logging.info(f"Processing event: {event.name}...")
     
     logging.info(
-        f"Creator: {event.creator} [{event.creator_id}], description: {event.description}, time: {event.start_time}"
+        f"Creator: {event.creator} [{event.creator_id}], description: {event.description}, time: {event.start_time}, status: {event.status}"
     )
     start_time = event.start_time.astimezone(local_timezone)
     if event.channel:
