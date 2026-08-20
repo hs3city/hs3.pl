@@ -78,6 +78,7 @@ async def add_discord_events(client, event_dir):
 
         for event in guild.scheduled_events:
             event = await guild.fetch_scheduled_event(event.id)
+            print(event.status)
             if event.status is EventStatus.canceled:
                 logging.info(f"Skipping canceled event: {event.name}")
                 continue
