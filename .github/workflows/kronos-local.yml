@@ -15,6 +15,7 @@ concurrency:
 
 env:
   DISCORD_TOKEN: ${{ secrets.DISCORD_TOKEN }}
+  DRY_RUN: ${{ vars.DRY_RUN }} 
 
 jobs:
   update:
@@ -48,6 +49,7 @@ jobs:
           fi
 
       - name: Commit changes
+        if: ${{ env.DRY_RUN != 'true' }} 
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Sync Discord events
