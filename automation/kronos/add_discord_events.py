@@ -6,7 +6,12 @@ from sanitize import remove_emoji, sanitize
 
 local_timezone = timezone("Europe/Warsaw")
 
-
+# Events listed here will be skipped from being added to the website
+# Useful for skipping events in series
+SKIPPED_EVENTS = [
+    ("Dzień otwarty cotygodniowe", "2026-09-04"),
+    ("event_name", "event_date"),
+]
 class MyDumper(yaml.Dumper):
     def increase_indent(self, flow=False, indentless=False):
         return super(MyDumper, self).increase_indent(flow, False)
@@ -79,5 +84,9 @@ async def add_discord_events(client, event_dir):
             event = await guild.fetch_scheduled_event(event.id)
             if event.channel and not event.channel.permissions_for(guild.default_role).connect:
                 logging.info(f"Skipping private channel event: {event.name}")
+                continue
+            event_date = event.start_time.astimezone(local_timezone).strftime("%Y-%m-%d")
+            if (event.name, event_date) in SKIPPED_EVENTS:
+                logging.info(f"Skipping skipped event: {event.name} ({event_date})")
                 continue
             _process_event(event, event_dir)
