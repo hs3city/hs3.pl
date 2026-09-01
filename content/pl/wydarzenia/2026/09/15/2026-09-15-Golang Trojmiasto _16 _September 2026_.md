@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1544264965546967091
   link: https://hs3.pl/join
-  interested: 3
+  interested: 4
   organizer: mm996606
   location: Hapag-Lloyd, Alchemia 413 Aleja Grunwaldzka, Gdańsk
 eventInfo:
