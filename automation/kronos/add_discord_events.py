@@ -10,6 +10,7 @@ local_timezone = timezone("Europe/Warsaw")
 # Useful for skipping events in series
 SKIPPED_EVENTS = [
     ("Dzień otwarty cotygodniowe", "2026-08-28"),
+    ("Dzień otwarty cotygodniowe", "2026-09-11"),
     ("event_name", "event_date"),
 ]
 class MyDumper(yaml.Dumper):
