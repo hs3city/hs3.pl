@@ -9,6 +9,7 @@ local_timezone = timezone("Europe/Warsaw")
 # Events listed here will be skipped from being added to the website
 # Useful for skipping events in series
 SKIPPED_EVENTS = [
+    ("Testowanie na produkcji", "2026-09-20"),
     ("Dzień otwarty cotygodniowe", "2026-08-28"),
     ("Dzień otwarty cotygodniowe", "2026-09-11"),
     ("event_name", "event_date"),
@@ -88,6 +89,6 @@ async def add_discord_events(client, event_dir):
                 continue
             event_date = event.start_time.astimezone(local_timezone).strftime("%Y-%m-%d")
             if (event.name, event_date) in SKIPPED_EVENTS:
-                logging.info(f"Skipping skipped event: {event.name} ({event_date})")
-                continue
+                logging.info(f"Appending ODWOŁANY! for {event.name} ({event_date})")
+                event.name = f"ODWOŁANO! {event.name}"
             _process_event(event, event_dir)
