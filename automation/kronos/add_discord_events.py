@@ -91,4 +91,5 @@ async def add_discord_events(client, event_dir):
             if (event.name, event_date) in SKIPPED_EVENTS:
                 logging.info(f"Appending ODWOŁANY! for {event.name} ({event_date})")
                 event.name = f"ODWOŁANO! {event.name}"
+            event.name = event.name.replace('"', '')
             _process_event(event, event_dir)
