@@ -1,6 +1,6 @@
 ---
 title: "Podziękowanie dla patronów UPS"
-date: 2022-09-10T22:08:38+01:00
+date: 2022-09-28T22:08:38+01:00
 featureImage: /images/wydarzenia/null.png
 tags: ["hackerspace", "hs3"]
 ---
@@ -28,5 +28,5 @@ Oto pełna lista naszych patronów - chcielibyśmy podziękować Wam za tak hojn
 - DRZ
 - Pudełko na sterydach
 - Piotr Gaczkowski
-
+<br>
 A także, specjalne podziękowanie dla Rasskabak za wykonanie "Ściany Patronów", którą możecie zobaczyć w serwerowni.
