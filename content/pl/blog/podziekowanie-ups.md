@@ -1,6 +1,6 @@
 ---
 title: "Podziękowanie dla patronów UPS"
-date: 2026-09-29T19:00:00+01:00
+date: 2022-09-10T22:08:38+01:00
 featureImage: /images/wydarzenia/null.png
 tags: ["hackerspace", "hs3"]
 ---
