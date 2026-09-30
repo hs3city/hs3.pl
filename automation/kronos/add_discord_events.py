@@ -9,6 +9,7 @@ local_timezone = timezone("Europe/Warsaw")
 # Events listed here will be skipped from being added to the website
 # Useful for skipping events in series
 SKIPPED_EVENTS = [
+    ("Zobaczyć więcej - kino i psychoedukacja", "2026-10-05"),
     ("Testowanie na produkcji", "2026-09-20"),
     ("Dzień otwarty cotygodniowe", "2026-08-28"),
     ("Dzień otwarty cotygodniowe", "2026-09-11"),
