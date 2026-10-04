@@ -1,5 +1,5 @@
 ---
-title: Zobaczyć więcej - kino i psychoedukacja
+title: ODWOŁANO! Zobaczyć więcej - kino i psychoedukacja
 tags:
   - hs3
 outputs:
