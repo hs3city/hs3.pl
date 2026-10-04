@@ -89,8 +89,8 @@ async def add_discord_events(client, event_dir):
                 logging.info(f"Skipping private channel event: {event.name}")
                 continue
             event_date = event.start_time.astimezone(local_timezone).strftime("%Y-%m-%d")
+            event.name = event.name.replace('"', '')
             if (event.name, event_date) in SKIPPED_EVENTS:
                 logging.info(f"Appending ODWOŁANY! for {event.name} ({event_date})")
                 event.name = f"ODWOŁANO! {event.name}"
-            event.name = event.name.replace('"', '')
             _process_event(event, event_dir)
