@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1549506712975970355
   link: https://hs3.pl/join
-  interested: 5
+  interested: 6
   organizer: mw5018
   location: Hackerspace Trójmiasto
 eventInfo:
