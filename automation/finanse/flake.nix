@@ -2,7 +2,7 @@
   description = "Construct development shell from requirements.txt";
   inputs = {
 
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05-small";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-25.11";
     flake-utils.url = "github:numtide/flake-utils";
 
     pyproject-nix.url = "github:nix-community/pyproject.nix";
@@ -37,7 +37,7 @@
           name = "dashboard";
           src = ./.;
           buildPhase = "${pythonEnv}/bin/python ./dashboard.py --source_path=./. --dest_path=./.";
-          installPhase = "cp ./finanse.html $out";
+          installPhase = "mkdir -p $out; cp ./finanse.* $out/";
         };
         defaultPackage = self.packages.${system}.dashboard;
         devShells.default = mkShell { buildInputs = [ pythonEnv ]; };
