@@ -12,6 +12,7 @@
 BEGIN:VEVENT
 {{ with $event.organizer}}ORGANIZER;CN="{{ .name }}":mailto:{{ .email }}{{ end }}
 SUMMARY:{{if $event.cancelled}}CANCELLED: {{end}}{{$event.page.Title}}{{with $event.comment}} -- {{.}}{{end}}
+DESCRIPTION;ENCODING=QUOTED-PRINTABLE:{{ $event.page.Content | replaceRE `\n` "=0D=0A" }}
 UID:{{$event.page.Title | urlize}}-{{dateFormat "2006-01-02" $event.startDateTime}}@hs3.pl
 SEQUENCE:0
 STATUS:{{if $event.cancelled}}CANCELLED{{else}}CONFIRMED{{end}}
