@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/75350ee7-804a-4cb7-9ac6-3ce0e37eb43b/deploy-status)](https://app.netlify.com/projects/test-hs3/deploys)
+
 # The main website for hs3.pl
 
 ## In order to run the website locally
