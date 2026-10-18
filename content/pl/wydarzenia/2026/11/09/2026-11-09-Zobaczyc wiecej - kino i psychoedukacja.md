@@ -8,14 +8,14 @@ outputs:
 discord_event:
   id: 1549506712975970355
   link: https://hs3.pl/join
-  interested: 7
+  interested: 8
   organizer: mw5018
   location: Hackerspace Trójmiasto
 eventInfo:
   dates:
     extra:
-      2026-10-19 19:00-21:30: null
-featureImage: https://cdn.discordapp.com/guild-events/1549506712975970355/e48bb5a623b41fceb5b43eb8077b5aec.png?size=1024
+      2026-11-09 18:00-21:00: null
+featureImage: https://cdn.discordapp.com/guild-events/1549506712975970355/6cb5807bea56bc4d6a2fa5c5312042c4.png?size=1024
 
 ---
 
