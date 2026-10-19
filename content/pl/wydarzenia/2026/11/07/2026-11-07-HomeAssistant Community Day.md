@@ -6,21 +6,19 @@ outputs:
   - html
   - calendar
 discord_event:
-  id: 1561422629083160706
+  id: 1561706717711040522
   link: https://hs3.pl/join
-  interested: 1
-  organizer: mor08945
-  location: Hackerspace Trójmiasto
+  interested: 0
+  organizer: kingbob
+  location: Hackerspace Trójmiasto, Gdańsk
 eventInfo:
   dates:
     extra:
-      2026-11-07 16:00-20:00: null
-featureImage: https://cdn.discordapp.com/guild-events/1561422629083160706/150c7843dc4a63415e68b1a07a3a8b5f.png?size=1024
+      2026-11-07 16:00-17:00: null
+featureImage: https://cdn.discordapp.com/guild-events/1561706717711040522/dd44b4299de1af383f48e7278e1b993c.png?size=1024
 
 ---
 
-Home Assistant Community Day 2026 zawita do Trójmiasta. Zapraszam wszystkich pasjonatów Home Assistanta, ESPHome czy Music Assistant. Nie ważne czy jesteś starym wyjadaczem smart home czy dopiero chcesz zacząć przygodę, wpadaj na spotkanie. 
+https://events.hs3.pl/events/7940360d-078b-4f8b-8eb4-477a6e8abae7
 
-Wymienimy się doświadczeniami, pomysłami na automatyzacje, dashboardy, opinie o sprzęcie jak i Smart Home Swap - możemy się powymieniać, sprzedać lub oddać ;)
-
-https://luma.com/c74bkooo
+Home Assistant Community Day 2026 zawita do Trójmiasta. Zapraszam wszystkich pasjonatów Home Assistanta, ESPHome czy Music Assistant. Nie ważne czy jesteś starym wyjadaczem smart home czy dopiero chcesz zacząć przygodę, wpadaj na spotkanie. Wymienimy się doświadczeniami, pomysłami na automatyzacje, …
