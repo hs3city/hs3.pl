@@ -1,5 +1,5 @@
 ---
-title: Dzień otwarty cotygodniowe
+title: ODWOŁANO! Dzień otwarty cotygodniowe
 tags:
   - hs3
 outputs:
