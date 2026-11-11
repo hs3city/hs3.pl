@@ -17,28 +17,50 @@ Want to help? Join us!
 - If you know HS3 and know what to do — drop by whenever you want!
 - If you need an introduction, join us at one of the times marked in the schedule (⭐)
 
+<br><br>
+
 ## Schedule
 
+<br>
+
 ### Friday 13.11
+
+<br>
+
 - 16:00 start of the hackathon
 - 18:00 introduction to the hackathon and hs3 ⭐
 - 20:00 dinner or pizza (we still don't know)
 
+<br><br>
+
 ### Saturday 14.11
+
+<br>
+
 - 09:00 sandwiches
 - 10:00 introduction to the hackathon and hs3 ⭐
 - 16:00 introduction to the hackathon and hs3 ⭐
 - 17:00 dinner
 - 19:00 HS3 internal meeting
 
+<br><br>
+
 ### Sunday 15.11
+
+<br>
+
 - 09:00 sandwiches
 - 10:00 introduction to the hackathon and hs3 ⭐
 - 14:00 dinner
 - 16:00 end of the hackathon
 - 16:00 hackathon presentations (until 18:00)
 
+<br><br>
+
 ## Topics and their mentors
+
+<br>
+
 - Marsien - finances
 - Braytonpower - workshop (garage)
 - DoomHammer - infra; cooperation of hs3 with the “outside”
