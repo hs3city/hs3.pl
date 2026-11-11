@@ -1,7 +1,7 @@
 ---
 title: "Hackathon HS3"
 date: 2026-11-11T08:08:00+01:00
-featureImage: /images/wydarzenia/null.png
+featureImage: /images/wydarzenia/foczka_hackathon.jpg
 tags: ["hackerspace", "hs3", "event", "hackathon"]
 ---
 
