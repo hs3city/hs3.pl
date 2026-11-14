@@ -40,7 +40,7 @@ Want to help? Join us!
 - 10:00 introduction to the hackathon and hs3 ⭐
 - 12:00 sandwiches
 - 16:00 introduction to the hackathon and hs3 ⭐
-- 17:00 dinner
+- 18:00 dinner
 - 19:00 HS3 internal meeting
 
 <br><br>
@@ -49,7 +49,7 @@ Want to help? Join us!
 
 <br>
 
-- 09:00 sandwiches
+- 10:00 sandwiches
 - 10:00 introduction to the hackathon and hs3 ⭐
 - 14:00 dinner
 - 16:00 end of the hackathon
