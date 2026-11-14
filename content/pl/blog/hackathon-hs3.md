@@ -37,8 +37,8 @@ Chcesz pomóc? Dołącz do nas!
 
 <br>
 
-- 09:00 kanapki
 - 10:00 wprowadzenie ludzi spoza spejsu w hackaton i hs3 ⭐
+- 12:00 kanapki
 - 16:00 wprowadzenie ludzi spoza spejsu w hackaton i hs3 ⭐
 - 17:00 obiad
 - 19:00 spotkanie wewnętrzne HS3
