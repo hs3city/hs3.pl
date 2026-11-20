@@ -8,7 +8,7 @@ outputs:
 discord_event:
   id: 1573088375936913608
   link: https://hs3.pl/join
-  interested: 1
+  interested: 2
   organizer: ninufar
   location: Hackerspace Trójmiasto
 eventInfo:
