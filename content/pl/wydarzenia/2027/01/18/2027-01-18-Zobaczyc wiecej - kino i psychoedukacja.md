@@ -14,7 +14,7 @@ discord_event:
 eventInfo:
   dates:
     extra:
-      2026-12-14 18:00-21:00: null
+      2027-01-18 18:00-21:00: null
 featureImage: https://cdn.discordapp.com/guild-events/1549506712975970355/6cb5807bea56bc4d6a2fa5c5312042c4.png?size=1024
 
 ---
