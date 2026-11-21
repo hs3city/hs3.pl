@@ -11,6 +11,7 @@ discord_event:
   interested: 6
   organizer: mor08945
   location: Hackerspace Trójmiasto
+featureImage: /images/wydarzenia/lpd-2026.png
 eventInfo:
   dates:
     extra:
