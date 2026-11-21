@@ -103,7 +103,7 @@ img[src="/images/google-translate.png"] {
       &.weeknumber {
         font-size: .6em;
         text-align: center;
-        color: Hsl(0, 0%, 60%);
+        color: Hsl(0, 0%, 35%);
       }
       &.calendar-day {
         &.today:not(other-month) {
@@ -151,7 +151,7 @@ img[src="/images/google-translate.png"] {
     }
   }
   &.cancelled {
-    color: hsl(0, 80, 60);
+    color: hsl(0, 80%, 35%);
     time {
       text-decoration: line-through;
     }
@@ -161,7 +161,7 @@ img[src="/images/google-translate.png"] {
   }
   span.date.changed,
   & > span.time.changed {
-    color: hsl(30, 100, 50);
+    color: hsl(30, 100%, 35%);
     &::after {
       font-size: 0.8em;
       content: "(changed)";
@@ -246,6 +246,80 @@ img[src="/images/google-translate.png"] {
 
 article img {
   max-width: 100%;
+}
+
+/* Improve text contrast and visual separation throughout the site. */
+body,
+p,
+.footer p,
+.footer-menu ul li a,
+.blog-content p,
+.privacy-policy-item p {
+  color: #595959;
+}
+
+p {
+  font-weight: 400;
+  line-height: 1.65;
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.75rem;
+  color: #252525;
+}
+
+h1,
+h2 {
+  font-weight: 600;
+}
+
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 600;
+}
+
+.section-title {
+  margin-bottom: 1.5rem;
+}
+
+.section-title h2 {
+  margin-bottom: 0.75rem;
+}
+
+.section-title p,
+.blog-content p,
+.faq .card-header h3,
+.privacy-policy-item p {
+  font-weight: 400;
+}
+
+.footer-copyright-text {
+  opacity: 1;
+}
+
+.footer-copyright-text p {
+  color: #595959;
+}
+
+#content a:not(.btn):not(.more) {
+  color: #005bb5;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
+}
+
+#content a:not(.btn):hover,
+#content a:not(.btn):focus {
+  color: #003e7e;
 }
 
 .toots {
