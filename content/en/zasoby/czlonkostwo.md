@@ -4,27 +4,47 @@ url: /en/resources/membership
 category: dokumentacja
 ---
 
-Hackerspace Trójmiasto is a non-profit organisation, supported by membership fees.
-We use the money to pay for the rent of the space, purchase the {{% link ref=/zasoby/chciejlista %}}necessary equipment{{% /link %}}, create {{% link ref=/zasoby/stypendia-hs3 %}}HS3 scholarships{{% /link %}} and organize {{% link ref=/wydarzenia %}}interesting events{{% /link %}}.
+Hackerspace Trójmiasto is a non-profit organisation maintained through voluntary membership contributions. We pool our funds to pay the rent, purchase {{% link ref="/zasoby/chciejlista" %}}needed equipment{{% /link %}}, and run {{% link ref="/zasoby/stypendia-hs3" %}}HS3 scholarships{{% /link %}} and interesting {{% link ref="/wydarzenia" %}}events{{% /link %}}.
 
-By supporting Hackerspace Trójmiasto, you help to democratize knowledge and promote skills in arts and crafts.
-You support the work of dozens of people who change their local communities for the better.
-You support the engine of these changes.
-Together we improve society.
+Contributors gain access to our physical space and its equipment, where they can work on their own projects or collaborate on shared ones.
 
-As a contributor, you gain access to our physical space and the equipment there. You can work on your own projects or join the existing ones. 
-You can support Hackerspace Trójmiasto for as little as 16 PLN per month.
-If you donate at least 128 PLN per month, you get your own keys and the ability to use the space day and night (but remember: we do not sleep in the space!)
+## Monthly support tiers
 
+### 16 PLN or more
 
-Become a member by joining us in [na Patronite](https://patronite.pl/hs3), and don't forget to join our [discord](/join).
+— access to the space and equipment
 
-You can also donate by a traditional wire transfer via CODE:ME foundation. {{% link ref=/zasoby/relacja-codeme-to-hs3 %}}Learn more about the relation between CODE:ME and Hackerspace Trójmiasto{{% /link %}}.
+### 128 PLN or more
 
-- Fundacja CODE:ME
-- MBANK 39 1140 2004 0000 3302 7648 8799
-- transfer purpose: 'darowizna na cele statutowe - hs3'
+— the possibility of becoming a keyholder after 3 months of support
+- Contact us to receive your own set of keys and the ability to use the space at any time, day or night.
 
-&nbsp;
+*but remember: we don't sleep in the Space*
 
-Resources available for contributing members (alarm instruction, access to infrastructure, discount codes etc.) are in this repository: [Podziemny Krąg](https://github.com/hs3city/podziemny_krag).
+## Support us
+
+### Bank transfer
+
+**Fundacja CODE:ME**<br>
+MBANK 39 1140 2004 0000 3302 7648 8799
+Transfer title: darowizna na cele statutowe - hs3
+
+{{% link ref="/zasoby/relacja-codeme-to-hs3" %}}Learn more about the relationship between Hackerspace Trójmiasto and CODE: ME{{% /link %}}
+
+### BLIK
+
+Donate to:
+- **575 666 870**
+
+### Patronite
+
+This form of support includes a commission, so we encourage bank transfers or BLIK.
+[Join on Patronite](https://patronite.pl/hs3)
+
+## Resources for contributors
+
+Resources available only to contributors — alarm operation, access to infrastructure, discount codes, etc. — are in the [Podziemny Krąg](https://github.com/hs3city/podziemny_krag) section.
+
+## Support matters
+
+By supporting Hackerspace Trójmiasto, you help democratize knowledge and promote art and craftsmanship. You support dozens of people making their local communities better. Your support becomes the engine of this change. Together, we work for the benefit of our surroundings.

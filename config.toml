@@ -68,37 +68,37 @@ longitude = 18.5815294
 pinImage = "/images/pin.png"
 pinUrl = "https://maps.app.goo.gl/GxMMjVquHcxkinQ2A"
 
-[Menu]
+[menu]
 # Main Menu
-[[menu.Main]]
+[[menu.main]]
 identifier = "about-us"
 pageref = "/about"
 weight = 1
-[[menu.Main]]
+[[menu.main]]
 identifier = "events"
 pageref = "/wydarzenia"
 weight = 2
-[[menu.Main]]
+[[menu.main]]
 identifier = "projects"
 pageref = "/projekty"
 weight = 3
-[[menu.Main]]
+[[menu.main]]
 identifier = "blogs"
 pageref = "/blog"
 weight = 4
-[[menu.Main]]
+[[menu.main]]
 identifier = "membership"
 pageref = "/zasoby/czlonkostwo"
 weight = 5
-[[menu.Main]]
+[[menu.main]]
 identifier = "resources"
 pageref = "/zasoby"
 weight = 6
-[[menu.Main]]
+[[menu.main]]
 identifier = "FAQ"
 url = "/#faq"
 weight = 7
-[[menu.Main]]
+[[menu.main]]
 identifier = "contact"
 url = "/#contact"
 weight = 8

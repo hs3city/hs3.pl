@@ -33,14 +33,12 @@ Tytuł przelewu: *darowizna na cele statutowe - hs3*
 ### BLIK
 
 Wyślij darowiznę na numer:
-
-**575 666 870**
+- **575 666 870**
 
 ### Patronite
 
-[Dołącz na Patronite](https://patronite.pl/hs3)
-
 Ta forma wsparcia wiąże się z prowizją, dlatego zachęcamy do przelewu lub BLIK-a.
+[Dołącz na Patronite](https://patronite.pl/hs3)
 
 ## Zasoby dla składkowiczów
 
