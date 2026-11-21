@@ -23,7 +23,7 @@ footerDescription = "Przyjdź i zbuduj coś z nami"
 [languages.pl.params.address]
 address = "al. Wojska Polskiego 41<br>80-268 Gdańsk"
 email = "kontakt@hs3.pl"
-openingDesc = "Otwarte całą dobę dla osób z kluczem."
+openingDesc = "Otwarte całą dobę dla osób z kluczem - [sprawdź jak nim zostać](https://hs3.pl/wsparcie)"
 openingHours = "Jeśli nie masz klucza [zapytaj na Discord](https://hs3.pl/join) czy ktoś jest w środku."
 phone = "+48 661 691 133"
 
