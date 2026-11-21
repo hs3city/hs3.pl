@@ -5,7 +5,9 @@ import plotly.graph_objects as go
 from bs4 import BeautifulSoup
 
 
-def export_dashboard_cashflow(source_path, dest_path="", offline=False, standalone=False):
+def export_dashboard_cashflow(
+    source_path, dest_path="", offline=False, standalone=False
+):
     """
     Returns HTML file with cashflow plot
 
@@ -24,6 +26,8 @@ def export_dashboard_cashflow(source_path, dest_path="", offline=False, standalo
         dest_path = source_path
     source_file = os.path.join(source_path, "finanse.csv")
     output_file = os.path.join(dest_path, "finanse.html")
+    output_svg = os.path.join(dest_path, "finanse.svg")
+    output_json = os.path.join(dest_path, "finanse.json")
 
     include_plotlyjs = "cdn"
     if offline:
@@ -89,6 +93,8 @@ def export_dashboard_cashflow(source_path, dest_path="", offline=False, standalo
     fig.update_xaxes(dtick="M1")
 
     fig.write_html(output_file, include_plotlyjs=include_plotlyjs, full_html=standalone)
+    # fig.write_image(output_svg, "svg")
+    fig.write_json(output_json)
 
 
 def update_html(source_path, dest_path):
@@ -121,6 +127,8 @@ if __name__ == "__main__":
 
     args = parser.parse_args()
 
-    export_dashboard_cashflow(args.source_path, args.dest_path, args.offline, args.standalone)
+    export_dashboard_cashflow(
+        args.source_path, args.dest_path, args.offline, args.standalone
+    )
     update_html(args.source_path, args.dest_path)
     print("Graph plotted and exported successfully to HTML")
