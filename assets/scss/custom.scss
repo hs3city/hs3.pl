@@ -251,11 +251,12 @@ article img {
 /* Improve text contrast and visual separation throughout the site. */
 body,
 p,
+.post-body li,
 .footer p,
 .footer-menu ul li a,
 .blog-content p,
 .privacy-policy-item p {
-  color: #595959;
+  color: #4d4d4d;
 }
 
 p {
@@ -263,6 +264,11 @@ p {
   line-height: 1.65;
   margin-top: 0;
   margin-bottom: 1rem;
+}
+
+.post-body li {
+  font-weight: 500;
+  line-height: 1.65;
 }
 
 h1,
@@ -308,7 +314,7 @@ h6 {
 }
 
 .footer-copyright-text p {
-  color: #595959;
+  color: #4d4d4d;
 }
 
 #content a:not(.btn):not(.more) {
