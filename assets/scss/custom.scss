@@ -343,9 +343,9 @@ h6 {
   color: #005bb5;
 }
 
-.eventDates.calendar .grid-body.calendar a.event,
-.eventDates.calendar .grid-body.calendar a.event:hover,
-.eventDates.calendar .grid-body.calendar a.event:focus {
+#content .eventDates.calendar .grid-body.calendar a.event,
+#content .eventDates.calendar .grid-body.calendar a.event:hover,
+#content .eventDates.calendar .grid-body.calendar a.event:focus {
   color: white;
   font-weight: inherit;
   text-decoration-thickness: inherit;
