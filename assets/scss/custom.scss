@@ -356,12 +356,88 @@ h6 {
   margin: auto;
   max-width: inherit;
   font-family: inherit;
-  
-  @media (max-width: 576px) {
-    .user {
-      margin-top: 2em;
-    }
+}
+
+.news .toots {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: 576px) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+
+  @media (min-width: 992px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.news .toot {
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid #e5e5e5;
+  border-radius: 0.5rem;
+  background-color: #fff;
+}
+
+.news .toot .user {
+  margin-top: 0;
+}
+
+.news .toot .user:not(.boost) {
+  display: grid;
+  grid-template-columns: 46px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-content: center;
+  align-items: center;
+  column-gap: 0.5rem;
+  width: 100%;
+  min-width: 0;
+  min-height: 46px;
+  height: auto;
+}
+
+.news .toot .user:not(.boost) .avatar {
+  grid-column: 1;
+  grid-row: 1 / 3;
+}
+
+.news .toot .user:not(.boost) .display-name,
+.news .toot .user:not(.boost) .username {
+  grid-column: 2;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+
+.news .toot .user:not(.boost) .display-name {
+  grid-row: 1;
+}
+
+.news .toot .user:not(.boost) .username {
+  grid-row: 2;
+  margin-right: 0;
+}
+
+.news .toot .permalink {
+  float: none;
+  font-size: 0.75rem;
+  margin-bottom: 0.5rem;
+  text-align: right;
+}
+
+.news .toot .body {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 6;
+  line-clamp: 6;
+  overflow: hidden;
+  margin-top: 0.75rem;
+}
+
+.news .toot .attachment {
+  margin-top: 0.75rem;
 }
 
 .news {
