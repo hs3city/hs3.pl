@@ -23,7 +23,7 @@ footerDescription = "Przyjdź i zbuduj coś z nami"
 [languages.pl.params.address]
 address = "al. Wojska Polskiego 41<br>80-268 Gdańsk"
 email = "kontakt@hs3.pl"
-openingDesc = "Otwarte całą dobę dla osób z kluczem."
+openingDesc = "Otwarte całą dobę dla osób z kluczem - [sprawdź jak nim zostać](https://hs3.pl/wsparcie)"
 openingHours = "Jeśli nie masz klucza [zapytaj na Discord](https://hs3.pl/join) czy ktoś jest w środku."
 phone = "+48 661 691 133"
 
@@ -68,37 +68,37 @@ longitude = 18.5815294
 pinImage = "/images/pin.png"
 pinUrl = "https://maps.app.goo.gl/GxMMjVquHcxkinQ2A"
 
-[Menu]
+[menu]
 # Main Menu
-[[menu.Main]]
+[[menu.main]]
 identifier = "about-us"
 pageref = "/about"
 weight = 1
-[[menu.Main]]
+[[menu.main]]
 identifier = "events"
 pageref = "/wydarzenia"
 weight = 2
-[[menu.Main]]
+[[menu.main]]
 identifier = "projects"
 pageref = "/projekty"
 weight = 3
-[[menu.Main]]
+[[menu.main]]
 identifier = "blogs"
 pageref = "/blog"
 weight = 4
-[[menu.Main]]
+[[menu.main]]
 identifier = "membership"
 pageref = "/zasoby/czlonkostwo"
 weight = 5
-[[menu.Main]]
+[[menu.main]]
 identifier = "resources"
 pageref = "/zasoby"
 weight = 6
-[[menu.Main]]
+[[menu.main]]
 identifier = "FAQ"
 url = "/#faq"
 weight = 7
-[[menu.Main]]
+[[menu.main]]
 identifier = "contact"
 url = "/#contact"
 weight = 8
