@@ -328,6 +328,30 @@ h6 {
   color: #003e7e;
 }
 
+.post a:not(.btn),
+.eventDates .grid-body:not(.calendar) a:not(.btn) {
+  color: #4d4d4d;
+  font-weight: 500;
+  text-decoration-thickness: 0.08em;
+  text-underline-offset: 0.12em;
+}
+
+.post a:not(.btn):hover,
+.post a:not(.btn):focus,
+.eventDates .grid-body:not(.calendar) a:not(.btn):hover,
+.eventDates .grid-body:not(.calendar) a:not(.btn):focus {
+  color: #005bb5;
+}
+
+.eventDates.calendar .grid-body.calendar a.event,
+.eventDates.calendar .grid-body.calendar a.event:hover,
+.eventDates.calendar .grid-body.calendar a.event:focus {
+  color: white;
+  font-weight: inherit;
+  text-decoration-thickness: inherit;
+  text-underline-offset: inherit;
+}
+
 .toots {
   margin: auto;
   max-width: inherit;
